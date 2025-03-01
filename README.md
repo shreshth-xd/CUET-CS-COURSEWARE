@@ -4,7 +4,7 @@
 # INTRODUCTION 
 <br>
 This courseware repo is specially designed for CUET UG/CUET PG CS aspirants who are looking for a well structured
-resource online, to help them nurture their problem solving and programming skills alongwith their revising the 
+resource to help them nurture their problem solving and programming skills alongwith revising the 
 concepts by practically implementing them in different problem statements.
 <br>
 
