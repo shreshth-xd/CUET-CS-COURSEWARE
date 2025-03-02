@@ -47,6 +47,7 @@ repository on your local machine</p>
 <li>Create a new folder</li>
 <li>Open the command prompt in the same folder (Right click -> Click on "Open in terminal")</li>
 <li>Copy the following command and paste it on your command prompt: </li>
+</ol>
 `git clone https://github.com/shreshth-xd/CUET-CS-COURSEWARE.git`
 <ul>
 <li>After pasting it, hit enter</li>
@@ -61,5 +62,4 @@ exams you can keep your changes local to your machine by your simple Ctrl+S , bu
 someone who is looking to contribute to my courseware then you have to fork my repo first.
 </p></li>
 </ul>
-</ol>
 </div>
