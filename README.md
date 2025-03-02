@@ -44,11 +44,10 @@ local machine, and it order to do this you can follow the below given steps to c
 repository on your local machine</p> 
 
 <ol>
-<li>1. Create a new folder</li>
-<li>2. Open the command prompt in the same folder (Right click -> Click on "Open in terminal")</li>
-<li>3. Copy the following command and paste it on your command prompt: </li>
-```bash
-git clone https://github.com/shreshth-xd/CUET-CS-COURSEWARE.git ```
+<li>Create a new folder</li>
+<li>Open the command prompt in the same folder (Right click -> Click on "Open in terminal")</li>
+<li>Copy the following command and paste it on your command prompt: </li>
+`git clone https://github.com/shreshth-xd/CUET-CS-COURSEWARE.git`
 <ul>
 <li>After pasting it, hit enter</li>
 <li><p>
