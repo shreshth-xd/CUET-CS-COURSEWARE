@@ -48,7 +48,7 @@ repository on your local machine</p>
 <li>2. Open the command prompt in the same folder (Right click -> Click on "Open in terminal")</li>
 <li>3. Copy the following command and paste it on your command prompt: </li>
 ```bash
-git clone https://github.com/shreshth-xd/CUET-CS-COURSEWARE.git 
+git clone https://github.com/shreshth-xd/CUET-CS-COURSEWARE.git
 ```
 <ul>
 <li>After pasting it, hit enter</li>
