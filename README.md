@@ -9,7 +9,7 @@ concepts by practically implementing them in different problem statements.
 <br>
 
 # RESOURCES 
-This open courseware consists of:
+<b>This open courseware consists of:</b>
 <ol>
 <li>
 <h2>Python programs:</h2>
