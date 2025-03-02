@@ -48,6 +48,7 @@ repository on your local machine</p>
 <li>Open the command prompt in the same folder (Right click -> Click on "Open in terminal")</li>
 <li>Copy the following command and paste it on your command prompt: </li>
 </ol>
+```bash
 git clone https://github.com/shreshth-xd/CUET-CS-COURSEWARE.git
 <ul>
 <li>After pasting it, hit enter</li>
