@@ -12,8 +12,7 @@ concepts by practically implementing them in different problem statements.
 This open courseware consists of:
 <ol>
 <li>
-Python programs:
-
+<h2>Python programs:</h2>
 <ul>
 
 <li>File handling</li>
@@ -25,7 +24,8 @@ Python programs:
   
 </li>
 
-<li>SQL commands:</li>
+<li>
+SQL commands:
 <ul>
 
 <li>Simple queries</li>
@@ -34,4 +34,5 @@ Python programs:
 <li>Connecting Python scripts with SQL(For boards)</li>
 
 </ul>
+</li>
 </ol>
