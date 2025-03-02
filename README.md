@@ -36,3 +36,32 @@ concepts by practically implementing them in different problem statements.
 </ul>
 </li>
 </ol>
+
+# HOW TO GET STARTED
+<div id="GettingStarted">
+<p>The best way to utilise all the resources provided in this Github repository is to get it on
+local machine, and it order to do this you can follow the below given steps to clone this Github
+repository on your local machine</p> 
+
+<ol>
+<li>1. Create a new folder</li>
+<li>2. Open the command prompt in the same folder (Right click -> Click on "Open in terminal")</li>
+<li>3. Copy the following command and paste it on your command prompt: </li>
+```bash
+git clone https://github.com/shreshth-xd/CUET-CS-COURSEWARE.git 
+```
+<ul>
+<li>After pasting it, hit enter</li>
+<li><p>
+The link provided in this code snippet is the link of this Github repository and the command 
+"git clone" is used to clone/copy someone's Github repository to your local machine.
+</p></li>
+<br>
+<li><p>NOTE: Cloning my Github repository to your local machine won't allow you to push changes
+to my repository or workspace, to revise the concepts and play around my code to study for your
+exams you can keep your changes local to your machine by your simple Ctrl+S , but in case you are
+someone who is looking to contribute to my courseware then you have to fork my repo first.
+</p></li>
+</ul>
+</ol>
+</div>
