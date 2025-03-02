@@ -25,7 +25,7 @@ This open courseware consists of:
 </li>
 
 <li>
-SQL commands:
+<h2>SQL commands:</h2>
 <ul>
 
 <li>Simple queries</li>
