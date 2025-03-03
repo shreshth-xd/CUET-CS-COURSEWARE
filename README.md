@@ -71,7 +71,7 @@ someone who is looking to contribute to my courseware then you may go through th
 <h2>Navigating through the courseware:</h2>
 <ul>
 <li><p>The root directory of this course holds two folders <b><u>CUET UG</u></b>and<b><u>CUET PG</u></b>
-made for UG and PG CS aspirants respectively.</p></li>
+made for UG and PG CS aspirants respectively.(We'll soon add resources for the PG section as well)</p></li>
 
 <li><p>In both of these folders there are separate folders and files for each topic to be studied and practiced
 as per the syllabus of CUET UG & PG.</p></li>
@@ -87,10 +87,13 @@ through the provided resources.</p></li>
 </div>
 
 <div id="ContriGuide">
-<h2>How to Contribute:</h2>  
-1. Fork the repository  
-2. Create a new branch (`git checkout -b feature-branch`)  
-3. Make your changes and commit (`git commit -m "Added feature"`)  
-4. Push to your branch (`git push origin feature-branch`)  
-5. Open a pull request!  
+<h2>How to Contribute:</h2>
+<ol>
+<li>Fork the repository</li>
+<li>Create a new branch (`git checkout -b feature-branch`)</li>
+<li>Make your changes and commit (`git commit -m "Added feature"`)</li>
+<li>Push to your branch (`git push origin feature-branch`)</li>
+<li>Open a pull request!</li>
+</ol>
+
 </div>
