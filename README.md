@@ -69,10 +69,21 @@ someone who is looking to contribute to my courseware then you may go through th
 
 <div id="DocTree">
 <h2>Navigating through the courseware:</h2>
-<p>The root directory of this course holds two folders <b><u>CUET UG</u></b>and<b><u>CUET PG</u></b>
-made for UG and PG CS aspirants respectively.</p>
-<p></p>
-<!-- ![alt text](image.png) -->
+<ul>
+<li><p>The root directory of this course holds two folders <b><u>CUET UG</u></b>and<b><u>CUET PG</u></b>
+made for UG and PG CS aspirants respectively.</p></li>
+
+<li><p>In both of these folders there are separate folders and files for each topic to be studied and practiced
+as per the syllabus of CUET UG & PG.</p></li>
+
+<li><p>There is a separate README file for each and every folder and subfolder so as to help you navigate 
+through the provided resources.</p></li>
+
+<li><p>The image below describes the overall document tree of this repository:</p></li>
+
+![alt text](image.png)
+
+</ul>
 </div>
 
 <div id="ContriGuide">
