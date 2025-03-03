@@ -70,7 +70,8 @@ someone who is looking to contribute to my courseware then you may go through th
 <div id="DocTree">
 <h2>Navigating through the courseware:</h2>
 <p>The root directory of this course holds two folders <b><u>CUET UG</u></b>and<b><u>CUET PG</u></b>
-made for </p>
+made for UG and PG CS aspirants respectively.</p>
+<p></p>
 <!-- ![alt text](image.png) -->
 </div>
 
