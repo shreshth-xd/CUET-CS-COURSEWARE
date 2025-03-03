@@ -8,11 +8,12 @@ for i in range(count):
 n=len(array)
 print("Unsorted array: ",array)
 """
-In bubble sort algorithm, all we have to do is to compare the starting value of the array with the value
+In bubble sort algorithm, all we have to do is to start with comparing the starting value of the array with the value
 coming after it and swap it as per our sort order (ascending or descending) and the process is repeated till
 the array is sorted as per the required sort order.
 
 Basically bubbling the biggest value of the array to the end of the array to sort it in an ascending order. 
+The worst case time complexity of Bubble sort algorithm is O(n²)
 """
 
 for i in range(0,n):
