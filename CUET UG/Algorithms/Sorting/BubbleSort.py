@@ -13,7 +13,10 @@ coming after it and swap it as per our sort order (ascending or descending) and 
 the array is sorted as per the required sort order.
 
 Basically bubbling the biggest value of the array to the end of the array to sort it in an ascending order. 
-The worst case time complexity of Bubble sort algorithm is O(n²)
+The worst case time complexity of Bubble sort algorithm is O(n²) and..
+the best case time complexity of this algorithm is O(n), which means that all the elements are sorted already,
+when all the elements are sorted in the required order already then all the algorithm has to do is to just
+compare the values of the list/array if they are in the required order or not.
 """
 
 for i in range(0,n):
