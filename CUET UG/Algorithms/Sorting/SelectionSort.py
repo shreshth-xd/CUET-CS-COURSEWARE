@@ -44,12 +44,12 @@ The same above process is repeated for all the i'th elements in the array/list t
 """
 
 for i in range(0,n-1):
-    min_=i
+    min_ = i
     for j in range(i+1,n):
         if lst[j]<lst[min_]:
-            min_=j
+            min_ = j
     
     if min_!=i:
-        lst[i],lst[min_]=lst[min_],lst[i]
-        
-print("Sorted list: ",lst)
+        lst[i],lst[min_] = lst[min_],lst[i]
+
+print("Sorted array: ",lst)
