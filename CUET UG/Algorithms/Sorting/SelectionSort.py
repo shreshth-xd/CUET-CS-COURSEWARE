@@ -17,6 +17,9 @@ the minimum/maximum element and then we keep on moving our loop counter alongwit
 for a value which is smaller/larger than the initially assumed minimum/maximum element,
 and when we encounter such an element, then only we swap these two element i.e. swapping the
 assumed minimum/maximum  element with the newly scanned minimum/maximum value after that particular iteration. 
+
+Since selection sort algorithm uses nested loops to sort the array just like Bubble sort and insertion sort, 
+the time complexity of this algorithm is O(n²)
 """
 
 
