@@ -23,7 +23,12 @@ class HashMap:
     
 
 HashTable = HashMap()
-key=input("Enter the key: ")
-value=input("Enter it's corresponding value: ")
-HashTable.add(key,value)
-print(HashTable.get(key))
+count=int(input("Enter the number of items: "))
+for i in range(count):        
+    key=input("Enter the key: ")
+    value=input("Enter it's corresponding value: ")
+    HashTable.add(key,value)
+
+search_item = input("Enter the key to search for an item: ")
+search_result = HashTable.get(search_item)
+print("The value of this key is: ",search_result)
