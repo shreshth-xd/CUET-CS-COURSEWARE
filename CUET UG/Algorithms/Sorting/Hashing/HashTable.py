@@ -20,9 +20,9 @@ class HashMap:
     
     # Introducing this additional function to export the data provided by the user to the csv file
     def exportData(self,filename,key,value):
-        with open(filename,"a") as file:
-            writer1 = csv.writer(filename)
-            writer1.writerow(key,value)
+        with open(filename,"a",newline="") as file:
+            writer_ = csv.writer(file)
+            writer_.writerow([key,value])
 
     def get(self,key):
         index=self.getHash(key)
@@ -36,7 +36,7 @@ with open ("Sturec.csv","r") as file:
     for line in file:
         tokens = line.split(",")
         name=tokens[0]
-        marks=tokens[1]
+        marks=int(tokens[1])
         recordHandler.add(name,marks)
         data[name]=marks
 
@@ -57,7 +57,7 @@ while True:
         ask=input("Enter the name of that student: ")
         marks_=int(input("Enter marks obtained by him/her out of 100: "))
         recordHandler.add(ask,marks_)
-        recordHandler.exportData("Sturec.csv")
+        recordHandler.exportData("Sturec.csv",ask,marks_)
     elif choice==4:
         break
     else:
