@@ -29,3 +29,9 @@ class HashTable:
             if len(element)==2 and element[0]==key:
                 return element[1]
     
+    # To delete a key value pair from the Hash table
+    def delItem(self,key):
+        hash=self.GetHash(key)
+        for index,element in enumerate(self.arr[hash]):
+            if len(element)==2 and element[0]==key:
+                del self.arr[hash][index]
