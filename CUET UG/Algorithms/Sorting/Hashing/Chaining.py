@@ -10,10 +10,10 @@ class HashTable:
         HashValue=0
         for i in key:
             HashValue+=ord(i)
-        return HashValue
+        return HashValue%10
     
-    def ExportData(self,filename,key,value):
-        with open(filename,"a") as file:
+    def ExportData(self,key,value):
+        with open("Sturec.csv","a",newline="") as file:
             writer_ = csv.writer(file)
             writer_.writerow([key,value])
     
@@ -23,25 +23,28 @@ class HashTable:
         for idx,element in enumerate(self.arr[h]):
             if len(element)==2 and element[0]==key:
                 self.arr[h][idx] = (key,value)
-                
-                # Making the same change on the CSV file so as to keep the file updated
-                with open("Sturec.csv","r") as infile ,open("Sturec.csv","w") as outfile:
-                    writer_ = csv.writer(outfile)
-                    reader = csv.writer(infile)
-                    for line in reader:
-                        tokens=line.split()
-                        name=tokens[0]
-                        marks=tokens[1]
-                        if name!=key:
-                            writer_.writerow([name,marks])
-                        else:
-                            writer_.writerow([key,marks])
                 found=True
                 break
+        
+        if found:
+            # Making the same change on the CSV file so as to keep the file updated
+                with open("Sturec.csv","r",newline="") as infile:
+                    lines = infile.readlines()
+                
+                with open("Sturec.csv","w",newline="") as outfile:
+                    writer_ = csv.writer(outfile)
+                    for line in lines:
+                        tokens=line.split(",")
+                        name=tokens[0]
+                        marks=int(tokens[1])
+                        if key not in line:
+                            writer_.writerow([name,marks])
+                        elif key in line:
+                            writer_.writerow([key,value])
 
         if not found:
             self.arr[h].append((key,value))
-            self.ExportData("Sutrec.csv",key,value)
+            self.ExportData(key,value)
 
 
     def get(self,key):
@@ -58,41 +61,55 @@ class HashTable:
             if len(element)==2 and element[0]==key:
                 del self.arr[hash][index]
 
-                # Making the same change on the CSV file so as to keep the file updated
-                with open("Sturec.csv","r") as infile, open("Sturec.csv","r") as outfile:
-                    writer_ = csv.writer(outfile)
-                    reader = csv.writer(infile)
-                    for line in reader:
-                        tokens=line.split()
-                        name=tokens[0]
-                        marks=tokens[1]
-                        if name!=key:
-                            writer_.writerow([name,marks])                          
+            # Making the same change on the CSV file so as to keep the file updated
+            with open("Sturec.csv","r",newline="") as infile:
+                lines = infile.readlines()
+            
+            with open("Sturec.csv","w",newline="") as outfile:
+                writer_ = csv.writer(outfile)
+                for line in lines:
+                    tokens=line.split(",")
+                    name=tokens[0]
+                    marks=int(tokens[1])
+                    if key not in line:
+                        writer_.writerow([name,marks])                          
 
+
+    def DisplayData(self):
+        data={} 
+        with open ("Sturec.csv","r") as file:
+            reader_=csv.reader(file)
+            for line in reader_:
+                name=line[0]
+                marks=int(line[1])
+                RecordHandler.add(name,marks)
+                data[name] = marks
+        
+        return data
 
 # Creating a record handler object out of Hash table class
 RecordHandler = HashTable()
-data={}
+data={} 
 
 with open ("Sturec.csv","r") as file:
-    for single_line in file:
-        tokens = single_line.split()
-        name=tokens[0]
-        marks=int(tokens[1])
+    reader_=csv.reader(file)
+    for line in reader_:
+        name=line[0]
+        marks=int(line[1])
         RecordHandler.add(name,marks)
         data[name] = marks
 
-print("1. Display data of all the students")
-print("2. Display marks of a particular student")
-print("3. Add more data points")
-print("4. Edit a student's marks")
-print("5. Delete a data point")
-print("6. Exit")
 
 while True:
+    print("1. Display data of all the students")
+    print("2. Display marks of a particular student")
+    print("3. Add more data points")
+    print("4. Edit a student's marks")
+    print("5. Delete a data point")
+    print("6. Exit")
     choice=int(input("Enter your choice: "))
     if choice==1:
-        print(data)     
+        print(RecordHandler.DisplayData())
     elif choice==2:
         name=input("Enter the name of the student: ")
         print(RecordHandler.get(name))
