@@ -1,0 +1,1 @@
+# Presenting the most basic usage of try-except blocks out there
