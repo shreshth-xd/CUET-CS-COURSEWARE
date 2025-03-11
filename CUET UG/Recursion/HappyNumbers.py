@@ -8,10 +8,11 @@ def sum_sq_digits(n,sum=0):
     if n>0:
         rem=n%10
         sum+=rem**2
-        sum_sq_digits(n//10,sum)
+        return sum_sq_digits(n//10,sum)
     else:
         return sum
-    
+
+
 def IsHappy(n,visited=None):
     if n==1:
         return True
@@ -30,6 +31,7 @@ def IsHappy(n,visited=None):
         visited.add(n)
         nextNumber=sum_sq_digits(n)
         return IsHappy(nextNumber,visited)
+
 
 n=int(input("Enter the number to check if the number is a happy number or not: "))
 result = IsHappy(n)
