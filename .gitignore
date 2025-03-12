@@ -169,4 +169,4 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-Projects\CUET-CS-COURSEWARE\CUET UG\Project\test.json
+CUET UG/Project/test.json
