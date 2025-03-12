@@ -1,40 +1,74 @@
 import json
 import bcrypt
+import re
 
 numbers="0123456789"
 letters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-validForusername="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
+# validForusername="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
+# strong_password=r"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_/\*-\+!@#\$%\^&\*\()-={}[]\|:;\"'<>,\.\?"
+pattern = r'^(?=.*[A-Za-z])(?=.*\d)(?=.*\W)[A-Za-z\d\W]{8,}$'
+
+def get_hash(password,round=12):
+    # Generating a salt to be included in the hashed password 
+    salt=bcrypt.gensalt(rounds=round)    
+    hashed_password = bcrypt.hashpw(password,salt)
+    return hashed_password
 
 def register(username,password):
     try:
         # Only letters, numbers and underscores are allowed in username field
-        # The username has to be unique
+        # The username has to be unique        
+        if bool(re.fullmatch(r"\w+",username))==False:
+            raise ValueError
+        if re.match(pattern,password)==False:
+            raise KeyError
+        else:
+            # hashed_password = get_hash(password)
+            # data={}
+            # data[username] = {
+            #     "username":username,
+            #     "password":hashed_password
+            # }
+            # json.dump(data)
+            pass
+    except ValueError:
+        print("Only letters, numbers and underscore is permissable for username.")
+        return "Invalid username"
+    except KeyError:
+        print("Your password is not strong.")
+        return "Invalid password"
+# def login(username,password):
+#     try:
+#     # Only letters, numbers and underscores are allowed in username field
+#     # The username has to be unique
+        
+#     except NameError:
+    
+
+# def change_password(username,password):
+#     try:
+#         # Only letters, numbers and underscores are allowed in username field
+#         # The username has to be unique
+
+#     except NameError:
+
+while True:
+    print("1. Register")
+    print("2. Login")
+    print("3. Change password")
+    print("4. Exit")
+    choice=int(input(">"))
+    if choice==1:
         while True:
             username=str(input("Enter the username: "))
-            if validForusername not in username:
-                raise Exception("Only letters, numbers and underscore is permissable for username.")
+            password=str(input("Enter your password: "))
+            response = register(username,password)
+
+            if response=="Invalid username" or response=="Invalid password":
+                print("Try to register yourself again.")
             else:
                 break
-    except Exception as e:
-        print("Exception occurred: ",e)
-
-
-def login(username,password):
-    try:
-    # Only letters, numbers and underscores are allowed in username field
-    # The username has to be unique
-        pass
-    except NameError:
-        # To be continued
-        pass
-
-
-def change_password(username,password):
-    try:
-        # Only letters, numbers and underscores are allowed in username field
-        # The username has to be unique
-        pass
-    except NameError:
-        # To be continued
-        pass
+        
+    elif choice==4:
+        break
