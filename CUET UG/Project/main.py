@@ -9,10 +9,12 @@ letters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 # strong_password=r"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_/\*-\+!@#\$%\^&\*\()-={}[]\|:;\"'<>,\.\?"
 pattern = r'^(?=.*[A-Za-z])(?=.*\d)(?=.*\W)[A-Za-z\d\W]{8,}$'
 
-def get_hash(password,round=12):
+def get_hash(password_,round=12):
+    password=password_
     # Generating a salt to be included in the hashed password 
     salt=bcrypt.gensalt(rounds=round)    
-    hashed_password = bcrypt.hashpw(password,salt)
+    password_bytes = password.encode('utf-8')
+    hashed_password = bcrypt.hashpw(password_bytes,salt)
     return hashed_password
 
 def register(username,password):
@@ -21,23 +23,35 @@ def register(username,password):
         # The username has to be unique        
         if bool(re.fullmatch(r"\w+",username))==False:
             raise ValueError
-        if re.match(pattern,password)==False:
+        if bool(re.match(pattern,password))==False:
             raise KeyError
         else:
-            # hashed_password = get_hash(password)
-            # data={}
-            # data[username] = {
-            #     "username":username,
-            #     "password":hashed_password
-            # }
-            # json.dump(data)
-            pass
+            hashed_password = get_hash(password).decode(encoding='utf-8')
+    
+            data= {
+                "username":username,
+                "password":hashed_password
+            }
+
+            try:
+                with open ("test.json","r") as file:
+                    existing_data = json.load(file)
+            except (FileNotFoundError, json.JSONDecodeError):
+                existing_data={}
+
+
+            with open("test.json","a") as file:
+                if username not in existing_data:
+                    existing_data[username] = data
+                    json.dump(existing_data,file,indent=4)
+
     except ValueError:
         print("Only letters, numbers and underscore is permissable for username.")
         return "Invalid username"
     except KeyError:
         print("Your password is not strong.")
         return "Invalid password"
+    
 # def login(username,password):
 #     try:
 #     # Only letters, numbers and underscores are allowed in username field
