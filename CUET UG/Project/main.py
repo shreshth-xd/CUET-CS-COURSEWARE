@@ -65,26 +65,23 @@ def register(username,password):
         print("Username is not unavailable")
         return "Unavailable username"  
 
-
-def login(username,password):
+def login(username, password_):
     try:
-        with open("test.json","r") as file:
-            data=json.load(file)
-            found=False
-            for key in data.keys():
-                if username==key:
-                    found=True
-            
-            if found==False:
-                raise KeyError
-            
-            hashed_password=get_hash(password).decode('utf-8')
-            if found==True and data[username]["password"]==hashed_password:
-                print("Login succesfull!")
-                print("Welcome to the system sir!")
-            elif found==True and data[username]["password"]!=hashed_password:
-                print("Incorrect password!")
-                raise ValueError
+        with open("test.json", "r") as file:
+            existing_data = json.load(file)
+        
+        if username not in existing_data:
+            raise KeyError
+        
+        stored_hashed_password = existing_data[username]["password"].encode("utf-8")  # Retrieve stored hash
+        
+        # Correct way to verify password
+        if bcrypt.checkpw(password_.encode("utf-8"), stored_hashed_password):
+            print("Login successful!")
+            print("Welcome to the system, sir!")
+        else:
+            print("Incorrect password!")
+            raise ValueError
 
     except KeyError:
         print("Account with this username was not found, try logging in again.")
@@ -93,6 +90,7 @@ def login(username,password):
     except ValueError:
         print("The password that you've entered for the username is incorrect, try again.")
         return "Incorrect password"
+
 
 # def change_password(username,password):
 #     try:
