@@ -42,6 +42,7 @@ def register(username,password):
                 "username":username,
                 "password":hashed_password
             }
+
             try:
                 with open ("test.json","r") as file:
                     existing_data = json.load(file)
@@ -63,13 +64,35 @@ def register(username,password):
     except NameError:
         print("Username is not unavailable")
         return "Unavailable username"  
-# def login(username,password):
-#     try:
-#     # Only letters, numbers and underscores are allowed in username field
-#     # The username has to be unique
-        
-#     except NameError:
+
+
+def login(username,password):
+    try:
+        with open("test.json","r") as file:
+            data=json.load(file)
+            found=False
+            for key in data.keys():
+                if username==key:
+                    found=True
+            
+            if found==False:
+                raise KeyError
+            
+            hashed_password=get_hash(password).decode('utf-8')
+            if found==True and data[username]["password"]==hashed_password:
+                print("Login succesfull!")
+                print("Welcome to the system sir!")
+            elif found==True and data[username]["password"]!=hashed_password:
+                print("Incorrect password!")
+                raise ValueError
+
+    except KeyError:
+        print("Account with this username was not found, try logging in again.")
+        return "Username not found"
     
+    except ValueError:
+        print("The password that you've entered for the username is incorrect, try again.")
+        return "Incorrect password"
 
 # def change_password(username,password):
 #     try:
@@ -94,6 +117,16 @@ while True:
                 print("Try to register yourself again.")
             else:
                 break
-        
+
+    elif choice==2:
+        while True:
+            username=str(input("Enter your username: "))
+            password=str(input("Enter your password: "))
+            response=login(username,password)
+
+            if response=="Incorrect password" or response=="Username not found":
+                print("Try logging in again.")
+            else:
+                break
     elif choice==4:
         break
