@@ -92,38 +92,39 @@ def login(username, password_):
         return "Incorrect password"
 
 
-def change_password(username,password):
-    try:
+def change_password(username,password,new_password):
+    auth=login(username,password)
+    if auth=="Username not found" or auth=="Incorrect password":
+        return "Illegitimate user"
+    if auth!="Username not found" and auth!="Incorrect password":
         with open("test.json", "r") as file:
             existing_data = json.load(file)
-        
-        if username not in existing_data:
-            raise KeyError
+            hashed_password = get_hash(new_password).decode(encoding='utf-8')
+            data = {
+                "username":username,
+                "password":hashed_password
+            }
 
-        stored_hashed_password = existing_data[username]["password"].encode("utf-8")  # Retrieve stored hash
-        
-        # Correct way to verify password
-        if bcrypt.checkpw(password.encode("utf-8"), stored_hashed_password):
-            print("Login successful!")
-            print("Welcome to the system, sir!")
-        else:
-            print("Incorrect password!")
-            raise ValueError
- 
-        
-    except KeyError:
-        print("Account with this username was not found, try logging in again.")
-        return "Username not found"
+            try:
+                with open ("test.json","r") as file:
+                    existing_data = json.load(file)
+            except (FileNotFoundError, json.JSONDecodeError):
+                existing_data={}
 
-    except ValueError:
-        print("The password that you've entered for the username is incorrect, try again.")
-        return "Incorrect password"
+            with open('test.json','w') as file:
+                existing_data[username]["password"]=data
+                json.dump(existing_data,file,indent=4)
+
+
+
+             
 
 while True:
     print("1. Register")
     print("2. Login")
     print("3. Change password")
-    print("4. Exit")
+    print("4. Change username")
+    print("5. Exit")
     choice=int(input(">"))
     if choice==1:
         while True:
@@ -146,5 +147,22 @@ while True:
                 print("Try logging in again.")
             else:
                 break
-    elif choice==4:
+    
+    elif choice==3:
+        i=0
+        while True:
+            username=str(input("Enter your username: "))
+            password=str(input("ENter your old password: "))
+            new_password=str(input("Enter your new password: "))
+            response=change_password(username,password,new_password)
+            if i>4:
+                print("We have detected some suspicious activities from your side.")
+                print("We are not permitting you to carry out this operation anymore.")
+                break
+            if response=="Illegitimate user":
+                print("The username or password that you've entered is wrong!")
+                print("Try again!")
+                i+=1
+
+    elif choice==5:
         break
