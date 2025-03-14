@@ -65,31 +65,21 @@ def register(username,password):
         print("Username is not unavailable")
         return "Unavailable username"  
 
-def login(username, password_):
-    try:
-        with open("test.json", "r") as file:
-            existing_data = json.load(file)
-        
-        if username not in existing_data:
-            raise KeyError
-        
-        stored_hashed_password = existing_data[username]["password"].encode("utf-8")  # Retrieve stored hash
-        
-        # Correct way to verify password
-        if bcrypt.checkpw(password_.encode("utf-8"), stored_hashed_password):
-            print("Login successful!")
-            print("Welcome to the system, sir!")
-        else:
-            print("Incorrect password!")
-            raise ValueError
-
-    except KeyError:
-        print("Account with this username was not found, try logging in again.")
-        return "Username not found"
+def login(username, password_):    
+    with open("test.json", "r") as file:
+        existing_data = json.load(file)
     
-    except ValueError:
-        print("The password that you've entered for the username is incorrect, try again.")
-        return "Incorrect password"
+    if username not in existing_data:
+        return "Invalid username or password"
+    
+    stored_hashed_password = existing_data[username]["password"].encode("utf-8")  # Retrieve stored hash
+    
+    # Correct way to verify password
+    if bcrypt.checkpw(password_.encode("utf-8"), stored_hashed_password):
+        print("Login successful!")
+        print("Welcome to the system, sir!")
+    else:
+        return "Invalid username or password"
 
 
 def change_password(username,password,new_password):
@@ -129,7 +119,6 @@ def change_username(username,password,new_username):
 
             with open("test.json", "r") as file:
                 existing_data = json.load(file)
-                hashed_password = get_hash(password).decode(encoding='utf-8')
                 
                 try:
                     with open ("test.json","r") as file:
@@ -170,7 +159,8 @@ while True:
             password=str(input("Enter your password: "))
             response=login(username,password)
 
-            if response=="Incorrect password" or response=="Username not found":
+            if response=="Invalid username or password":
+                print("Invalid username or password")
                 print("Try logging in again.")
             else:
                 break
@@ -179,7 +169,7 @@ while True:
         i=0
         while True:
             username=str(input("Enter your username: "))
-            password=str(input("ENter your old password: "))
+            password=str(input("Enter your old password: "))
             new_password=str(input("Enter your new password: "))
             response=change_password(username,password,new_password)
             if i>4:
@@ -191,14 +181,15 @@ while True:
                 print("Try again!")
                 i+=1
             elif response=="Password changed succesfully":
+                i=0
                 print("Password changed successfully.")
                 break
     
     elif choice==4:
         while True:
             username=str(input("Enter your username: "))
-            password=str(input("ENter your old password: "))
-            new_username=str(input("Enter your new password: "))
+            password=str(input("Enter your old password: "))
+            new_username = str(input("Enter your new username: "))
             response=change_username(username,password,new_username)
             if response=="Unavailable username":
                 print("Try again!")
