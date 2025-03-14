@@ -100,11 +100,7 @@ def change_password(username,password,new_password):
         with open("test.json", "r") as file:
             existing_data = json.load(file)
             hashed_password = get_hash(new_password).decode(encoding='utf-8')
-            data = {
-                "username":username,
-                "password":hashed_password
-            }
-
+            
             try:
                 with open ("test.json","r") as file:
                     existing_data = json.load(file)
@@ -112,12 +108,43 @@ def change_password(username,password,new_password):
                 existing_data={}
 
             with open('test.json','w') as file:
-                existing_data[username]["password"]=data
+                existing_data[username]["password"]=hashed_password
                 json.dump(existing_data,file,indent=4)
+        
+        return "Password changed succesfully"
 
 
 
-             
+def change_username(username,password,new_username):
+    try:
+        auth=login(username,password)
+        if auth=="Username not found" or auth=="Incorrect password":
+            return "Illegitimate user"
+        if auth!="Username not found" and auth!="Incorrect password":
+            with open ("test.json","r") as file:
+                existing_data = json.load(file)
+                if new_username in existing_data:
+                    raise NameError
+
+
+            with open("test.json", "r") as file:
+                existing_data = json.load(file)
+                hashed_password = get_hash(password).decode(encoding='utf-8')
+                
+                try:
+                    with open ("test.json","r") as file:
+                        existing_data = json.load(file)
+                except (FileNotFoundError, json.JSONDecodeError):
+                    existing_data={}
+
+                with open('test.json','w') as file:
+                    existing_data[username]["username"]=new_username
+                    json.dump(existing_data,file,indent=4)
+                    return "Username changed succesfully"
+
+    except NameError:
+        print("Username is not available")
+        return "Unavailable username"         
 
 while True:
     print("1. Register")
@@ -163,6 +190,21 @@ while True:
                 print("The username or password that you've entered is wrong!")
                 print("Try again!")
                 i+=1
+            elif response=="Password changed succesfully":
+                print("Password changed successfully.")
+                break
+    
+    elif choice==4:
+        while True:
+            username=str(input("Enter your username: "))
+            password=str(input("ENter your old password: "))
+            new_username=str(input("Enter your new password: "))
+            response=change_username(username,password,new_username)
+            if response=="Unavailable username":
+                print("Try again!")
+            elif response=="Username changed succesfully":
+                print("Username changed successfully.")
+                break
 
     elif choice==5:
         break
