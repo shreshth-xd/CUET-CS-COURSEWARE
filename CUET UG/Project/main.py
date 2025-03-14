@@ -92,12 +92,32 @@ def login(username, password_):
         return "Incorrect password"
 
 
-# def change_password(username,password):
-#     try:
-#         # Only letters, numbers and underscores are allowed in username field
-#         # The username has to be unique
+def change_password(username,password):
+    try:
+        with open("test.json", "r") as file:
+            existing_data = json.load(file)
+        
+        if username not in existing_data:
+            raise KeyError
 
-#     except NameError:
+        stored_hashed_password = existing_data[username]["password"].encode("utf-8")  # Retrieve stored hash
+        
+        # Correct way to verify password
+        if bcrypt.checkpw(password.encode("utf-8"), stored_hashed_password):
+            print("Login successful!")
+            print("Welcome to the system, sir!")
+        else:
+            print("Incorrect password!")
+            raise ValueError
+ 
+        
+    except KeyError:
+        print("Account with this username was not found, try logging in again.")
+        return "Username not found"
+
+    except ValueError:
+        print("The password that you've entered for the username is incorrect, try again.")
+        return "Incorrect password"
 
 while True:
     print("1. Register")
