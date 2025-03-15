@@ -11,5 +11,10 @@ of the syllabus of CUET-UG and maybe even CUET-PG as well, but this project focu
 and files can be managed and utilised in some real world use cases.
 </h2>
 
+<p>
+We have used a JSON file in this project to store our data.
+</p>
+
+
 </div>
 
