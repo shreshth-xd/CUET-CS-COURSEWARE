@@ -1,0 +1,1 @@
+# This project is a demonstration of one of the most usefull use cases of exception and file handling.
