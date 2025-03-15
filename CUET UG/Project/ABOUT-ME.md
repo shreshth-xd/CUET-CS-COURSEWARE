@@ -12,7 +12,7 @@ and files can be managed and utilised in some real world use cases.
 </h2>
 
 <p>
-We have used a JSON file in this project to store our data.
+We have used a JSON file in this project to store our data and regex expressions for password validation.
 </p>
 
 
