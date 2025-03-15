@@ -107,33 +107,27 @@ def change_password(username,password,new_password):
 
 def change_username(username,password,new_username):
     try:
-        auth=login(username,password)
-        if auth=="Username not found" or auth=="Incorrect password":
-            return "Illegitimate user"
-        if auth!="Username not found" and auth!="Incorrect password":
-            with open ("test.json","r") as file:
-                existing_data = json.load(file)
-                if new_username in existing_data:
-                    raise NameError
+        with open("test.json","r+") as file:
+            existing_data=json.load(file)
+        
+            if username not in existing_data:
+                return "Illegitimate user"
+        
+            stored_hashed_password = existing_data[username]["password"].encode('utf-8')
+            if not bcrypt.checkpw(password.encode('utf-8'),stored_hashed_password):
+                return "Illegitimate user"
 
+            if new_username in existing_data:
+                return "Unavailable username"
+            
+            existing_data[new_username]=existing_data[username].pop(username)
+            existing_data[new_username]["username"]=new_username
 
-            with open("test.json", "r") as file:
-                existing_data = json.load(file)
-                
-                try:
-                    with open ("test.json","r") as file:
-                        existing_data = json.load(file)
-                except (FileNotFoundError, json.JSONDecodeError):
-                    existing_data={}
+            json.dump(existing_data,file,indent=4)
+        
 
-                with open('test.json','w') as file:
-                    existing_data[username]["username"]=new_username
-                    json.dump(existing_data,file,indent=4)
-                    return "Username changed succesfully"
-
-    except NameError:
-        print("Username is not available")
-        return "Unavailable username"         
+    except (FileNotFoundError, json.JSONDecodeError):
+        return "Error: User database corrupted or missing"
 
 while True:
     print("1. Register")
