@@ -83,26 +83,49 @@ def login(username, password_):
 
 
 def change_password(username,password,new_password):
-    auth=login(username,password)
-    if auth=="Username not found" or auth=="Incorrect password":
-        return "Illegitimate user"
-    if auth!="Username not found" and auth!="Incorrect password":
-        with open("test.json", "r") as file:
+
+    try:
+        with open('test.json','r+') as file:
             existing_data = json.load(file)
-            hashed_password = get_hash(new_password).decode(encoding='utf-8')
-            
-            try:
-                with open ("test.json","r") as file:
-                    existing_data = json.load(file)
-            except (FileNotFoundError, json.JSONDecodeError):
-                existing_data={}
-
-            with open('test.json','w') as file:
-                existing_data[username]["password"]=hashed_password
-                json.dump(existing_data,file,indent=4)
         
-        return "Password changed succesfully"
+            if username not in existing_data:
+                return "Illegitimate user"
 
+            if bool(re.match(pattern,new_password))==False:
+                return "Your password is not strong"
+
+            stored_hashed_password = existing_data[username]["password"].encode('utf-8')
+            if not bcrypt.checkpw(password.encode('utf-8'),stored_hashed_password):
+                return "Illegitimate user"
+            
+            hashed_new_password = get_hash(new_password).decode('utf-8')
+            existing_data[username]["password"] = hashed_new_password
+
+            json.dump(existing_data,file)
+
+    except (FileNotFoundError, json.JSONDecodeError):
+        return "Err: User's database is corrupted or missing"
+    
+    # auth=login(username,password)
+    # if auth=="Username not found" or auth=="Incorrect password":
+    #     return "Illegitimate user"
+    # if auth!="Username not found" and auth!="Incorrect password":
+    #     with open("test.json", "r") as file:
+    #         existing_data = json.load(file)
+    #         hashed_password = get_hash(new_password).decode(encoding='utf-8')
+            
+    #         try:
+    #             with open ("test.json","r") as file:
+    #                 existing_data = json.load(file)
+    #         except (FileNotFoundError, json.JSONDecodeError):
+    #             existing_data={}
+
+    #         with open('test.json','w') as file:
+    #             existing_data[username]["password"]=hashed_password
+    #             json.dump(existing_data,file,indent=4)
+        
+    #     return "Password changed succesfully"
+    pass
 
 
 def change_username(username,password,new_username):
@@ -178,6 +201,10 @@ while True:
                 i=0
                 print("Password changed successfully.")
                 break
+
+            elif response=="Your password is not strong":
+                print(response)
+                print("Choose a more strong and unguessable password")
     
     elif choice==4:
         while True:
