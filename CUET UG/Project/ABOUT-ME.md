@@ -20,18 +20,32 @@ building projects.
 </div>
 <br>
 <div class="some-obvious-restrictions">
-<p>
 ## Some obvious restrictions
-
+<ol>
+<li>
 Due to some obvious security concerns, I am not willing to expose the data stored on the JSON file
 using this password manager that I've built, and also after all successfull tests, I have made that none
 of you will ever get to see this file.
+</li>
 
+<br>
+
+<li>
 Since this courseware is actually a Github repo with a MIT license, so of course, it does allows
 open source contributions and most importantly, only serious, usefull and significant contributions and
-pull requests will be entertained and taken seriously by me, and eventually I shall merge those pull
-request(s) to the main branch of this codebase.
-</p>
+pull requests relating to this project or any part of this courseware will be entertained and taken 
+seriously by me, and eventually I shall merge those pull request(s) to the main branch of this codebase.
+</li>
+
+<br>
+
+<li>
+Although, pull requests relating to the addition of new DSA questions and their code solutions which
+are relevant in terms of practice, revision, learning, up-skilling, interviews, CUET-UG, CUET-PG and 
+CS related GATE examinations are respected and welcomed with open heart here.
+</li>
+</ol>
+
 </div>
 </body>
 
