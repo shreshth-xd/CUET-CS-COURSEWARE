@@ -197,8 +197,18 @@ while True:
             password=str(input("Enter your old password: "))
             new_username = str(input("Enter your new username: "))
             response=change_username(username,password,new_username)
+            
+            i=0
+            if i>4:
+                print("We have detected some suspicious activities from your side.")
+                print("We are not permitting you to carry out this operation anymore.")
+                break
             if response=="Unavailable username":
                 print("Try again!")
+            if response=="Illegitimate user":
+                print("The username or password that you've entered is wrong!")
+                print("Try again!")
+                i+=1
             elif response=="Username changed succesfully":
                 print("Username changed successfully.")
                 break
