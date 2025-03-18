@@ -194,7 +194,7 @@ while True:
     elif choice==4:
         while True:
             username=str(input("Enter your username: "))
-            password=str(input("Enter your old password: "))
+            password=str(input("Enter your password: "))
             new_username = str(input("Enter your new username: "))
             response=change_username(username,password,new_username)
             
