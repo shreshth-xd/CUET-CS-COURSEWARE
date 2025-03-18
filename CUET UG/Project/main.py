@@ -152,11 +152,11 @@ while True:
                 break
 
     elif choice==2:
+        i=0
         while True:
             username=str(input("Enter your username: "))
             password=str(input("Enter your password: "))
             response=login(username,password)
-            i=0
             if i>4:
                 print("We have detected some suspicious activities from your side.")
                 print("We are not permitting you to carry out this operation anymore.")
@@ -194,13 +194,13 @@ while True:
                 print("Choose a more strong and unguessable password")
     
     elif choice==4:
+        i=0
         while True:
             username=str(input("Enter your username: "))
             password=str(input("Enter your password: "))
             new_username = str(input("Enter your new username: "))
             response=change_username(username,password,new_username)
             
-            i=0
             if i>4:
                 print("We have detected some suspicious activities from your side.")
                 print("We are not permitting you to carry out this operation anymore.")
