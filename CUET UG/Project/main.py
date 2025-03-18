@@ -106,27 +106,6 @@ def change_password(username,password,new_password):
     except (FileNotFoundError, json.JSONDecodeError):
         return "Err: User's database is corrupted or missing"
     
-    # auth=login(username,password)
-    # if auth=="Username not found" or auth=="Incorrect password":
-    #     return "Illegitimate user"
-    # if auth!="Username not found" and auth!="Incorrect password":
-    #     with open("test.json", "r") as file:
-    #         existing_data = json.load(file)
-    #         hashed_password = get_hash(new_password).decode(encoding='utf-8')
-            
-    #         try:
-    #             with open ("test.json","r") as file:
-    #                 existing_data = json.load(file)
-    #         except (FileNotFoundError, json.JSONDecodeError):
-    #             existing_data={}
-
-    #         with open('test.json','w') as file:
-    #             existing_data[username]["password"]=hashed_password
-    #             json.dump(existing_data,file,indent=4)
-        
-    #     return "Password changed succesfully"
-    pass
-
 
 def change_username(username,password,new_username):
     try:
