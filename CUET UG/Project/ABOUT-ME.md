@@ -44,6 +44,12 @@ Although, pull requests relating to the addition of new DSA questions and their 
 are relevant in terms of practice, revision, learning, up-skilling, interviews, CUET-UG, CUET-PG and 
 CS related GATE examinations are respected and welcomed with open heart here.
 </li>
+<br>
+
+<li>
+For now this program just works as a password manager type of thing, but in the coming time I am actually
+planning to maybe just combine this thing with a Python's Django powered blog or maybe with a web app.
+</li>
 </ol>
 
 </div>
