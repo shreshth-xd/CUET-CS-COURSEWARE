@@ -154,11 +154,17 @@ while True:
             username=str(input("Enter your username: "))
             password=str(input("Enter your password: "))
             response=login(username,password)
-
+            i=0
+            if i>4:
+                print("We have detected some suspicious activities from your side.")
+                print("We are not permitting you to carry out this operation anymore.")
+                break
             if response=="Invalid username or password":
                 print("Invalid username or password")
                 print("Try logging in again.")
+                i+=1
             else:
+                i=0
                 break
     
     elif choice==3:
