@@ -109,7 +109,7 @@ def change_password(username,password,new_password):
 
 def change_username(username,password,new_username):
     try:
-        with open("test.json","r+") as file:
+        with open("test.json","r") as file:
             existing_data=json.load(file)
         
             if username not in existing_data:
@@ -122,10 +122,12 @@ def change_username(username,password,new_username):
             if new_username in existing_data:
                 return "Unavailable username"
         
-            existing_data[new_username]=existing_data[username].pop(username)
+            existing_data[new_username]=existing_data.pop(username)
             existing_data[new_username]["username"]=new_username
 
+        with open ("test.json","w") as file:
             json.dump(existing_data,file,indent=4)
+            return "Username changed succesfully"
         
 
     except (FileNotFoundError, json.JSONDecodeError):
