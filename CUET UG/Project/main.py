@@ -85,7 +85,7 @@ def login(username, password_):
 def change_password(username,password,new_password):
 
     try:
-        with open('test.json','r+') as file:
+        with open('test.json','r') as file:
             existing_data = json.load(file)
         
             if username not in existing_data:
@@ -101,7 +101,9 @@ def change_password(username,password,new_password):
             hashed_new_password = get_hash(new_password).decode('utf-8')
             existing_data[username]["password"] = hashed_new_password
 
-            json.dump(existing_data,file)
+            with open("test.json","w") as file:
+                json.dump(existing_data,file)
+                return "Password changed succesfully"
 
     except (FileNotFoundError, json.JSONDecodeError):
         return "Err: User's database is corrupted or missing"
