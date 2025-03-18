@@ -121,7 +121,7 @@ def change_username(username,password,new_username):
 
             if new_username in existing_data:
                 return "Unavailable username"
-            
+        
             existing_data[new_username]=existing_data[username].pop(username)
             existing_data[new_username]["username"]=new_username
 
