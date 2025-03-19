@@ -6,6 +6,14 @@ import re
 pattern = r'^(?=.*[A-Za-z])(?=.*\d)(?=.*\W)[A-Za-z\d\W]{8,}$'
 
 
+
+
+#_____________________________________________________________________________________________________________________
+
+
+
+# Base utility functions:
+
 def get_hash(password,round=12):
     # Generating a salt to be included in the hashed password 
     salt=bcrypt.gensalt(rounds=round)    
@@ -135,6 +143,10 @@ def change_username(username,password,new_username):
     except (FileNotFoundError, json.JSONDecodeError):
         return "Error: User database corrupted or missing"
 
+
+#_____________________________________________________________________________________________________________________
+
+## User interface
 while True:
     print("1. Register")
     print("2. Login")
