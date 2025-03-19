@@ -81,7 +81,7 @@ through the provided resources.</p></li>
 
 <li><p>The image below describes the overall document tree of this repository:</p></li>
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 </ul>
 </div>
