@@ -110,7 +110,7 @@ def change_password(username,password,new_password):
             existing_data[username]["password"] = hashed_new_password
 
             with open("test.json","w") as file:
-                json.dump(existing_data,file)
+                json.dump(existing_data,file,indent=4)
                 return "Password changed succesfully"
 
     except (FileNotFoundError, json.JSONDecodeError):
