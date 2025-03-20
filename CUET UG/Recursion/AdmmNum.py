@@ -7,9 +7,11 @@ using recursive binary search.
 record = [01,02,03,04,05,06,07,08,09,10]
 number = int(input('Enter the admission number of your student: '))
 low=0
-high=len(record)-1
+high=len(record)
+
+
 def BinarySearch(low,high,item,array):
-    if low<=high:
+    if low<high:
         mid = int((low+high)/2)
         if array[mid]==item:
             return 1
