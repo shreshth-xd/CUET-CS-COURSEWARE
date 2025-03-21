@@ -54,5 +54,3 @@ planning to maybe just combine this thing with a Python's Django powered blog or
 
 </div>
 </body>
-
-
