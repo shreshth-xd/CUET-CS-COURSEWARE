@@ -9,7 +9,7 @@ number = int(input('Enter the admission number of your student: '))
 low=0
 high=len(record)
 
-
+# Using a function to make it recursive
 def BinarySearch(low,high,item,array):
     if low<high:
         mid = int((low+high)/2)
