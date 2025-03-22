@@ -10,11 +10,11 @@ def primeTest(n,i=2):
         # We will just check from 2 to √n to check for possible factors of n
         if i<=n**(1/2):
             if n%i==0:
-                return 1
+                return 0
             else:
                 return primeTest(n,i+1)
         else:
-            return 0
+            return 1
 
 n=int(input("Enter the number to check if it's a prime number or not: "))
 res=primeTest(n)
