@@ -3,11 +3,12 @@
 def primeTest(n,i=2):
     if n==1 or n==0 or n<0:
         return 0
+    if n==2 or n==3:
+        return 1
     else:
         # Instead of iterating all over from 2 to n to check for possible factors of n
         # We will just check from 2 to √n to check for possible factors of n
         if i<=n**(1/2):
-
             if n%i==0:
                 return 1
             else:
