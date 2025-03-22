@@ -1,6 +1,6 @@
 """
 In this program we have a list which contains admission numbers of n number of students sorted in ascending
-order, after which user serches for a student through his/her admission number and we'll look for it
+order, after which user searches for his/her admission number and we'll look for it
 using recursive binary search.
 """
 
