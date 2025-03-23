@@ -21,7 +21,8 @@ case of converting the human readable arithmetic expressions to machine readable
     <li>To convert an infix notation (human readable) to prefix notation.</li>
     <li>To evaluate a prefix or a postfix notation's numerical value.</li>
 </ol>
-<p><b>Although, I do have scripts related to the conversion of infix expressions to postfix and 
+<p><b>
+NOTE: Although, I do have scripts related to the conversion of infix expressions to postfix and 
 prefix formats which are clearly a way to implement stacks to solve this problem statement ,but 
 there is also a direct method to estimate the postfix or prefix format of a given expression 
 directly, but since these direct methods is purely based on simple logic and requires a little bit 
