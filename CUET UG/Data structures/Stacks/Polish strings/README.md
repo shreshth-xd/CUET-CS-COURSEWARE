@@ -1,4 +1,4 @@
-# <h1>Introduction to Polish strings</h1>
+# <h1 style="color: red">Introduction to Polish strings</h1>
 
 <p>Polish strings is one of the basic applications of Stack data structure.</p>
 <br>
@@ -12,7 +12,7 @@ mathematician "Jan Lukasiewicz". There are three types of Polish strings or nota
     <li>Prefix notation - The expressions where the operators come before the operands +AB</li>
 </ol>
 
-# <h2>Ok, so.. but how does this makes it a application of Stack?</h2>
+# <h2 style="color: red">Ok, so.. but how does this makes it a application of Stack?</h2>
 <p>Stacks, as a data structure are a used for a variety of purposes but in case of Polish strings and in 
 case of converting the human readable arithmetic expressions to machine readable format, Stacks are used for: </p>
 <br>
