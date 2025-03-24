@@ -8,9 +8,16 @@
 """
 
 queue=[]
+front=0
+rear=len(queue)-1
 
 def isEmpty(q):
     if q==[]:
         return True
     else:
         return False
+
+def Peek(q):
+    if isEmpty(q):
+        return "The Queue is empty!"
+    return q[0]
