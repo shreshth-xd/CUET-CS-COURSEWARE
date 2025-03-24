@@ -24,4 +24,4 @@ built-in or explicit data structure in Python, both Arrays(or Linear lists) and 
 implemented in Python using lists.</p>
 <br>
 
-![alt text](image.png)
+![alt text](../Stacks/Notes%20images/image.png)
