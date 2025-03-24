@@ -27,6 +27,14 @@ def Enqueue(item,q):
         back=len(q)-1
     return 1
 
+
+def Dequeue(q):
+    if isEmpty(q):
+        return "Underflow"
+    item = q.pop(0)
+    return item
+
+
 def Peek(q):
     if isEmpty(q):
         return "The Queue is empty!"
