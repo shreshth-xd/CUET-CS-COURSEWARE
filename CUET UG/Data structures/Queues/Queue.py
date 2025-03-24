@@ -65,4 +65,16 @@ while True:
     
     elif request==2:
         item=int(input("Enter the item you want to push into the Queue: "))
-        Enqueue(item,queue)
+        response=Enqueue(item,queue)
+        if response==1:
+            pass
+
+    elif request==3:
+        item=Dequeue(queue)
+        print(item)
+    
+    elif request==4:
+        Display(queue)
+    
+    elif request==5:
+        break
