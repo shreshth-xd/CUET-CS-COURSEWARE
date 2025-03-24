@@ -23,3 +23,5 @@ that Stacks are implemented in Python using the Lists since we don't Stacks and 
 built-in or explicit data structure in Python, both Arrays(or Linear lists) and Stacks are
 implemented in Python using lists.</p>
 <br>
+
+![alt text](image.png)
