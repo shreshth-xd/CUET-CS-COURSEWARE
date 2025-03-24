@@ -39,3 +39,30 @@ def Peek(q):
     if isEmpty(q):
         return "The Queue is empty!"
     return q[0]
+
+
+def Display(q):
+    front=0
+    rear=len(q)-1
+    print(q[front],"<---- front")
+    for i in range(1,len(q)-1):
+        print(q[i])
+    print(q[rear],"<---- rear")
+
+
+while True:
+    print("1. Peek")
+    print("2. Enqueue")
+    print("3. Dequeue")
+    print("4. Display")
+    print("5. Exit")
+
+    request=int(input("Enter your choice: "))
+
+    if request==1:
+        response=Peek(queue)
+        print(response)        
+    
+    elif request==2:
+        item=int(input("Enter the item you want to push into the Queue: "))
+        Enqueue(item,queue)
