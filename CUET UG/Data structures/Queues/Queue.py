@@ -17,6 +17,16 @@ def isEmpty(q):
     else:
         return False
 
+
+def Enqueue(item,q):
+    if isEmpty(q):
+        q.append(item)
+        front=rear=0
+    else:
+        q.append(item)
+        back=len(q)-1
+    return 1
+
 def Peek(q):
     if isEmpty(q):
         return "The Queue is empty!"
