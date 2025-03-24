@@ -11,6 +11,6 @@ one of them namely Stacks.
 introductory notes of Data structures, then I highly suggest you to go through those notes by
 clicking here --> 
 
-[![Intro to Data Structures](https://img.shields.io/badge/Introduction%20to%20Data%20Structures-Click%20Here-green?labelColor=black&color=black&style=for-the-badge)](../README.md)
+[![Intro to Data Structures](https://img.shields.io/badge/Introduction%20to%20Data%20Structures-Click%20Here-green?labelColor=black&color=limeGreen&style=for-the-badge)](../README.md)
 </b></p>
 
