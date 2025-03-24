@@ -9,4 +9,4 @@ one of them namely Stacks.
 <br>
 <p><b>NOTE: If you are studying Data structures for the first time and haven't gone through the
 introductory notes of Data structures, then I highly suggest you to go through those notes by
-clicking here --> [Introduction to Data structures](Projects\CUET-CS-COURSEWARE\CUET UG\Networking\README.md)</b></p>
+clicking here --> [Introduction to Data structures](C:\Users\lenovo\OneDrive\Desktop\Python\Projects\CUET-CS-COURSEWARE\CUET UG\Networking\README.md)</b></p>
