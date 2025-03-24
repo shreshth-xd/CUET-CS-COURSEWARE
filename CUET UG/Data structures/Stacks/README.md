@@ -9,5 +9,6 @@ one of them namely Stacks.
 <br>
 <p><b>NOTE: If you are studying Data structures for the first time and haven't gone through the
 introductory notes of Data structures, then I highly suggest you to go through those notes by
-clicking here --> [![Intro to Data Structures](https://img.shields.io/badge/Introduction%20to%20Data%20Structures-Click%20Here-white?style=for-the-badge)](../README.md)
+clicking here --> 
+[![Intro to Data Structures](https://img.shields.io/badge/Introduction%20to%20Data%20Structures-Click%20Here-white?style=for-the-badge)](../README.md)
 </b></p>
