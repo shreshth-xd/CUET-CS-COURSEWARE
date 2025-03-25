@@ -35,8 +35,8 @@ a single element, and each element in a Stack is called as item-node.</p>
 <br>
 
 
+<p><b>We have three operations that can be done on a Stack, namely</b></p>
 <ol name="operations">
-    <label for="operations"><b>We have three operations that can be done on a Stack, namely</b></label>
     <br>
     <li>Push</li>
     <li>Pop</li>
