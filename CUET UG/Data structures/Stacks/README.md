@@ -34,4 +34,19 @@ an element, you can even insert a whole set, a whole list or a whole dictionary 
 a single element, and each element in a Stack is called as item-node.</p>
 <br>
 
+
+<ol name="operations">
+    <label for="operations"><b>We have three operations that can be done on a Stack, namely</b></label>
+    <br>
+    <li>Push</li>
+    <li>Pop</li>
+    <li>Peek</li>
+</ol>
+<br><br>
+<p>
+Since, we are not talking about the code implementation yet, we shall visualise how we use the Push 
+operation to insert elements in a Stack and where those elements actually gets pushed 👇
+</p>
+<br>
+
 ![alt text](../Stacks/Notes%20images/OperationsOnStacks.png)
