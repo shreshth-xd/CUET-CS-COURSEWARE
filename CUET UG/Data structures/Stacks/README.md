@@ -22,6 +22,12 @@ what Stacks are, how do they work, and what principles or techniques to store th
 that Stacks are implemented in Python using the Lists since we don't Stacks and Arrays is not a
 built-in or explicit data structure in Python, both Arrays(or Linear lists) and Stacks are
 implemented in Python using lists.</p>
-<br>
+<br><br>
 
 ![alt text](../Stacks/Notes%20images/image.png)
+
+## <h2>Alright... So how do we actually insert and delete elements in a Stack?</h2>
+<p>Before you actually see how the elements are inserted in a Stack , you should realise that
+it's not necessary for Stacks to hold only integers or a single item of a specific data-type as
+an element, you can even insert a whole set, a whole list or a whole dictionary to a Stack as
+a single element, and each element in a Stack is called as item-node.</p>
