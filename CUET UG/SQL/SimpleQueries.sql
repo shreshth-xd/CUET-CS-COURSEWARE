@@ -25,3 +25,6 @@ INSERT INTO registered_users(name,age,sex) values ('Aiden Smith', 21, 'Male'),
 ('Harper Adams', 20, 'Female'),
 ('Henry Nelson', 24, 'Male'),
 ('Evelyn Carter', 23, 'Female');
+
+-- To review the data after inserting it into the table:
+SELECT * FROM Registered_users;
