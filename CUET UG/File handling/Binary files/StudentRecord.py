@@ -12,11 +12,11 @@ while True:
         marks = int(input("Enter his/her marks: "))
         rec={}
         rec[name] = marks
+        with open("StudentRecord.dat","ab") as file:
+            pickle.dump(rec,file)
 
         ask=str(input("You've got more records? "))
         if "yes" in ask.lower():
-            with open("StudentRecord.dat","ab") as file:
-                pickle.dump(rec,file)
             continue
         elif "no" in ask.lower():
             break
