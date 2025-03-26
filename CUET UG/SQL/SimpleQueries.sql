@@ -35,10 +35,14 @@ SELECT Name FROM registered_users;
 -- OR 
 SELECT ALL Name FROM registered_users;
 
+-- To select more than one columns from a table (relation):
+SELECT Name, Age FROM registered_users;
+
 -- Note: SQL is not a case sensitive language, so using "select" instead of "SELECT" does not throws error
 
 -- Selecting a specific column based on a condition:
 SELECT Name FROM registered_users WHERE Age>==18; 
 
 -- Selecting a set of specific records that satisfies the specified condition:
-SELECT Name,Age FROM registered_users WHERE Age>=18;
+SELECT Name,Sex FROM registered_users WHERE Age>=18;
+
