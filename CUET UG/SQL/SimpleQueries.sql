@@ -54,3 +54,6 @@ DESCRIBE registered_users;
 
 -- Reviewing all the tables (relations) that you have in your database:
 SHOW tables;
+
+-- To use column aliases, i.e. to change a column's name in the result of the query
+SELECT Name, Sex as "Age" FROM registered_users;
