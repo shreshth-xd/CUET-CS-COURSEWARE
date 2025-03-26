@@ -48,3 +48,6 @@ SELECT Name,Sex FROM registered_users WHERE Age>=18;
 
 -- Eliminating redundant data from the search result:
 SELECT Distinct Age FROM registered_users;
+
+-- To review the structure of a existing table:
+DESCRIBE registered_users;
