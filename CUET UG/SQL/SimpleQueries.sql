@@ -34,3 +34,5 @@ SELECT * FROM Registered_users;
 SELECT Name FROM registered_users;
 -- OR 
 SELECT ALL Name FROM registered_users;
+
+-- Note: SQL is not a case sensitive language.
