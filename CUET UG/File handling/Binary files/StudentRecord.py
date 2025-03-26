@@ -14,3 +14,6 @@ while True:
         break
     else:
         print("Answer in yes or no.")
+
+with open("StudentRecord.dat","rb+") as file:
+    pickle.dump(rec)
