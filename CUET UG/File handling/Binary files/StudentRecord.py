@@ -26,13 +26,19 @@ while True:
     
     elif choice==2:
         with open("StudentRecord.dat","rb") as file:
-            data=pickle.load(file)
             name = str(input("Enter the student's name: "))
-            if name in data.keys():
-                print("Record found!")
-                print(data[name])
-            else:
-                print("Data not found.")
+            while True:        
+                try:
+                    data=pickle.load(file)
+                    print(data)
+                    if name in data.keys():
+                        found=True
+                except EOFError:
+                    if found==False:
+                        print("Record not found.")
+                    else:
+                        print("Record found!")
+                        break
 
     elif choice==3:
         break
