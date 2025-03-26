@@ -16,4 +16,4 @@ while True:
         print("Answer in yes or no.")
 
 with open("StudentRecord.dat","rb+") as file:
-    pickle.dump(rec)
+    pickle.dump(rec,file)
