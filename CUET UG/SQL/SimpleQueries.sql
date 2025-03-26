@@ -46,3 +46,5 @@ SELECT Name FROM registered_users WHERE Age>==18;
 -- Selecting a set of specific records that satisfies the specified condition:
 SELECT Name,Sex FROM registered_users WHERE Age>=18;
 
+-- Eliminating redundant data from the search result:
+SELECT Distinct Age FROM registered_users;
