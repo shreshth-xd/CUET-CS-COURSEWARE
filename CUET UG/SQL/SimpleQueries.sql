@@ -51,3 +51,6 @@ SELECT Distinct Age FROM registered_users;
 
 -- To review the structure of a existing table:
 DESCRIBE registered_users;
+
+-- Reviewing all the tables (relations) that you have in your database:
+SHOW tables;
