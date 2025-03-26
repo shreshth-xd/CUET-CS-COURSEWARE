@@ -4,6 +4,7 @@ import pickle
 while True:
     print("1. Push data to the file")
     print("2. Retrieve data from the file")
+    print("3. Exit")
     choice=int(input("Enter your choice: "))
 
     if choice==1:
@@ -32,3 +33,9 @@ while True:
                 print(data[name])
             else:
                 print("Data not found.")
+
+    elif choice==3:
+        break
+    
+    else:
+        print("Please, make a valid choice.")
