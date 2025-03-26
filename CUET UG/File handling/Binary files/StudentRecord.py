@@ -15,14 +15,14 @@ while True:
 
         ask=str(input("You've got more records? "))
         if "yes" in ask.lower():
+            with open("StudentRecord.dat","ab") as file:
+                pickle.dump(rec,file)
             continue
         elif "no" in ask.lower():
             break
         else:
             print("Answer in yes or no.")
 
-        with open("StudentRecord.dat","ab") as file:
-            pickle.dump(rec,file)
     
     elif choice==2:
         with open("StudentRecord.dat","rb") as file:
