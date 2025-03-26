@@ -36,3 +36,6 @@ SELECT Name FROM registered_users;
 SELECT ALL Name FROM registered_users;
 
 -- Note: SQL is not a case sensitive language, so using "select" instead of "SELECT" does not throws error
+
+-- Selecting a specific record based on a condition:
+SELECT Name FROM registered_users WHERE Age>==18; 
