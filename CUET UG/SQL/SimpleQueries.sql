@@ -32,3 +32,5 @@ SELECT * FROM Registered_users;
 
 -- To select a specific column of a relation:
 SELECT Name FROM registered_users;
+-- OR 
+SELECT ALL Name FROM registered_users;
