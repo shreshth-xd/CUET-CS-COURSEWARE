@@ -29,3 +29,6 @@ INSERT INTO registered_users(name,age,sex) values ('Aiden Smith', 21, 'Male'),
 -- To select all the columns from a certain relation:
 -- SELECT * FROM <table_name>
 SELECT * FROM Registered_users;
+
+-- To select a specific column of a relation:
+SELECT Name FROM registered_users;
