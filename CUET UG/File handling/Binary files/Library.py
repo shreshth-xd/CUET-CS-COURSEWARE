@@ -1,5 +1,8 @@
-# A Python script to simulate the feature of issuing books from a library
-# To store the data of books issued by a certain user.
+"""
+A Python script to simulate the feature of issuing books from a library
+To store the data of books issued by a certain user.
+Managing user accounts of library
+"""
 
 
 import csv
