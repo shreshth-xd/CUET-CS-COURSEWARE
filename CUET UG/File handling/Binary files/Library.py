@@ -66,8 +66,8 @@ while True:
         # Information related to the book
         request = str(input(f"Enter the name of the book you would like to {TypeOfPurchase} from us: "))
         author = str(input(f"Enter the name of the author of this book: "))
-        NonAvailability = bool(SearchBook(request))
-        condition = author.lower()!="" and author.lower()!="idk" and NonAvailability==True
+        Availability = bool(SearchBook(request))
+        condition = author.lower()!="" and author.lower()!="idk" and Availability!=True
         genre=str(input("Genre: "))
         price=0        
         CurrentDate = str(datetime.date.today()).replace("-","/")
