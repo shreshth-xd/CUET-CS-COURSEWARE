@@ -12,9 +12,11 @@ books={}
 
 BorrowDefaulter = "As per our terms and conditions, in case of failing to return a book borrowed from us,\nyou have to pay a fine of 150$ and we shall prohibit your access to our bookstore permanently and blacklist you after cancelling your library subscription provided that no refund will be given from our side under any circumstances."
 
+# To display the account details of an user, only when he requests to fetch it
+# def SignIn(user,file)
 
 # To make an account in Accounts.csv
-# def SignUp(user):
+# def SignUp(user,subscribed,plan,tenure of plan,Penalty,Profession,file):
 
 
 #To fetch the price of a requested book (only if the user wants to purchase)
