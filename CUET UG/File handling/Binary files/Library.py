@@ -10,6 +10,15 @@ books={}
 BorrowDefaulter = "As per our terms and conditions, in case of failing to return a book borrowed from us,\nyou have to pay a fine of 150$ and we shall prohibit your access to our bookstore permanently and blacklist you after cancelling your library subscription provided that no refund will be given from our side under any circumstances."
 
 
+def SearchBook(name,file):
+    with open (file,"r") as file:
+        reader=csv.reader(file)
+        for record in reader:
+            if record[1]==name:
+                return 1
+        else:
+            return 0
+
 def Dump(data,file):
     with open(file,"a") as file:
         writer = csv.writer(file,lineterminator="\n",delimiter=",")
@@ -26,7 +35,7 @@ def LabellingReturn(user,bookname,file):
         for record in reader:
             if record[1]==bookname and record[0]==user:
                 found=True
-                record[8]="Returned"
+                record[9]="Returned"
                 writer.writerow(record)
                 print("We aprreciate your honesty and thanks for visiting.")
                 break
@@ -54,8 +63,8 @@ while True:
         # Information related to the book
         request = str(input(f"Enter the name of the book you would like to {TypeOfPurchase} from us: "))
         author = str(input(f"Enter the name of the author of this book: "))
-        NonAvailability = request not in books
-        condition = author.lower()!="" and author.lower()!="idk"
+        NonAvailability = bool(SearchBook(request))
+        condition = author.lower()!="" and author.lower()!="idk" and NonAvailability==True
         genre=str(input("Genre: "))
         price=0        
         CurrentDate = str(datetime.date.today()).replace("-","/")
@@ -69,6 +78,9 @@ while True:
                 print("Ok, you can borrow this book for this duration of time, have a nice day.")
                 print(BorrowDefaulter)
                 price+=0
+        
+        elif TypeOfPurchase.lower()=="purchase":
+            pass
 
         if condition==True:
             data={
@@ -91,6 +103,8 @@ while True:
             user=str(input("Enter your name: "))
             BookToBeReturned = str(input(f"Enter the name of the book that you borrowed from us: "))                    
             LabellingReturn(user,BookToBeReturned,"IssuedBooks.csv")
+
+    # elif choice==3:    
 
     elif choice==4:
         break
