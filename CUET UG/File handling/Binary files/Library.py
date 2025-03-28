@@ -1,6 +1,7 @@
 # A Python script to simulate the feature of issuing books from a library
 # To store the data of books issued by a certain user.
 
+
 import csv
 import datetime
 
@@ -17,6 +18,25 @@ def Dump(data,file):
             ItemNode.append(data[keys])
         writer.writerow(ItemNode)
 
+
+def LabellingReturn(user,bookname,file):
+    with open(file,"r+") as file:
+        reader = csv.reader(file)
+        writer = csv.writer(file,lineterminator="\n",delimiter=",")
+        for record in reader:
+            if record[1]==bookname and record[0]==user:
+                found=True
+                record[8]="Returned"
+                writer.writerow(record)
+                print("We aprreciate your honesty and thanks for visiting.")
+                break
+            else:
+                writer.writerow(record)
+
+        if not found:
+            print("Sorry, we couldn't find this book")
+            print("")
+
 while True:
     print("1. GET")
     print("2. Return")
@@ -28,6 +48,9 @@ while True:
         
         TypeOfPurchase = str(input("Borrow or purchase? "))
         
+        # User information:
+        user=str(input("Enter your full name: "))
+
         # Information related to the book
         request = str(input(f"Enter the name of the book you would like to {TypeOfPurchase} from us: "))
         author = str(input(f"Enter the name of the author of this book: "))
@@ -49,6 +72,7 @@ while True:
 
         if condition==True:
             data={
+                    "User":user,
                     "Name":request,
                     "Author":author,
                     "Genre":genre,
@@ -56,11 +80,21 @@ while True:
                     "Price":price,
                     "Duration":duration,
                     "Fine":"150$",
-                    "Date":CurrentDate
+                    "Date":CurrentDate,
+                    "Returned":"Not yet"
             }
+
             books[request]=data
             Dump(data,"IssuedBooks.csv")
         
-    if choice==4:
+    elif choice==2:
+            user=str(input("Enter your name: "))
+            BookToBeReturned = str(input(f"Enter the name of the book that you borrowed from us: "))                    
+            LabellingReturn(user,BookToBeReturned,"IssuedBooks.csv")
+
+    elif choice==4:
         break
+
+    else:
+        print('Please make a valid choice.')
 
