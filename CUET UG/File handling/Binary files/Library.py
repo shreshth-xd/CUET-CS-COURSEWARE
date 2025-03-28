@@ -2,7 +2,7 @@
 # To store the data of books issued by a certain user.
 
 import csv
-
+import datetime
 
 books={}
 
@@ -35,6 +35,7 @@ while True:
         condition = author.lower()!="" and author.lower()!="idk"
         genre=str(input("Genre: "))
         price=0        
+        CurrentDate = str(datetime.date.today()).replace("-","/")
         
         if TypeOfPurchase.lower()=="borrow":
             duration=int(input("For how many days do you want to keep this book with yourself? "))
@@ -54,10 +55,12 @@ while True:
                     "Type":TypeOfPurchase,
                     "Price":price,
                     "Duration":duration,
-                    "Fine":"150$"
+                    "Fine":"150$",
+                    "Date":CurrentDate
             }
             books[request]=data
             Dump(data,"IssuedBooks.csv")
         
     if choice==4:
         break
+
