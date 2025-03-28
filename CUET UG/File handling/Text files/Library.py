@@ -13,6 +13,15 @@ books={}
 BorrowDefaulter = "As per our terms and conditions, in case of failing to return a book borrowed from us,\nyou have to pay a fine of 150$ and we shall prohibit your access to our bookstore permanently and blacklist you after cancelling your library subscription provided that no refund will be given from our side under any circumstances."
 
 
+# To make an account in Accounts.csv
+# def SignUp(user):
+
+
+#To fetch the price of a requested book (only if the user wants to purchase)
+# def FetchPrice(name,File):
+
+
+# To search if the library does have the requested book or not
 def SearchBook(name,file):
     with open (file,"r") as file:
         reader=csv.reader(file)
@@ -66,8 +75,8 @@ while True:
         # Information related to the book
         request = str(input(f"Enter the name of the book you would like to {TypeOfPurchase} from us: "))
         author = str(input(f"Enter the name of the author of this book: "))
-        Availability = bool(SearchBook(request))
-        condition = author.lower()!="" and author.lower()!="idk" and Availability!=True
+        Availability = bool(SearchBook(request,"AvailableBooks.csv"))
+        condition = author.lower()!="" and author.lower()!="idk" and Availability==True
         genre=str(input("Genre: "))
         price=0        
         CurrentDate = str(datetime.date.today()).replace("-","/")
@@ -83,6 +92,8 @@ while True:
                 price+=0
         
         elif TypeOfPurchase.lower()=="purchase":
+            if Availability==True:
+                print("")
             pass
 
         if condition==True:
