@@ -1,3 +1,3 @@
-User,Name, Author, Genre, Type, Price, Duration (days), Fine, Date of Issue, Returned?
-Shreshth Kanchan,Computer Networking: A top-down approach,James Kurose,Computer Science/Networking,Borrow,0,14,150$,28/03/2025, No yet
-Ajit Singh,The art of war,Sun Tzu,Philosophy/Historical war and propaganda startegies,Borrow,0,5,150$,28/03/2025, Not yet
+Username,User,Name, Author, Genre, Type, Price, Duration (days), Fine, Date of Issue, Returned?
+shreshth_,Shreshth Kanchan,Computer Networking: A top-down approach,James Kurose,Computer Science/Networking,Borrow,0,14,150$,28/03/2025, No yet
+Ajit90_,Ajit Singh,The art of war,Sun Tzu,Philosophy/Historical war and propaganda startegies,Borrow,0,5,150$,28/03/2025, Not yet
