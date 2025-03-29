@@ -95,8 +95,11 @@ while True:
         
         elif TypeOfPurchase.lower()=="purchase":
             if Availability==True:
-                print("")
-            pass
+                # Print a thank you message and add this book to the user's account
+                print("Thanks for visiting us sir! Have a nice day.")
+            else:
+                newBook={"Name":request}
+                Dump(newBook,"AvailableBooks.csv")
 
         if condition==True:
             data={
