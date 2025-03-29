@@ -1,7 +1,8 @@
 """
-A Python script to simulate the feature of issuing books from a library
+A Python script to simulate the feature of issuing books from a library.
 To store the data of books issued by a certain user.
-Managing user accounts of library
+Managing user accounts of library.
+Data of available books in the library.
 """
 
 
@@ -20,8 +21,14 @@ BorrowDefaulter = "As per our terms and conditions, in case of failing to return
 
 
 #To fetch the price of a requested book (only if the user wants to purchase)
-# def FetchPrice(name,File):
+# Currently using this function to fetch the prices of books from AvailableBooks.csv
 
+def FetchPrice(name,File):
+    with open (file,"r") as file:
+        reader=csv.reader(file)
+        for record in reader:
+            if record[0]==name:
+                return record[1]
 
 # To search if the library does have the requested book or not
 def SearchBook(name,file):
