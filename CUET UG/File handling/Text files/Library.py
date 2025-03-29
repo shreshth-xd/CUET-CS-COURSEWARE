@@ -17,17 +17,28 @@ BorrowDefaulter = "As per our terms and conditions, in case of failing to return
 # def SignIn(user,file)
 
 # To make an account in Accounts.csv
-# def SignUp(user,subscribed,plan,tenure of plan,Penalty,Profession,file):
+def SignUp (username,user,subscribed,plan,tenure_of_plan,Penalty,Profession):
+        with open ("Accounts.csv","r+") as file:
+            reader=csv.reader(file)
+            writer=csv.writer(file)
+            for record in reader:
+                if record[0]==username:
+                    return "Username exists already, try again!"
+                else:
+                    writer.writerow(record)
+            else:
+                writer.writerow([username,user,subscribed,plan,tenure_of_plan,Penalty,Profession])
+
 
 
 # To check if a user exists in Accounts.csv or not
-def CheckUser(name,file):
+def CheckUser(name):
     with open("Accounts.csv","r") as file:
         reader=csv.reader(file)
         for record in reader:
             if record[0]==user:
                 return 1
-
+        return 0
 
 #To fetch the price of a requested book (only if the user wants to purchase)
 # Currently using this function to fetch the prices of books from AvailableBooks.csv
@@ -46,9 +57,10 @@ def SearchBook(name,file):
         for record in reader:
             if record[1]==name:
                 return 1
-        else:
-            return 0
+        return 0
 
+# To push the values of all the keys of a data stored in a dictionary
+# Majorly using it for pushing data to IssuedBooks.csv
 def Dump(data,file):
     with open(file,"a") as file:
         writer = csv.writer(file,lineterminator="\n",delimiter=",")
@@ -57,15 +69,15 @@ def Dump(data,file):
             ItemNode.append(data[keys])
         writer.writerow(ItemNode)
 
-
+# Adding a label of "returned when a user has returned a particular book"
 def LabellingReturn(user,bookname,file):
     with open(file,"r+") as file:
         reader = csv.reader(file)
         writer = csv.writer(file,lineterminator="\n",delimiter=",")
         for record in reader:
-            if record[1]==bookname and record[0]==user:
+            if record[2]==bookname and record[1]==user:
                 found=True
-                record[9]="Returned"
+                record[10]="Returned"
                 writer.writerow(record)
                 print("We aprreciate your honesty and thanks for visiting.")
                 break
@@ -74,7 +86,7 @@ def LabellingReturn(user,bookname,file):
 
         if not found:
             print("Sorry, we couldn't find this book")
-            print("")
+            
 
 while True:
     print("1. GET")
@@ -91,6 +103,7 @@ while True:
         user=str(input("Enter your full name: "))
 
         # Information related to the book
+        username = str(input(f"Enter your username: "))
         request = str(input(f"Enter the name of the book you would like to {TypeOfPurchase} from us: "))
         author = str(input(f"Enter the name of the author of this book: "))
         Availability = bool(SearchBook(request,"AvailableBooks.csv"))
@@ -113,7 +126,13 @@ while True:
             if condition==True:
                 # Print a thank you message and add this book to the user's account
                 print("Thanks for visiting us sir! Have a nice day.")
-                
+                UserExists = CheckUser(username)
+                if bool(UserExists)==True:
+                    pass
+                else:
+                    # Run sign up function
+                    pass
+
                 book={}
             else:
                 newBook={"Name":request}
@@ -121,6 +140,7 @@ while True:
 
         if condition==True:
             data={
+                    "Username":username,
                     "User":user,
                     "Name":request,
                     "Author":author,
