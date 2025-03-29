@@ -20,15 +20,24 @@ BorrowDefaulter = "As per our terms and conditions, in case of failing to return
 # def SignUp(user,subscribed,plan,tenure of plan,Penalty,Profession,file):
 
 
+# To check if a user exists in Accounts.csv or not
+def CheckUser(name,file):
+    with open("Accounts.csv","r") as file:
+        reader=csv.reader(file)
+        for record in reader:
+            if record[0]==user:
+                return 1
+
+
 #To fetch the price of a requested book (only if the user wants to purchase)
 # Currently using this function to fetch the prices of books from AvailableBooks.csv
-
 def FetchPrice(name,File):
     with open (file,"r") as file:
         reader=csv.reader(file)
         for record in reader:
             if record[0]==name:
                 return record[1]
+
 
 # To search if the library does have the requested book or not
 def SearchBook(name,file):
@@ -101,9 +110,11 @@ while True:
                 price+=0
         
         elif TypeOfPurchase.lower()=="purchase":
-            if Availability==True:
+            if condition==True:
                 # Print a thank you message and add this book to the user's account
                 print("Thanks for visiting us sir! Have a nice day.")
+                
+                book={}
             else:
                 newBook={"Name":request}
                 Dump(newBook,"AvailableBooks.csv")
@@ -122,7 +133,7 @@ while True:
                     "Returned":"Not yet"
             }
 
-            books[request]=data
+            books[user]=data
             Dump(data,"IssuedBooks.csv")
         
     elif choice==2:
