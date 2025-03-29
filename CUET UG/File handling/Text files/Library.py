@@ -74,13 +74,13 @@ def Dump(data,file):
         writer.writerow(ItemNode)
 
 # Adding a label of "returned when a user has returned a particular book"
-def LabellingReturn(user,bookname,file):
+def LabellingReturn(username,bookname,file):
     with open(file,"r") as file:
         reader = csv.reader(file)
         Data=[]
         # writer = csv.writer(file,lineterminator="\n",delimiter=",")
         for record in reader:
-            if record[2]==bookname and record[1]==user:
+            if record[2]==bookname and record[0]==username:
                 found=True
                 record[10]="Returned"
                 Data.append(record)
