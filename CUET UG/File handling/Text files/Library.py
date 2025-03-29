@@ -20,14 +20,18 @@ BorrowDefaulter = "As per our terms and conditions, in case of failing to return
 def SignUp (username,user,subscribed,plan,tenure_of_plan,Penalty,Profession):
         with open ("Accounts.csv","r+") as file:
             reader=csv.reader(file)
-            writer=csv.writer(file)
+            previousData=[]
             for record in reader:
                 if record[0]==username:
                     return "Username exists already, try again!"
                 else:
-                    writer.writerow(record)
-            else:
-                writer.writerow([username,user,subscribed,plan,tenure_of_plan,Penalty,Profession])
+                    previousData.append(record)
+            
+
+        with open ("Accounts.csv","w") as file:        
+            writer=csv.writer(file,lineterminator="\n",delimiter=",")
+            writer.writerows(previousData)
+            writer.writerow([username,user,subscribed,plan,tenure_of_plan,Penalty,Profession])
 
 
 
@@ -71,22 +75,25 @@ def Dump(data,file):
 
 # Adding a label of "returned when a user has returned a particular book"
 def LabellingReturn(user,bookname,file):
-    with open(file,"r+") as file:
+    with open(file,"r") as file:
         reader = csv.reader(file)
-        writer = csv.writer(file,lineterminator="\n",delimiter=",")
+        Data=[]
+        # writer = csv.writer(file,lineterminator="\n",delimiter=",")
         for record in reader:
             if record[2]==bookname and record[1]==user:
                 found=True
                 record[10]="Returned"
-                writer.writerow(record)
+                Data.append(record)
                 print("We aprreciate your honesty and thanks for visiting.")
-                break
             else:
-                writer.writerow(record)
+                Data.append(record)
 
         if not found:
             print("Sorry, we couldn't find this book")
             
+    with open(file,"w") as file:
+        writer = csv.writer(file,lineterminator="\n",delimiter=",")
+        writer.writerows(data)
 
 while True:
     print("1. GET")
