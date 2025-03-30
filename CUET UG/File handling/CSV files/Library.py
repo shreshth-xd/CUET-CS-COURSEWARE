@@ -99,7 +99,7 @@ def LabellingReturn(username,bookname,file):
         writer = csv.writer(file,lineterminator="\n",delimiter=",")
         writer.writerows(data)
 
-# Marketing:
+# To display all the subscirption plans with their respective benefits whenever and wherever I want
 def SubscriptionPlans():
     print("We have three subscription for all of our users visiting our library.")
     print("\n\n")
