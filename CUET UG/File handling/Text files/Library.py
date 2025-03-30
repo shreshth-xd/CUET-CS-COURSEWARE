@@ -104,6 +104,7 @@ def SubscriptionPlans():
     print("We have three subscription for all of our users visiting our library.")
     print("\n\n")
     print("1. Basic plan - Free plan for occasional visitors, prohibits users from:")
+    print("\n")
     print("- Borrowing any book from us")
     print("- Using their account on multiple devices")
     print("- Using social media and video conferencing while using our interface")
@@ -113,7 +114,8 @@ def SubscriptionPlans():
     print("\n\n")
 
     print("2. Intermediate - A 2 week plan of 10$ which provides you with: ")
-    print("- A discount of 40%\ on your gross purchase.")
+    print("\n")
+    print(r"- A discount of 40% on your gross purchase.")
     print("- Our real-time chat software to group study with your friends.")
     print("- Privilege to use your account on maximum three devices, irrespective of the device type.")
     print("- Access to read paid novels, research papers and view study results of top worldwide institutions.")
@@ -121,7 +123,22 @@ def SubscriptionPlans():
     time.sleep(5)
     print("\n\n")
 
-    
+    print("3. Pro - Monthly plan of 80$ which will get you: ")
+    print("\n")
+    print("- Privilege to use our AI assitant to get help in solving your homework problems.")
+    print("- Access to previous question papers and questions of your board, competitive exams and semester exams.")
+    print("- Free access to previous year questions of your university exams.")
+    print("- Discount on book sets, research papers, archaelogical bulletins and tech oriented books.")
+
+    time.sleep(5)
+    print("\n\n")
+
+    print("4. Premium - 3 month plan of 100$ which offers you: ")
+    print("\n")
+    print("- Specialised AI assistant to help you study, analyse and summarize research papers and any study material.")
+    print("- Thesis.ai which is an AI bot to help you write and proofread your own research papers and thesis.")
+    print("- An interface to collaborate with researchers and scientists and SMEs of your field/subject.")
+    print(r"- 70% discount on publishing your thesis and research papers in the market and on the internet as well.")
 
 
 while True:
