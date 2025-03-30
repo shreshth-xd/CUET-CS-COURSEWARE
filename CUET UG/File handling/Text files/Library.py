@@ -8,6 +8,7 @@ Data of available books in the library.
 
 import csv
 import datetime
+import time
 
 books={}
 
@@ -18,7 +19,7 @@ BorrowDefaulter = "As per our terms and conditions, in case of failing to return
 
 # To make an account in Accounts.csv
 def SignUp (username,user,subscribed,plan,tenure_of_plan,Penalty,Profession):
-        with open ("Accounts.csv","r+") as file:
+        with open ("Accounts.csv","r") as file:
             reader=csv.reader(file)
             previousData=[]
             for record in reader:
@@ -30,27 +31,27 @@ def SignUp (username,user,subscribed,plan,tenure_of_plan,Penalty,Profession):
 
         with open ("Accounts.csv","w") as file:        
             writer=csv.writer(file,lineterminator="\n",delimiter=",")
+            currData=[username,user,subscribed,plan,tenure_of_plan,Penalty,Profession]
+            previousData.append(currData)
             writer.writerows(previousData)
-            writer.writerow([username,user,subscribed,plan,tenure_of_plan,Penalty,Profession])
-
 
 
 # To check if a user exists in Accounts.csv or not
-def CheckUser(name):
+def CheckUser(username):
     with open("Accounts.csv","r") as file:
         reader=csv.reader(file)
         for record in reader:
-            if record[0]==user:
+            if record[0]==username:
                 return 1
         return 0
 
 #To fetch the price of a requested book (only if the user wants to purchase)
 # Currently using this function to fetch the prices of books from AvailableBooks.csv
-def FetchPrice(name,File):
-    with open (file,"r") as file:
+def FetchPrice(bookName):
+    with open ("AvailableBooks.csv","r") as file:
         reader=csv.reader(file)
         for record in reader:
-            if record[0]==name:
+            if record[0]==bookName:
                 return record[1]
 
 
@@ -84,16 +85,44 @@ def LabellingReturn(username,bookname,file):
                 found=True
                 record[10]="Returned"
                 Data.append(record)
-                print("We aprreciate your honesty and thanks for visiting.")
             else:
                 Data.append(record)
 
-        if not found:
+        if found:
+            print("We aprreciate your honesty and thanks for visiting.")
+
+        elif not found:
             print("Sorry, we couldn't find this book")
-            
+            return 
+        
     with open(file,"w") as file:
         writer = csv.writer(file,lineterminator="\n",delimiter=",")
         writer.writerows(data)
+
+# Marketing:
+def SubscriptionPlans():
+    print("We have three subscription for all of our users visiting our library.")
+    print("\n\n")
+    print("1. Basic plan - Free plan for occasional visitors, prohibits users from:")
+    print("- Borrowing any book from us")
+    print("- Using their account on multiple devices")
+    print("- Using social media and video conferencing while using our interface")
+    print("- Accessing study results of institutions and research papers or any high level academic or learning material.")
+    
+    time.sleep(5)
+    print("\n\n")
+
+    print("2. Intermediate - A 2 week plan of 10$ which provides you with: ")
+    print("- A discount of 40%\ on your gross purchase.")
+    print("- Our real-time chat software to group study with your friends.")
+    print("- Privilege to use your account on maximum three devices, irrespective of the device type.")
+    print("- Access to read paid novels, research papers and view study results of top worldwide institutions.")
+    
+    time.sleep(5)
+    print("\n\n")
+
+    
+
 
 while True:
     print("1. GET")
@@ -138,9 +167,12 @@ while True:
                     pass
                 else:
                     # Run sign up function
-                    pass
+                    print("Since you don't have account, you need to make one.")
+                    print("Fill the information below to make your account.")
+                    profession=str(input("Enter your profession here (Student if none): "))
+                    SignUp(username,user,subscribed="No",plan="Basic",tenure_of_plan="Unlimited",Penalty="None",Profession=profession)
 
-                book={}
+
             else:
                 newBook={"Name":request}
                 Dump(newBook,"AvailableBooks.csv")
