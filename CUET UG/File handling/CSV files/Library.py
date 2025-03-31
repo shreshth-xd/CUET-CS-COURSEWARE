@@ -60,7 +60,7 @@ def SearchBook(name,file):
     with open (file,"r") as file:
         reader=csv.reader(file)
         for record in reader:
-            if record[1]==name:
+            if record[0]==name:
                 return 1
         return 0
 
@@ -168,17 +168,17 @@ while True:
 
         # Information related to the book
         username = str(input(f"Enter your username: "))
-        UsernameValidation=CheckUser(username)
         request = str(input(f"Enter the name of the book you would like to {TypeOfPurchase} from us: "))
         author = str(input(f"Enter the name of the author of this book: "))
         Availability = bool(SearchBook(request,"AvailableBooks.csv"))
         condition = author.lower()!="" and author.lower()!="idk" and Availability==True
         genre=str(input("Genre: "))
-        price=0        
+        price=FetchPrice(request)
         CurrentDate = str(datetime.date.today()).replace("-","/")
         
         if TypeOfPurchase.lower()=="borrow":
             duration=int(input("For how many days do you want to keep this book with yourself? "))
+            
             if duration>14:
                 print("Sorry, we don't lend anyone any book for that much of duration.")
                 continue
@@ -196,7 +196,7 @@ while True:
                     pass
                 else:
                     # Run sign up function
-                    print("Since you don't have account, you need to make one.")
+                    print("Since you don't have an account, you need to make one.")
                     print("Fill the information below to make your account.")
                     profession=str(input("Enter your profession here (Student if none): "))
                     SignUp(username,user,subscribed="No",plan="Basic",tenure_of_plan="Unlimited",Penalty="None",Profession=profession)
