@@ -53,7 +53,7 @@ def FetchPrice(bookName):
         for record in reader:
             if record[0]==bookName:
                 return record[1]
-
+        return 0
 
 # To search if the library does have the requested book or not
 def SearchBook(name,file):
@@ -174,6 +174,9 @@ while True:
         condition = author.lower()!="" and author.lower()!="idk" and Availability==True
         genre=str(input("Genre: "))
         price=FetchPrice(request)
+        if price==0:
+            price=0
+            
         CurrentDate = str(datetime.date.today()).replace("-","/")
         
         if TypeOfPurchase.lower()=="borrow":
@@ -200,7 +203,6 @@ while True:
                     print("Fill the information below to make your account.")
                     profession=str(input("Enter your profession here (Student if none): "))
                     SignUp(username,user,subscribed="No",plan="Basic",tenure_of_plan="Unlimited",Penalty="None",Profession=profession)
-
 
             else:
                 newBook={"Name":request}
