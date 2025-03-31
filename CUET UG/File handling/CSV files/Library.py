@@ -76,6 +76,7 @@ def Dump(data,file):
 
 # Adding a label of "returned when a user has returned a particular book"
 def LabellingReturn(username,bookname,file):
+    found=False
     with open(file,"r") as file:
         reader = csv.reader(file)
         Data=[]
@@ -99,6 +100,7 @@ def LabellingReturn(username,bookname,file):
         writer = csv.writer(file,lineterminator="\n",delimiter=",")
         writer.writerows(data)
 
+"""_______Marketing___________"""
 # To display all the subscirption plans with their respective benefits whenever and wherever I want
 def SubscriptionPlans():
     print("We have three subscription for all of our users visiting our library.")
