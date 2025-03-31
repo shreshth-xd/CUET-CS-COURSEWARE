@@ -36,17 +36,17 @@ def SignUp (username,user,subscribed,plan,tenure_of_plan,Penalty,Profession):
 # To display the account details of an user, only when he requests to fetch it
 def SignIn(username):
     with open("Accounts.csv","r") as file:
-        data=[]
         reader=csv.reader(file)
         for record in reader:
             if record[0]==username:
-                data.append(record)
-        print("Username: ",data[0])
-        print("Subscribed: ",data[1])
-        print("Plan: ",data[2])
-        print("Tenure of plan: ",data[3])
-        print("Penalty: ",data[4])
-        print("Profession: ",data[5])
+                print("Username: ",record[0])
+                print("Subscribed: ",record[1])
+                print("Plan: ",record[2])
+                print("Tenure of plan: ",record[3])
+                print("Penalty: ",record[4])
+                print("Profession: ",record[5])
+                return 1
+        return 0
 
 
 
@@ -116,6 +116,13 @@ def LabellingReturn(username,bookname,file):
 
 
 
+
+
+
+
+
+
+
 """
 _______Marketing___________
 To display all the subscirption plans with their respective benefits whenever and wherever I want.
@@ -165,12 +172,21 @@ def SubscriptionPlans():
 
 
 
+"""
+Letting the user to actually subscribe to his favorite plan.
+"""
+
+
+
+
+
 
 while True:
     print("1. GET")
     print("2. Return")
     print("3. My account")
-    print("4. Exit")
+    print("4. Subscribe")
+    print("5. Exit")
 
     choice=int(input("Enter your choice: "))
     if choice==1:
@@ -194,16 +210,33 @@ while True:
         CurrentDate = str(datetime.date.today()).replace("-","/")
         
         if TypeOfPurchase.lower()=="borrow":
-            duration=int(input("For how many days do you want to keep this book with yourself? "))
-            fine="150$"
-            if duration>14:
-                print("Sorry, we don't lend anyone any book for that much of duration.")
-                continue
+            if condition==True:
+                UserExists = CheckUser(username)
+                if bool(UserExists)==True:
+                    pass
+                else:
+                    # Run sign up function
+                    print("Since you don't have an account, you need to make one.")
+                    print("Fill the information below to make your account.")
+                    profession=str(input("Enter your profession here (Student if none): "))
+                    SignUp(username,user,subscribed="No",plan="Basic",tenure_of_plan="Unlimited",Penalty=("None"),Profession=profession)
+            
+                duration=int(input("For how many days do you want to keep this book with yourself? "))
+                fine="150$"
+                if duration>14:
+                    print("Sorry, we don't lend anyone any book for that much of duration.")
+                    continue
+                else:
+                    print("Ok, you can borrow this book for this duration of time, have a nice day.")
+                    print(BorrowDefaulter)
+                    price+=0
+                    
             else:
-                print("Ok, you can borrow this book for this duration of time, have a nice day.")
-                print(BorrowDefaulter)
-                price+=0
-        
+                newBook={"Name":request}
+                Dump(newBook,"AvailableBooks.csv")
+                print("Sorry for the inconvenience but we didn't had this in our library.")
+                print("But don't worry, we'll soon fetch it for you, you may check for it in a day or two.")
+
         elif TypeOfPurchase.lower()=="purchase":
             if condition==True:
                 # Print a thank you message and add this book to the user's account
@@ -247,9 +280,13 @@ while True:
             BookToBeReturned = str(input(f"Enter the name of the book that you borrowed from us: "))                    
             LabellingReturn(username,BookToBeReturned,"IssuedBooks.csv")
 
-    # elif choice==3:    
+    elif choice==3:    
+        request = str(input(f"Enter your username: "))
+        response = SignIn(request)
+        if response==0:
+            print("Error 404: Account not found.")
 
-    elif choice==4:
+    elif choice==5:
         break
 
     else:
