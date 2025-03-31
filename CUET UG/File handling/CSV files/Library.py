@@ -176,7 +176,7 @@ while True:
         price=FetchPrice(request)
         if price==0:
             price=0
-            
+
         CurrentDate = str(datetime.date.today()).replace("-","/")
         
         if TypeOfPurchase.lower()=="borrow":
@@ -207,6 +207,8 @@ while True:
             else:
                 newBook={"Name":request}
                 Dump(newBook,"AvailableBooks.csv")
+                print("Sorry for the inconvenience but we didn't had this in our library.")
+                print("But don't worry, we'll soon fetch it for you, you may check for it in a day or two.")
 
         if condition==True:
             data={
