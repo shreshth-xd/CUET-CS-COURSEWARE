@@ -178,7 +178,7 @@ while True:
         
         if TypeOfPurchase.lower()=="borrow":
             duration=int(input("For how many days do you want to keep this book with yourself? "))
-            
+            fine="150$"
             if duration>14:
                 print("Sorry, we don't lend anyone any book for that much of duration.")
                 continue
@@ -216,7 +216,7 @@ while True:
                     "Type":TypeOfPurchase,
                     "Price":price,
                     "Duration":duration,
-                    "Fine":"150$",
+                    "Fine":fine,
                     "Date":CurrentDate,
                     "Returned":"Not yet"
             }
