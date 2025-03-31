@@ -176,13 +176,29 @@ def SubscriptionPlans():
 Letting the user to actually subscribe to his favorite plan.
 """
 
-# def subscribe(plan):
-#     if plan.lower()=="basic":
-#         return "Basic plan"
-#     elif plan.lower()=="intermediate":
-#         return "Intermediate plan"
-#     elif plan.lower()=="pro":
-#         return ""
+def DurationFetcher(plan):
+    if plan.lower()=="basic":
+        return "Unlimited"
+    elif plan.lower()=="intermediate":
+        return "14 days"
+    elif plan.lower()=="pro":
+        return "30 days"
+    elif plan.lower()=="premium":
+        return "90 days"
+    else:
+        return "Please select a valid plan."
+
+def SubscriptionPriceFetcher(plan):
+    if plan.lower()=="basic":
+        return "Free"
+    elif plan.lower()=="intermediate":
+        return "10$"
+    elif plan.lower()=="pro":
+        return "80$"
+    elif plan.lower()=="premium":
+        return "100$"
+    else:
+        return "Please select a valid plan."
 
 
 
@@ -225,6 +241,7 @@ while True:
                     # Run sign up function
                     print("Since you don't have an account, you need to make one.")
                     print("Fill the information below to make your account.")
+                    plan=str(input("Select a plan: "))
                     profession=str(input("Enter your profession here (Student if none): "))
                     SignUp(username,user,subscribed="No",plan="Basic",tenure_of_plan="Unlimited",Penalty=("None"),Profession=profession)
             
