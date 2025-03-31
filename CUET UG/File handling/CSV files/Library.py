@@ -176,6 +176,13 @@ def SubscriptionPlans():
 Letting the user to actually subscribe to his favorite plan.
 """
 
+# def subscribe(plan):
+#     if plan.lower()=="basic":
+#         return "Basic plan"
+#     elif plan.lower()=="intermediate":
+#         return "Intermediate plan"
+#     elif plan.lower()=="pro":
+#         return ""
 
 
 
@@ -230,7 +237,7 @@ while True:
                     print("Ok, you can borrow this book for this duration of time, have a nice day.")
                     print(BorrowDefaulter)
                     price+=0
-                    
+
             else:
                 newBook={"Name":request}
                 Dump(newBook,"AvailableBooks.csv")
