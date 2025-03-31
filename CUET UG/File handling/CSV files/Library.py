@@ -14,8 +14,6 @@ books={}
 
 BorrowDefaulter = "As per our terms and conditions, in case of failing to return a book borrowed from us,\nyou have to pay a fine of 150$ and we shall prohibit your access to our bookstore permanently and blacklist you after cancelling your library subscription provided that no refund will be given from our side under any circumstances."
 
-# To display the account details of an user, only when he requests to fetch it
-# def SignIn(user,file)
 
 # To make an account in Accounts.csv
 def SignUp (username,user,subscribed,plan,tenure_of_plan,Penalty,Profession):
@@ -34,6 +32,22 @@ def SignUp (username,user,subscribed,plan,tenure_of_plan,Penalty,Profession):
             currData=[username,user,subscribed,plan,tenure_of_plan,Penalty,Profession]
             previousData.append(currData)
             writer.writerows(previousData)
+
+# To display the account details of an user, only when he requests to fetch it
+def SignIn(username):
+    with open("Accounts.csv","r") as file:
+        data=[]
+        reader=csv.reader(file)
+        for record in reader:
+            if record[0]==username:
+                data.append(record)
+        print("Username: ",data[0])
+        print("Subscribed: ",data[1])
+        print("Plan: ",data[2])
+        print("Tenure of plan: ",data[3])
+        print("Penalty: ",data[4])
+        print("Profession: ",data[5])
+
 
 
 # To check if a user exists in Accounts.csv or not
