@@ -100,8 +100,15 @@ def LabellingReturn(username,bookname,file):
         writer = csv.writer(file,lineterminator="\n",delimiter=",")
         writer.writerows(data)
 
-"""_______Marketing___________"""
-# To display all the subscirption plans with their respective benefits whenever and wherever I want
+
+
+"""
+_______Marketing___________
+To display all the subscirption plans with their respective benefits whenever and wherever I want.
+
+Adding a function to actually let a user to subscribe to any one of the subscription plans he want.
+"""
+
 def SubscriptionPlans():
     print("We have three subscription for all of our users visiting our library.")
     print("\n\n")
@@ -143,6 +150,8 @@ def SubscriptionPlans():
     print(r"- 70% discount on publishing your thesis and research papers in the market and on the internet as well.")
 
 
+
+
 while True:
     print("1. GET")
     print("2. Return")
@@ -159,6 +168,7 @@ while True:
 
         # Information related to the book
         username = str(input(f"Enter your username: "))
+        UsernameValidation=CheckUser(username)
         request = str(input(f"Enter the name of the book you would like to {TypeOfPurchase} from us: "))
         author = str(input(f"Enter the name of the author of this book: "))
         Availability = bool(SearchBook(request,"AvailableBooks.csv"))
@@ -211,13 +221,13 @@ while True:
                     "Returned":"Not yet"
             }
 
-            books[user]=data
+            books[username]=data
             Dump(data,"IssuedBooks.csv")
         
     elif choice==2:
-            user=str(input("Enter your name: "))
+            username=str(input("Enter your username: "))
             BookToBeReturned = str(input(f"Enter the name of the book that you borrowed from us: "))                    
-            LabellingReturn(user,BookToBeReturned,"IssuedBooks.csv")
+            LabellingReturn(username,BookToBeReturned,"IssuedBooks.csv")
 
     # elif choice==3:    
 
