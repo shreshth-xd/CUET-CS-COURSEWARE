@@ -2,4 +2,4 @@
 
 file=open("sentences.txt","r")
 for line in file:
-    print(line)
+    print(line ,end="")
