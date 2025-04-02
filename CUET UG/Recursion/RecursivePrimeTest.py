@@ -16,7 +16,7 @@ def PrimeTest(n,i=2):
             return 0
         else:
             PrimeTest(n,i=i+1)
-            
+
 number=int(input("Enter the number to check if it's a prime or not: "))
 response=PrimeTest(number)
 if response==0:
