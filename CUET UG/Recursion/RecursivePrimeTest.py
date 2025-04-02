@@ -12,14 +12,18 @@ def PrimeTest(n,i=2):
     elif n==2 or n==3:
         return 1
     else:
-        if n%i==0:
-            return 0
+        if i<=n**(1/2):
+            if n%i==0:
+                return 0
+            else:
+                return PrimeTest(n,i=i+1)
         else:
-            PrimeTest(n,i=i+1)
+            return 1
 
 number=int(input("Enter the number to check if it's a prime or not: "))
 response=PrimeTest(number)
 if response==0:
     print("No, It's not a prime number.")
 else:
+    print(response)
     print("Yes, it's a prime number.")
