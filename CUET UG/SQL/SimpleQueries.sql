@@ -58,6 +58,9 @@ SHOW tables;
 -- To use column aliases, i.e. to change a column's name in the result of the query
 SELECT Name, Sex as "Age" FROM registered_users;
 
-
 -- To select all the male users with age of either 18 or more than 18:
 SELECT name FROM registered_users WHERE sex="Male" and age>=18;
+
+-- To insert a new, single and independent record in the specified table:
+INSERT INTO registered_users(name,age,sex) VALUES('John Doe',25,'Male');
+
