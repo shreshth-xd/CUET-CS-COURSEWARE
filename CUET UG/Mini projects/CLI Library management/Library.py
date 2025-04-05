@@ -270,7 +270,7 @@ while True:
 
         elif TypeOfPurchase.lower()=="purchase":
             if condition==True:
-                # Print a thank you message and add this book to the user's account
+                # Print a thank you message and add this account to the CSV file
                 print("Thanks for visiting us sir! Have a nice day.")
                 UserExists = CheckUser(username)
                 if bool(UserExists)==True:
