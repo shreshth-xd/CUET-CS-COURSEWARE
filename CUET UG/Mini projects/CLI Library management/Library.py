@@ -235,7 +235,7 @@ while True:
         if price==0:
             price=0
 
-        condition = author.lower() not in ("","idk") and Availability==True and price!=0
+        condition = author.lower() not in ("","idk") and Availability==True 
 
         CurrentDate = str(datetime.date.today()).replace("-","/")
         
@@ -306,6 +306,10 @@ while True:
             books[username]=data
             Dump(data,"IssuedBooks.csv")
         
+        elif condition!=True:
+            print("Some error occured :(")
+            print("Check if you have provided us with the author's name or not.")
+            
     elif choice==2:
             username=str(input("Enter your username: "))
             BookToBeReturned = str(input(f"Enter the name of the book that you borrowed from us: "))                    
