@@ -234,8 +234,8 @@ while True:
         price=FetchPrice(request)
         if price==0:
             price=0
-            
-        condition = author.lower()!="" and author.lower()!="idk" and Availability==True
+
+        condition = author.lower() not in ("","idk") and Availability==True and price!=0
 
         CurrentDate = str(datetime.date.today()).replace("-","/")
         
