@@ -202,6 +202,12 @@ def SubscriptionPriceFetcher(plan):
 
 
 
+"""
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-xx-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-xx-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+"""
+
+
+# Main UI interface for the user:
 
 
 while True:
