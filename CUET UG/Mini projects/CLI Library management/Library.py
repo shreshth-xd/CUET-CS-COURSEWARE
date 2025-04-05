@@ -288,7 +288,7 @@ while True:
                 print("Sorry for the inconvenience but we didn't had this in our library.")
                 print("But don't worry, we'll soon fetch it for you, you may check for it in a day or two.")
 
-        if condition==True:
+        if condition==True and price!=0:
             data={
                     "Username":username,
                     "User":user,
