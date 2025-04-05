@@ -306,6 +306,9 @@ while True:
             books[username]=data
             Dump(data,"IssuedBooks.csv")
         
+        if condition==True and price!=0:
+            print("Sorry we can't provide you with this book \n as we haven't decided the post discount price of it.")
+        
         elif condition!=True:
             print("Some error occured :(")
             print("Check if you have provided us with the author's name or not.")
