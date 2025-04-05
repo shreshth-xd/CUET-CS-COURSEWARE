@@ -230,11 +230,12 @@ while True:
         request = str(input(f"Enter the name of the book you would like to {TypeOfPurchase} from us: "))
         author = str(input(f"Enter the name of the author of this book: "))
         Availability = bool(SearchBook(request,"AvailableBooks.csv"))
-        condition = author.lower()!="" and author.lower()!="idk" and Availability==True
         genre=str(input("Genre: "))
         price=FetchPrice(request)
         if price==0:
             price=0
+            
+        condition = author.lower()!="" and author.lower()!="idk" and Availability==True
 
         CurrentDate = str(datetime.date.today()).replace("-","/")
         
