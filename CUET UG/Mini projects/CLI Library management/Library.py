@@ -235,7 +235,6 @@ while True:
             price=0
         
         condition = author.lower() not in ("","idk") and Availability==True 
-
         CurrentDate = str(datetime.date.today()).replace("-","/")
         
         if TypeOfPurchase.lower()=="borrow":
