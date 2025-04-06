@@ -222,7 +222,6 @@ while True:
         
         TypeOfPurchase = str(input("Borrow or purchase? "))
         
-        # User information:
 
         # Information related to the book 
         user=str(input("Enter your full name: "))
@@ -234,7 +233,7 @@ while True:
         price=FetchPrice(request)
         if price==0:
             price=0
-
+        
         condition = author.lower() not in ("","idk") and Availability==True 
 
         CurrentDate = str(datetime.date.today()).replace("-","/")
