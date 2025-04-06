@@ -174,6 +174,8 @@ def DisplaySubscriptionPlans():
 
 """
 Letting the user to actually subscribe to his favorite plan.
+
+--Putting a stay on these functions, as I don't feel the need to use them for now.
 """
 
 # def DurationFetcher(plan):
