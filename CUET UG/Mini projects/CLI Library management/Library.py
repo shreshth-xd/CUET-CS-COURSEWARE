@@ -282,6 +282,8 @@ while True:
                     profession=str(input("Enter your profession here (Student if none): "))
                     SignUp(username,user,subscribed="No",plan="Basic",tenure_of_plan="Unlimited",Penalty="None",Profession=profession)
 
+                ReturnStatus="N/A"
+
             else:
                 newBook={"Name":request}
                 Dump(newBook,"AvailableBooks.csv")
