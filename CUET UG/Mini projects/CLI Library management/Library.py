@@ -176,29 +176,29 @@ def DisplaySubscriptionPlans():
 Letting the user to actually subscribe to his favorite plan.
 """
 
-def DurationFetcher(plan):
-    if plan.lower()=="basic":
-        return "Unlimited"
-    elif plan.lower()=="intermediate":
-        return "14 days"
-    elif plan.lower()=="pro":
-        return "30 days"
-    elif plan.lower()=="premium":
-        return "90 days"
-    else:
-        return "Please select a valid plan."
+# def DurationFetcher(plan):
+#     if plan.lower()=="basic":
+#         return "Unlimited"
+#     elif plan.lower()=="intermediate":
+#         return "14 days"
+#     elif plan.lower()=="pro":
+#         return "30 days"
+#     elif plan.lower()=="premium":
+#         return "90 days"
+#     else:
+#         return "Please select a valid plan."
 
-def SubscriptionPriceFetcher(plan):
-    if plan.lower()=="basic":
-        return "Free"
-    elif plan.lower()=="intermediate":
-        return "10$"
-    elif plan.lower()=="pro":
-        return "80$"
-    elif plan.lower()=="premium":
-        return "100$"
-    else:
-        return "Please select a valid plan."
+# def SubscriptionPriceFetcher(plan):
+#     if plan.lower()=="basic":
+#         return "Free"
+#     elif plan.lower()=="intermediate":
+#         return "10$"
+#     elif plan.lower()=="pro":
+#         return "80$"
+#     elif plan.lower()=="premium":
+#         return "100$"
+#     else:
+#         return "Please select a valid plan."
 
 
 
