@@ -130,7 +130,7 @@ To display all the subscirption plans with their respective benefits whenever an
 Adding a function to actually let a user to subscribe to any one of the subscription plans he want.
 """
 
-def SubscriptionPlans():
+def DisplaySubscriptionPlans():
     print("We have three subscription for all of our users visiting our library.")
     print("\n\n")
     print("1. Basic plan - Free plan for occasional visitors, prohibits users from:")
@@ -325,6 +325,9 @@ while True:
         response = SignIn(request)
         if response==0:
             print("Error 404: Account not found.")
+
+
+
 
     elif choice==5:
         break
