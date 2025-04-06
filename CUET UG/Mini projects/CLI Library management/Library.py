@@ -332,6 +332,9 @@ while True:
     elif choice==4:
         DisplaySubscriptionPlans()
         choice=int(input("Which plan would you like to subcribe to: "))
+        if choice==1:
+            pass
+        # elif choice==2:
 
 
     elif choice==5:
