@@ -329,6 +329,8 @@ while True:
             print("Error 404: Account not found.")
 
 
+    elif choice==4:
+        DisplaySubscriptionPlans()
 
 
     elif choice==5:
