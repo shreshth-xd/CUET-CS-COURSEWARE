@@ -223,9 +223,9 @@ while True:
         TypeOfPurchase = str(input("Borrow or purchase? "))
         
         # User information:
-        user=str(input("Enter your full name: "))
 
-        # Information related to the book
+        # Information related to the book 
+        user=str(input("Enter your full name: "))
         username = str(input(f"Enter your username: "))
         request = str(input(f"Enter the name of the book you would like to {TypeOfPurchase} from us: "))
         author = str(input(f"Enter the name of the author of this book: "))
