@@ -230,6 +230,7 @@ while True:
         author = str(input(f"Enter the name of the author of this book: "))
         Availability = bool(SearchBook(request,"AvailableBooks.csv"))
         genre=str(input("Genre: "))
+        ReturnStatus=""
         price=FetchPrice(request)
         if price==0:
             price=0
@@ -252,6 +253,7 @@ while True:
             
                 duration=int(input("For how many days do you want to keep this book with yourself? "))
                 fine="150$"
+                ReturnStatus="Not yet"
                 if duration>14:
                     print("Sorry, we don't lend anyone any book for that much of duration.")
                     continue
