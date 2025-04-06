@@ -249,9 +249,9 @@ while True:
                     # Run sign up function
                     print("Since you don't have an account, you need to make one.")
                     print("Fill the information below to make your account.")
-                    plan=str(input("Select a plan: "))
+                    plan_=str(input("Select a plan: "))
                     profession=str(input("Enter your profession here (Student if none): "))
-                    SignUp(username,user,subscribed="No",plan="Basic",tenure_of_plan="Unlimited",Penalty=("None"),Profession=profession)
+                    SignUp(username,user,subscribed="No",plan=plan_,tenure_of_plan="Unlimited",Penalty=("None"),Profession=profession)
             
                 duration=int(input("For how many days do you want to keep this book with yourself? "))
                 fine="150$"
@@ -281,8 +281,9 @@ while True:
                     # Run sign up function
                     print("Since you don't have an account, you need to make one.")
                     print("Fill the information below to make your account.")
+                    plan_=str(input("Select a plan: "))
                     profession=str(input("Enter your profession here (Student if none): "))
-                    SignUp(username,user,subscribed="No",plan="Basic",tenure_of_plan="Unlimited",Penalty="None",Profession=profession)
+                    SignUp(username,user,subscribed="No",plan=plan_,tenure_of_plan="Unlimited",Penalty="None",Profession=profession)
 
                 ReturnStatus="N/A"
 
