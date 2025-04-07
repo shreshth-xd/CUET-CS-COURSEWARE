@@ -2,3 +2,5 @@
 
 -- To insert a new, single and independent record in the specified table:
 INSERT INTO registered_users(name,age,sex) VALUES('John Doe',25,'Male');
+
+
