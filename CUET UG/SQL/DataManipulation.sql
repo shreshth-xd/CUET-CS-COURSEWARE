@@ -8,6 +8,7 @@ INSERT INTO registered_users(name,age,sex) VALUES ('Shreyansh',18,'Male'),
 ('Vikas',20,'Male'),
 ('Trishita',17,'Female'),
 ('Dhruv',20,'Male'),
-('Yash',21,'Female'),
+('Yashika',21,'Female'),
 ('Rudra',22,'Male'),
+('Urvashi',25,'Female')
 ;
