@@ -62,3 +62,6 @@ SELECT Name, Sex as "Age" FROM registered_users;
 SELECT name FROM registered_users WHERE sex="Male" and age>=18;
 
 
+-- To retreive non duplicate data in a particular column or columns in the specified table
+SELECT DISTINCT age FROM registered_users;
+SELECT DISTINCT name FROM registered_users;
