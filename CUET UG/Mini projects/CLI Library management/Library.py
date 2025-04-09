@@ -123,6 +123,7 @@ def subscribe(username,plan):
     if bool(authentication)==True:
         with open ("Accounts.csv","r") as file:
             reader=csv.reader(file)
+            previousData=[]
             
         pass
     else:
