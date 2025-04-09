@@ -376,7 +376,6 @@ while True:
         TOP=DurationFetcher(choice)
 
 
-
     elif choice==5:
         break
 
