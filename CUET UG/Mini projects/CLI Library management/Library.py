@@ -118,7 +118,7 @@ def LabellingReturn(username,bookname,file):
 
 # Function allowing the user to actually subcribe to an available plan
 def subscribe(username,plan):
-    
+    # Check which plan the user wants to subscribe to then add this subscription to user's account
     pass
 
 
