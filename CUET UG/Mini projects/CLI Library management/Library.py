@@ -137,12 +137,12 @@ def subscribe(username,plan,profession,duration):
             for record in reader:
                 if record[0]==username and not unsanitized:
                     record[1]="Yes"
-                    record[2]=plan
+                    record[2]=plan.capitalize()
                     record[3]=duration
                     previousData.append(record)
                 elif record[0]==username and unsanitized:
                     record[1]="No"
-                    record[2]=plan
+                    record[2]=plan.capitalize()
                     record[3]="Unlimited"
                     previousData.append(record)
                 else:
@@ -372,9 +372,10 @@ while True:
         DisplaySubscriptionPlans()
         choice=str(input("Which plan would you like to subcribe to: "))
 
+        username = str(input(f"Enter your username: "))
         # Fetching the tenure of plan (TOP)
         TOP=DurationFetcher(choice)
-
+        subscribe(username,choice)
 
     elif choice==5:
         break
