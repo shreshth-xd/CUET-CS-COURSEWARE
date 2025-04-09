@@ -216,17 +216,17 @@ Letting the user to actually subscribe to his favorite plan.
 --Putting a stay on these functions, as I don't feel the need to use them for now.
 """
 
-# def DurationFetcher(plan):
-#     if plan.lower()=="basic":
-#         return "Unlimited"
-#     elif plan.lower()=="intermediate":
-#         return "14 days"
-#     elif plan.lower()=="pro":
-#         return "30 days"
-#     elif plan.lower()=="premium":
-#         return "90 days"
-#     else:
-#         return "Please select a valid plan."
+def DurationFetcher(plan):
+    if plan.lower()=="basic":
+        return "Unlimited"
+    elif plan.lower()=="intermediate":
+        return "14 days"
+    elif plan.lower()=="pro":
+        return "30 days"
+    elif plan.lower()=="premium":
+        return "90 days"
+    else:
+        return "Please select a valid plan."
 
 # def SubscriptionPriceFetcher(plan):
 #     if plan.lower()=="basic":
@@ -371,9 +371,10 @@ while True:
     elif choice==4:
         DisplaySubscriptionPlans()
         choice=int(input("Which plan would you like to subcribe to: "))
-        if choice==1:
-            pass
-        # elif choice==2:
+
+        # Fetching the tenure of plan (TOP)
+        TOP=DurationFetcher(choice)
+
 
 
     elif choice==5:
