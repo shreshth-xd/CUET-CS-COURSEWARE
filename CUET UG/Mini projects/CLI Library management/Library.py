@@ -122,7 +122,7 @@ NOTE: A user needs to have an existing account to be able to subscribe to any pl
 NOTE: If a user is not signed up, then prompt him/her to sign up first
 """
 
-def subscribe(username,plan,profession):
+def subscribe(username,plan,profession,duration):
     # Check which plan the user wants to subscribe to then add this subscription to user's account
     authentication=CheckUser(username)
 
@@ -136,14 +136,14 @@ def subscribe(username,plan,profession):
             previousData=[]
             for record in reader:
                 if record[0]==username and not unsanitized:
+                    record[1]="Yes"
                     record[2]=plan
-                    record[4]=profession
+                    record[3]=duration
                     previousData.append(record)
                 elif record[0]==username and unsanitized:
                     record[1]="No"
                     record[2]=plan
                     record[3]="Unlimited"
-                    record[4]=profession
                     previousData.append(record)
                 else:
                     previousData.append(record)
@@ -154,8 +154,6 @@ def subscribe(username,plan,profession):
         
     else:
         return "User not found"
-    pass
-
 
 
 
