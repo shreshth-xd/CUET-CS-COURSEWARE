@@ -370,7 +370,7 @@ while True:
 
     elif choice==4:
         DisplaySubscriptionPlans()
-        choice=int(input("Which plan would you like to subcribe to: "))
+        choice=str(input("Which plan would you like to subcribe to: "))
 
         # Fetching the tenure of plan (TOP)
         TOP=DurationFetcher(choice)
