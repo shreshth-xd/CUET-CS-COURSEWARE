@@ -124,8 +124,13 @@ def subscribe(username,plan):
         with open ("Accounts.csv","r") as file:
             reader=csv.reader(file)
             previousData=[]
-            
-        pass
+            for record in file:
+                if record[0]==username:
+                    record[2]==plan
+                    previousData.append(record)
+                else:
+                    previousData.append(record)
+        
     else:
         return "User not found"
     pass
