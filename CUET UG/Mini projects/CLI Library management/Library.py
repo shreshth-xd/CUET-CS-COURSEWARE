@@ -116,20 +116,39 @@ def LabellingReturn(username,bookname,file):
 
 
 
-# Function allowing the user to actually subcribe to an available plan
-def subscribe(username,plan):
+"""
+Function allowing the user to actually subcribe to an available plan
+NOTE: A user needs to have an existing account to be able to subscribe to any plan.
+NOTE: If a user is not signed up, then prompt him/her to sign up first
+"""
+
+def subscribe(username,plan,profession):
     # Check which plan the user wants to subscribe to then add this subscription to user's account
     authentication=CheckUser(username)
+
+    # Differentiating the free tier users and the subscribed users:
+    unsanitized=plan.lower() in ("free","basic","none")
+    
+
     if bool(authentication)==True:
-        with open ("Accounts.csv","r") as file:
+        with open("Accounts.csv","r") as file:
             reader=csv.reader(file)
             previousData=[]
-            for record in file:
-                if record[0]==username:
-                    record[2]==plan
+            for record in reader:
+                if record[0]==username and not unsanitized:
+                    record[2]=plan
+                    previousData.append(record)
+                elif record[0]==username and unsanitized:
+                    subscribed="No"
+                    duration="Unlimited"
+                    record[2]=plan
                     previousData.append(record)
                 else:
                     previousData.append(record)
+        
+        with open("Accounts.csv","w") as file:
+            writer=csv.writer(file)
+            writer.writerows(previousData)
         
     else:
         return "User not found"
