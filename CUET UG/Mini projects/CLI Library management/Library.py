@@ -137,11 +137,13 @@ def subscribe(username,plan,profession):
             for record in reader:
                 if record[0]==username and not unsanitized:
                     record[2]=plan
+                    record[4]=profession
                     previousData.append(record)
                 elif record[0]==username and unsanitized:
-                    subscribed="No"
-                    duration="Unlimited"
+                    record[1]="No"
                     record[2]=plan
+                    record[3]="Unlimited"
+                    record[4]=profession
                     previousData.append(record)
                 else:
                     previousData.append(record)
