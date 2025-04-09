@@ -288,7 +288,7 @@ while True:
                     print("Fill the information below to make your account.")
                     plan_=str(input("Select a plan: "))
                     profession=str(input("Enter your profession here (Student if none): "))
-                    SignUp(username,user,subscribed="No",plan=plan_,tenure_of_plan="Unlimited",Penalty="None",Profession=profession)
+                    SignUp(username,user,subscribed="No",plan=plan_,tenure_of_plan="Unlimited",Penalty=("None"),Profession=profession)
 
                 ReturnStatus="N/A"
 
