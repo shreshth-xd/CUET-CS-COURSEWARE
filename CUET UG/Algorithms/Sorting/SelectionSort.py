@@ -46,7 +46,7 @@ pre-assumed smallest element is shifted to it's correct and actual position due 
 The same above process is repeated for all the i'th elements in the array/list till the termination of outer loop
 """
 
-# Code:
+# Code
 for i in range(0,n-1):
     min_=i
     for j in range(i+1,n):
@@ -56,5 +56,5 @@ for i in range(0,n-1):
     if min_!=i:
         lst[i],lst[min_]=lst[min_],lst[i]
 
-# Printing the sorted list
-print("Sorted list: ",lst)
+print("Sorted list:",lst)
+
