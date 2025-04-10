@@ -151,6 +151,8 @@ def subscribe(username,plan,profession,duration):
         with open("Accounts.csv","w") as file:
             writer=csv.writer(file)
             writer.writerows(previousData)
+            return "Subscribed successfully."
+        
         
     else:
         return "User not found"
@@ -374,8 +376,8 @@ while True:
 
         username = str(input(f"Enter your username: "))
         # Fetching the tenure of plan (TOP)
-        TOP=DurationFetcher(choice)
-        subscribe(username,choice)
+        Duration=DurationFetcher(choice)
+        subscribe(username,choice,profession,Duration)
 
     elif choice==5:
         break
