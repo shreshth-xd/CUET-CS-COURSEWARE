@@ -26,6 +26,8 @@ for i in range(1,n):
     j=i-1
     while j>=0 and curr<lst[j]:
         lst[j+1]=lst[j]
+        j=j-1
     else:
         lst[j+1]=curr
+
 print("Sorted array: ",lst)
