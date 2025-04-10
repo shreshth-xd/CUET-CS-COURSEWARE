@@ -46,13 +46,3 @@ pre-assumed smallest element is shifted to it's correct and actual position due 
 The same above process is repeated for all the i'th elements in the array/list till the termination of outer loop
 """
 
-for i in range(0,n-1):
-    min_ = i
-    for j in range(i+1,n):
-        if lst[j]<lst[min_]:
-            min_ = j
-    
-    if min_!=i:
-        lst[i],lst[min_] = lst[min_],lst[i]
-
-print("Sorted array: ",lst)
