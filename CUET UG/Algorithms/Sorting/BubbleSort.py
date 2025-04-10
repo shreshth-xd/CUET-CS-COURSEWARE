@@ -6,7 +6,9 @@ for i in range(count):
     array.append(item)
 
 n=len(array)
-print("Unsorted array: ",array)
+print("Unsorted array:",array)
+
+# Logic and explanation of bubble sort algorithm 
 """
 In bubble sort algorithm, all we have to do is to start with comparing the starting value of the array with the value
 coming after it and swap it as per our sort order (ascending or descending) and the process is repeated till
@@ -19,10 +21,11 @@ when all the elements are sorted in the required order already then all the algo
 compare the values of the list/array if they are in the required order or not.
 """
 
+
+# Code
 for i in range(0,n):
     for j in range(0,n-i-1):
         if array[j]>array[j+1]:
-            array[j],array[j+1] = array[j+1],array[j]
+            array[j],array[j+1]=array[j+1],array[j]
 
-
-print("Sorted array: ",array)
+print("Sorted list:",array)
