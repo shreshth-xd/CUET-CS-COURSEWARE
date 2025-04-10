@@ -56,4 +56,5 @@ for i in range(0,n-1):
     if min_!=i:
         lst[i],lst[min_]=lst[min_],lst[j]
 
+# Printing the sorted list
 print("Sorted list: ",lst)
