@@ -14,3 +14,5 @@ def PallindromeString(string):
         
         return checkForPallindrome(left+1,right-1)
     
+    return checkForPallindrome()
+
