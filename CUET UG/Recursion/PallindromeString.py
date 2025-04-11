@@ -1,10 +1,10 @@
 # Checking if a given string is a pallindrome or not
 string=str(input("Enter the string: "))
 
-def PallindromeString(string):
+def PalindromeString(string):
     string = "".join(c.lower() for c in string if c.isalnum())
 
-    def checkForPallindrome(left=0,right=len(string)-1):
+    def checkForPalindrome(left=0,right=len(string)-1):
         if string=="":
             return True
         elif len(string)==1:
@@ -12,11 +12,11 @@ def PallindromeString(string):
         elif string[0]!=string[len(string)-1]:
             return False
         
-        return checkForPallindrome(left+1,right-1)
+        return checkForPalindrome(left+1,right-1)
     
-    return checkForPallindrome()
+    return checkForPalindrome()
 
-result=PallindromeString(string)
+result=PalindromeString(string)
 if result==True:
     print("Yes!, the string is pallindrome.")
 else:
