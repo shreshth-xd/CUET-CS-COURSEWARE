@@ -5,9 +5,7 @@ def PalindromeString(string):
     string = "".join(c.lower() for c in string if c.isalnum())
 
     def checkForPalindrome(left=0,right=len(string)-1):
-        if string=="":
-            return True
-        elif len(string)==1:
+        if left>=right:
             return True
         elif string[left]!=string[right]:
             return False
