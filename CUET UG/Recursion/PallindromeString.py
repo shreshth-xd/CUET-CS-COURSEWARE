@@ -9,7 +9,7 @@ def PalindromeString(string):
             return True
         elif len(string)==1:
             return True
-        elif string[0]!=string[len(string)-1]:
+        elif string[left]!=string[right]:
             return False
         
         return checkForPalindrome(left+1,right-1)
