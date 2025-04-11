@@ -48,6 +48,7 @@ def l_enqueue(item,queue):
         queue.insert(0,item)
     else:
         queue.insert(0,item)
+        rear=len(queue)-1
 
 
 
@@ -57,4 +58,13 @@ def r_dequeue(queue):
         print("Underflow")
     else:
         item=queue.pop()
+        return item
+    
+
+def peekRight(queue):
+    if isEmpty(queue):
+        print("The Queue is empty.")
+    else:
+        rear=len(queue)-1
+        item=queue[rear]
         return item
