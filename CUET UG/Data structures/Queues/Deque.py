@@ -24,4 +24,7 @@ def enqueue(item,queue):
 def dequeue(queue):
     if isEmpty(queue):
         print("Underflow")
+    else:
+        item=queue.pop(0)
+        return item
 
