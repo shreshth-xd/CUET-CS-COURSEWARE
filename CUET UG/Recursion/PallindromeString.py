@@ -6,4 +6,4 @@ def PallindromeString(string):
         return True
     elif len(string)==1:
         return True
-    
+    elif 
