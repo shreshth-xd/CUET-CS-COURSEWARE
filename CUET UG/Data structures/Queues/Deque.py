@@ -27,4 +27,12 @@ def dequeue(queue):
     else:
         item=queue.pop(0)
         return item
+    
+
+def peek(queue):
+    if isEmpty(queue):
+        return "The Queue is empty."
+    else:
+        item=queue[0]
+        return item
 
