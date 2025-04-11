@@ -16,3 +16,8 @@ def PallindromeString(string):
     
     return checkForPallindrome()
 
+result=PallindromeString(string)
+if result==True:
+    print("Yes!, the string is pallindrome.")
+else:
+    print("No, the string not a pallindrome.")
