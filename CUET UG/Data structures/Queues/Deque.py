@@ -11,7 +11,7 @@ def isEmpty(queue):
     else:
         return False
     
-
+# Normal enqueue as per the FIFO technique
 def enqueue(item,queue):
     if isEmpty(queue):
         front=rear=0
@@ -19,6 +19,8 @@ def enqueue(item,queue):
     else:
         queue.append(item)
         rear=len(queue)-1
+
+
 
 
 def dequeue(queue):
@@ -36,3 +38,6 @@ def peek(queue):
         item=queue[0]
         return item
 
+# Enqueue function to push an element at the front
+def l_enqueue(item,queue):
+    queue.insert(0,item)
