@@ -38,6 +38,23 @@ def peek(queue):
         item=queue[0]
         return item
 
+
+# Deque functions:
+
 # Enqueue function to push an element at the front
 def l_enqueue(item,queue):
-    queue.insert(0,item)
+    if isEmpty(queue):
+        front=rear=0
+        queue.insert(0,item)
+    else:
+        queue.insert(0,item)
+
+
+
+# Deleting an element from the rear end of the queue
+def r_dequeue(queue):
+    if isEmpty(queue):
+        print("Underflow")
+    else:
+        item=queue.pop()
+        return item
