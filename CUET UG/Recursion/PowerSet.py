@@ -6,5 +6,7 @@ def PowerSetGenerator(string,ptr,combs=None):
 
     if ptr in combs:
         pass
-
+    
+    combs.add("")
     combs.add(ptr)    
+    
