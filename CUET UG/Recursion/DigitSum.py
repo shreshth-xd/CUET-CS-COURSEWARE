@@ -6,3 +6,7 @@ def SumOfDigits(num,sum=0):
     rem=num%10
     sum+=rem
     return SumOfDigits(num//10,sum)
+
+n=int(input("Enter the number: "))
+res=SumOfDigits(n)
+print(res)
