@@ -10,3 +10,4 @@ def PowerSetGenerator(string,ptr=0,combs=None):
     
     combs.add("")
     combs.add(string[ptr])
+    
