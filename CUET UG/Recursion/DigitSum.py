@@ -2,7 +2,7 @@
 
 def SumOfDigits(num,sum=0):
     if num==0:
-        return SumOfDigits(sum)
+        return sum
     rem=num%10
     sum+=rem
     return SumOfDigits(num//10,sum)
