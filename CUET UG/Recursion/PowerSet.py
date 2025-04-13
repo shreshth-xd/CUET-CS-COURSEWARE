@@ -11,4 +11,4 @@ def PowerSetGenerator(string,ptr=0,combs=None):
     
     if string not in combs:
         combs.add(string)
-    
+        return PowerSetGenerator(string)
