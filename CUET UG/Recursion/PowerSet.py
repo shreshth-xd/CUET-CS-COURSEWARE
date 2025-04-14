@@ -4,7 +4,6 @@ def PowerSetGenerator(string,ptr=0,combs=None):
     if combs is None:
         combs = set()
         combs.add("")
-        combs.add(string[ptr])
 
 
     if string in combs:
