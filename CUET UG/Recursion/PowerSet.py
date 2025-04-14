@@ -6,7 +6,7 @@ def PowerSetGenerator(string,ptr=0,current="",combs=None):
 
     elif combs is None:
         combs = set()
-        combs.add("")
+        combs.add(current)
         return PowerSetGenerator(string,ptr+1,current+string[ptr],combs=combs)
 
     elif current in combs:
