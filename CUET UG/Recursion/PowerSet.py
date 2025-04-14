@@ -1,18 +1,20 @@
 string=str(input("Enter the string: "))
 
-def PowerSetGenerator(string,ptr=-1,current="",combs=None):
-    if combs is None:
+def PowerSetGenerator(string,ptr=0,current="",combs=None):
+    if ptr==len(string):
+        return combs
+
+    elif combs is None:
         combs = set()
         combs.add("")
-        return PowerSetGenerator(string,combs=combs)
+        return PowerSetGenerator(string,ptr+1,current+string[ptr],combs=combs)
 
     elif current in combs:
-        PowerSetGenerator(string,ptr+1,current+string[ptr],combs=combs)
-        pass
-    
+        return PowerSetGenerator(string,ptr+1,current+string[ptr],combs=combs)
+        
     elif current not in combs:
         combs.add(current)
-        PowerSetGenerator(string,ptr+1,current,combs=combs)
+        return PowerSetGenerator(string,ptr+1,current,combs=combs)
     
-    elif ptr==len(string):
-        return combs
+    
+print(PowerSetGenerator(string))
