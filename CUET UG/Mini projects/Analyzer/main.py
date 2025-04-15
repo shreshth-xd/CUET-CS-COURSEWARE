@@ -22,7 +22,8 @@ while True:
         print("2. docx")
         print("3. png")
         print("4. jpeg")
-        format_=str(input(""))
+        print("5. svg")
+        format_=str(input(">"))
         pass
     elif choice==6:
         break
