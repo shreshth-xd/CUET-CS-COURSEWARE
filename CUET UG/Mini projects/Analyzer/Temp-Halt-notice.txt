@@ -1,0 +1,3 @@
+Currently halting the progress and further development of this one mini project, as I have redirect myself to some other things
+which are important for this project as well, in the meantime, the readers and contributors can send me their suggestion for this
+courseware via a pull request after forking this repo and writing their suggestion in the suggestions.txt of this project's folder.
