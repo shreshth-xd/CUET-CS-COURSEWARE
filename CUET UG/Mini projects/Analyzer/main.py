@@ -3,7 +3,6 @@
 import matplotlib
 import csv
 from collections import Counter
-import json
 
 
 while True:
