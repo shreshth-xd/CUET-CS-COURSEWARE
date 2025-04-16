@@ -1,5 +1,7 @@
 # __name__==__main__ 
 # Main script for the Data Analyzer and probability calculator project
+# This analyzer currently works only for the purpose of analyzing the performance of students of a class
+# Currently using and relying on CSV for data storage
 import matplotlib
 import csv
 from collections import Counter
@@ -14,7 +16,19 @@ while True:
     print("6. Exit")
     choice=int(input(">"))
     if choice==1:
-        pass
+        names=[]
+        IndividualScores={}
+        averages=[]
+
+        
+        stream = str(input("Enter the stream: "))
+        strengthOfClass = int(input("Enter the number of students in this class: "))
+        subjects=int(input("Enter the number of subjects and electives for this stream: "))
+
+        for i in range(strengthOfClass):
+            name=str(input("Enter the name of the student: "))
+            # scores=
+        
     elif choice==5:
         print("Export it in: ")
         print("1. pdf")
