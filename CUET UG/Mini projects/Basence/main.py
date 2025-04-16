@@ -7,6 +7,7 @@ import matplotlib
 import csv
 from collections import Counter
 
+conn = connector.connect(host="localhost", user="root", password="",  database="BasenceDB")
 
 while True:
     print("1. Upload dataset")
