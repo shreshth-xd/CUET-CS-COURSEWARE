@@ -2,6 +2,7 @@
 # Main script for the Data Analyzer and probability calculator project
 # This analyzer currently works only for the purpose of analyzing the performance of students of a class
 # Currently using and relying on CSV for data storage
+import mysql.connector as connector
 import matplotlib
 import csv
 from collections import Counter
