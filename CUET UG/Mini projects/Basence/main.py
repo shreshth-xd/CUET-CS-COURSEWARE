@@ -20,7 +20,6 @@ while True:
         names=[]
         IndividualScores={}
         averages=[]
-
         
         stream = str(input("Enter the stream: "))
         strengthOfClass = int(input("Enter the number of students in this class: "))
