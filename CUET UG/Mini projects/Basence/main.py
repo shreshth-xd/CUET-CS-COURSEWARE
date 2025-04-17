@@ -5,9 +5,16 @@
 import mysql.connector as connector
 import matplotlib
 import csv
+import os
 from collections import Counter
+from dotenv import load_dotenv
 
-conn = connector.connect(host="localhost", user="root", password="",  database="BasenceDB")
+load_dotenv()
+conn = connector.connect(
+    host=os.getenv("DB_HOST"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),  
+    database=os.getenv("DB_NAME"))
 
 while True:
     print("1. Upload dataset")
