@@ -19,6 +19,7 @@ conn = connector.connect(
 # Checking if credentials are loaded properly or not
 RequiredCreds = ["DB_HOST","DB_USER","DB_PASSWORD","DB_NAME"]
 missing = [cred for cred in RequiredCreds if not os.getenv(cred)]
+
 if missing:
     print("Some of your credentials are missing.")
     print(f"Missing env variables: {', '.join(missing)}")
@@ -26,6 +27,9 @@ if missing:
 if conn.is_connected():
     print("BASENCE\n")
     print("One stop solution for performance analysis")
+
+# Cursor
+Cursor = conn.cursor()
 
 
 while True:
