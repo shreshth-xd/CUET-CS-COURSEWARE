@@ -16,8 +16,12 @@ conn = connector.connect(
     password=os.getenv("DB_PASSWORD"),  
     database=os.getenv("DB_NAME"))
 
+# Checking if credentials are loaded properly or not
+creds = ["DB_HOST","DB_USER","DB_PASSWORD","DB_NAME"]
+
 if conn.is_connected():
-    print("Connection successfull.")
+    print("BASENCE\n")
+    print("One stop solution for performance analysis")
 
 
 while True:
