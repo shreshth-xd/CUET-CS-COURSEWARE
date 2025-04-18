@@ -65,8 +65,8 @@ while True:
                 ComputerScienceScore = str(input("Enter the Computer science score of the student: "))
                 PhysicalEducationScore = str(input("Enter the Physical score of the student: "))
                 
-                query = f"insert into pcm values({name},{})"
-                Cursor.execute()
+                query = f"insert into pcm values({name},{Class_},{EnglishScore},{PhysicsScore},{ChemistryScore},{MathScore},{ComputerScienceScore},{PhysicalEducationScore})"
+                Cursor.execute(query)
             
             elif stream.lower()=="pcb":
                 print("Write N/A for the elective which has not been chosen by a student.")
@@ -80,8 +80,8 @@ while True:
                 ComputerScienceScore = str(input("Enter the Computer science score of the student: "))
                 PhysicalEducationScore = str(input("Enter the Physical score of the student: "))
                 
-                query = f"insert into pcm values({name},{})"
-                Cursor.execute()
+                query = f"insert into pcb values({name},{Class_},{EnglishScore},{PhysicsScore},{ChemistryScore},{BioScore},{ComputerScienceScore},{PhysicalEducationScore})"
+                Cursor.execute(query)
 
 
     elif choice==6:
