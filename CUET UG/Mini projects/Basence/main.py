@@ -45,8 +45,7 @@ while True:
         stream = str(input("Enter the stream: "))
         strengthOfClass = int(input("Enter the number of students in this class: "))
         subjects=int(input("Enter the number of subjects and electives for this stream: "))
-        # electives
-
+        
         for i in range(strengthOfClass):
             name=str(input("Enter the name of the student: "))
             # scores=
