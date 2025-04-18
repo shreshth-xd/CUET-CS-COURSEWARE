@@ -17,7 +17,6 @@ conn = connector.connect(
     database=os.getenv("DB_NAME"))
 
 
-
 while True:
     print("1. Upload dataset")
     print("2. Generate frequency table")
