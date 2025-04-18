@@ -48,7 +48,7 @@ while True:
         
         # Fetching the table name
         stream = str(input("Enter the stream: "))
-
+        Class = int(input("Enter the class of this stream: "))
         strengthOfClass = int(input("Enter the number of students in this class: "))
         
         for i in range(strengthOfClass):
@@ -65,6 +65,7 @@ while True:
                 ComputerScienceScore = str(input("Enter the Computer science score of the student: "))
                 PhysicalEducationScore = str(input("Enter the Physical score of the student: "))
                 
+                query = f"insert into pcm values({name},{})"
                 Cursor.execute()
             
             elif stream.lower()=="pcb":
@@ -79,6 +80,7 @@ while True:
                 ComputerScienceScore = str(input("Enter the Computer science score of the student: "))
                 PhysicalEducationScore = str(input("Enter the Physical score of the student: "))
                 
+                query = f"insert into pcm values({name},{})"
                 Cursor.execute()
 
 
