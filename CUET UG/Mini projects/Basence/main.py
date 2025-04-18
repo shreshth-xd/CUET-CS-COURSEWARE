@@ -53,14 +53,35 @@ while True:
         
         for i in range(strengthOfClass):
             name=str(input("Enter the name of the student: "))
-            if stream.lower()=="science":
+            if stream.lower()=="pcm":
+                print("Write N/A for the elective which has not been chosen by a student.")
                 MathScore = int(input("Enter the Mathematics score of the student: "))
                 PhysicsScore = int(input("Enter the Physics score of the student: "))
                 ChemistryScore = int(input("Enter the Chemistry score of the student: "))
                 EnglishScore = int(input("Enter the English score of the student: "))
-                ComputerScienceScore = int(input("Enter the Computer science score of the student: "))
-                PhysicalEducationScore = int(input("Enter the Physical score of the student: "))
+
+                # Electives
+                print("The following subjects are electives")
+                ComputerScienceScore = str(input("Enter the Computer science score of the student: "))
+                PhysicalEducationScore = str(input("Enter the Physical score of the student: "))
                 
+                Cursor.execute()
+            
+            elif stream.lower()=="pcb":
+                print("Write N/A for the elective which has not been chosen by a student.")
+                BioScore = int(input("Enter the Biology score of the student: "))
+                PhysicsScore = int(input("Enter the Physics score of the student: "))
+                ChemistryScore = int(input("Enter the Chemistry score of the student: "))
+                EnglishScore = int(input("Enter the English score of the student: "))
+
+                # Electives
+                print("The following subjects are electives")
+                ComputerScienceScore = str(input("Enter the Computer science score of the student: "))
+                PhysicalEducationScore = str(input("Enter the Physical score of the student: "))
+                
+                Cursor.execute()
+
+
     elif choice==6:
         print("Export it in: ")
         print("1. pdf")
