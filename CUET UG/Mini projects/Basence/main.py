@@ -17,7 +17,11 @@ conn = connector.connect(
     database=os.getenv("DB_NAME"))
 
 # Checking if credentials are loaded properly or not
-creds = ["DB_HOST","DB_USER","DB_PASSWORD","DB_NAME"]
+RequiredCreds = ["DB_HOST","DB_USER","DB_PASSWORD","DB_NAME"]
+missing = [cred for cred in RequiredCreds if not os.getenv(cred)]
+if missing:
+    print("Some of your credentials are missing.")
+    # print("".join({missing}))
 
 if conn.is_connected():
     print("BASENCE\n")
