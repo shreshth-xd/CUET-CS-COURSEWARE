@@ -34,25 +34,34 @@ Cursor = conn.cursor()
 
 while True:
     print("1. Upload dataset")
-    print("2. Generate frequency table")
-    print("3. Calculate probability")
-    print("4. Plot graph")
-    print("5. Export report")
-    print("6. Exit")
+    print("2. Update dataset")
+    print("3. Generate frequency table")
+    print("4. Calculate probability")
+    print("5. Plot graph")
+    print("6. Export report")
+    print("7. Exit")
     choice=int(input(">"))
     if choice==1:
         names=[]
         IndividualScores={}
         averages=[]
         
+        # Fetching the table name
         stream = str(input("Enter the stream: "))
+
         strengthOfClass = int(input("Enter the number of students in this class: "))
         
         for i in range(strengthOfClass):
             name=str(input("Enter the name of the student: "))
-            # scores=
-        
-    elif choice==5:
+            if stream.lower()=="science":
+                MathScore = int(input("Enter the Mathematics score of the student: "))
+                PhysicsScore = int(input("Enter the Physics score of the student: "))
+                ChemistryScore = int(input("Enter the Chemistry score of the student: "))
+                EnglishScore = int(input("Enter the English score of the student: "))
+                ComputerScienceScore = int(input("Enter the Computer science score of the student: "))
+                PhysicalEducationScore = int(input("Enter the Physical score of the student: "))
+                
+    elif choice==6:
         print("Export it in: ")
         print("1. pdf")
         print("2. docx")
@@ -61,7 +70,7 @@ while True:
         print("5. svg")
         format_=str(input(">"))
         pass
-    elif choice==6:
+    elif choice==7:
         break
     else:
         print("Please make a valid choice.")
