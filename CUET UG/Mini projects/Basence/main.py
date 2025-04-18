@@ -21,7 +21,7 @@ RequiredCreds = ["DB_HOST","DB_USER","DB_PASSWORD","DB_NAME"]
 missing = [cred for cred in RequiredCreds if not os.getenv(cred)]
 if missing:
     print("Some of your credentials are missing.")
-    # print("".join({missing}))
+    print(f"Missing env variables: {', '.join(missing)}")
 
 if conn.is_connected():
     print("BASENCE\n")
