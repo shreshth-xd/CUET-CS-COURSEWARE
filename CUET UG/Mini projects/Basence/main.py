@@ -48,7 +48,7 @@ while True:
         
         # Fetching the table name
         stream = str(input("Enter the stream: "))
-        Class = int(input("Enter the class of this stream: "))
+        Class_ = int(input("Enter the class of this stream: "))
         strengthOfClass = int(input("Enter the number of students in this class: "))
         
         for i in range(strengthOfClass):
