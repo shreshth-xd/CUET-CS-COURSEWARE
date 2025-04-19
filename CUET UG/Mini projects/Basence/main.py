@@ -31,7 +31,6 @@ if conn.is_connected():
 # Cursor
 Cursor = conn.cursor()
 
-
 while True:
     print("1. Upload dataset")
     print("2. Update dataset")
