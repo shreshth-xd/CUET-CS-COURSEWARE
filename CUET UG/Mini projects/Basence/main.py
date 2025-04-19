@@ -99,8 +99,9 @@ while True:
                 Cursor.execute(query)
 
     elif choice==2:
+        table=str(input("Stream: "))
         pass
-    
+
     elif choice==6:
         print("Export it in: ")
         print("1. pdf")
