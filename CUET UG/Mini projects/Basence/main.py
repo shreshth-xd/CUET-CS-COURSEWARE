@@ -34,7 +34,7 @@ Cursor = conn.cursor()
 while True:
     print("1. Upload dataset")
     print("2. Update dataset")
-    print("3. Generate frequency table")
+    print("3. Project averages")
     print("4. Calculate probability")
     print("5. Plot graph")
     print("6. Export report")
@@ -96,7 +96,21 @@ while True:
 
     elif choice==2:
         table=str(input("Stream: "))
-        pass
+
+    elif choice==3:
+        DataOfClass = {}
+
+        table=str(input("Stream: "))
+        query=f"select name, (English+Physics+Chemistry+Maths+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
+        
+        Cursor.execute(query)
+        data=Cursor.fetchall()
+
+        for row in data:
+            DataOfClass[row[0]]=row[1]
+        
+        print(DataOfClass)
+    
 
     elif choice==6:
         print("Export it in: ")
