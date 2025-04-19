@@ -82,6 +82,20 @@ while True:
                 
                 query = f"insert into pcb values({name},{Class_},{EnglishScore},{PhysicsScore},{ChemistryScore},{BioScore},{ComputerScienceScore},{PhysicalEducationScore})"
                 Cursor.execute(query)
+            
+            elif stream.lower()=="commerce":
+                print("Write N/A for the elective which has not been chosen by a student.")
+                EnglishScore = int(input("Enter the English score of the student: "))
+                AccountancyScore = int(input("Enter the Biology score of the student: "))
+                BusinessStudiesScore = int(input("Enter the Physics score of the student: "))
+                EconomicsScore = int(input("Enter the Chemistry score of the student: "))
+
+                # Electives
+                print("The following subjects are electives")
+                ComputerScienceScore = str(input("Enter the Computer science score of the student: "))
+                PhysicalEducationScore = str(input("Enter the Physical score of the student: "))
+
+                query = f"insert into pcb values({name},{Class_},{EnglishScore},{AccountancyScore},{BusinessStudiesScore},{EconomicsScore},{ComputerScienceScore},{PhysicalEducationScore})"
 
 
     elif choice==6:
