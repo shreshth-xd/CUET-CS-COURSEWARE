@@ -42,9 +42,6 @@ while True:
     print("7. Exit")
     choice=int(input(">"))
     if choice==1:
-        names=[]
-        IndividualScores={}
-        averages=[]
         
         # Fetching the table name
         stream = str(input("Enter the stream: "))
