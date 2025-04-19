@@ -41,7 +41,7 @@ while True:
         
         # Fetching the table name
         stream = str(input("Enter the stream: "))
-        Class_ = int(input("Enter the class of this stream: "))
+        Class_ = str(input("Enter the class of this stream: "))
         strengthOfClass = int(input("Enter the number of students in this class: "))
         
         for i in range(strengthOfClass):
@@ -108,7 +108,11 @@ while True:
             names.append(row[0])
             averages.append(row[1])
         
-        plt.plot(names,averages)
+        graphChoice=str(input("Do you want a line graph or a bar graph? "))
+        if graphChoice.lower()=="line":
+            plt.plot(names,averages)
+        elif graphChoice.lower()=="bar":
+            plt.bar(names,averages)
         plt.title("Overall performance of all students")
         plt.xlabel("Names")
         plt.ylabel("Averages")
