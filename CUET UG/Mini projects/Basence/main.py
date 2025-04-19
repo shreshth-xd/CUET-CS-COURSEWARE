@@ -127,7 +127,7 @@ while True:
         else:
             plt.show()
 
-    elif choice==6:
+    elif choice==5:
         break
     else:
         print("Please make a valid choice.")
