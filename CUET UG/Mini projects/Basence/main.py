@@ -128,7 +128,6 @@ while True:
         print("4. jpeg")
         print("5. svg")
         format_=str(input(">"))
-        pass
     elif choice==7:
         break
     else:
