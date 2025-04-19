@@ -35,9 +35,7 @@ while True:
     print("2. Update dataset")
     print("3. Project averages")
     print("4. Calculate probability")
-    print("5. Plot graph")
-    print("6. Export report")
-    print("7. Exit")
+    print("5. Exit")
     choice=int(input(">"))
     if choice==1:
         
@@ -117,18 +115,19 @@ while True:
         save=str(input("Do you want to save the upcoming graph?"))
         if save.lower()=="yes":
             GraphName=str(input("Name: "))
-            plt.savefig(GraphName)
-        plt.show()
+            print("Save it in: ")
+            print("1. pdf")
+            print("2. docx")
+            print("3. png")
+            print("4. jpeg")
+            print("5. svg")
+            format_=str(input(">"))
+            plt.savefig(f"{GraphName}.{format_.lower()}")
+            plt.show()
+        else:
+            plt.show()
 
     elif choice==6:
-        print("Save it in: ")
-        print("1. pdf")
-        print("2. docx")
-        print("3. png")
-        print("4. jpeg")
-        print("5. svg")
-        format_=str(input(">"))
-    elif choice==7:
         break
     else:
         print("Please make a valid choice.")
