@@ -117,6 +117,7 @@ while True:
         plt.xlabel("Names")
         plt.ylabel("Averages")
         save=str(input("Do you want to save the upcoming graph?"))
+        
         if save.lower()=="yes":
             GraphName=str(input("Name: "))
             print("Save it in: ")
@@ -128,6 +129,7 @@ while True:
             format_=str(input(">"))
             plt.savefig(f"{GraphName}.{format_.lower()}")
             plt.show()
+        
         else:
             plt.show()
 
