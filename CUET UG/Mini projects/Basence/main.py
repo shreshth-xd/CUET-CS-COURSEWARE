@@ -3,8 +3,7 @@
 # This analyzer currently works only for the purpose of analyzing the performance of students of a class
 # Currently using and relying on CSV for data storage
 import mysql.connector as connector
-import matplotlib
-import csv
+import matplotlib as plt
 import os
 from collections import Counter
 from dotenv import load_dotenv
@@ -98,7 +97,8 @@ while True:
         table=str(input("Stream: "))
 
     elif choice==3:
-        DataOfClass = {}
+        names=[]
+        averages=[]
 
         table=str(input("Stream: "))
         query=f"select name, (English+Physics+Chemistry+Maths+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
@@ -107,13 +107,21 @@ while True:
         data=Cursor.fetchall()
 
         for row in data:
-            DataOfClass[row[0]]=row[1]
+            names.append(row[0])
+            averages.append(row[1])
         
-        print(DataOfClass)
-    
+        plt.plot(names,averages)
+        plt.title("Overall performance of all students")
+        plt.xlabel("Names")
+        plt.ylabel("Averages")
+        save=str(input("Do you want to save the upcoming graph?"))
+        if save.lower()=="yes":
+            GraphName=str(input("Name: "))
+            plt.savefig(GraphName)
+        plt.show()
 
     elif choice==6:
-        print("Export it in: ")
+        print("Save it in: ")
         print("1. pdf")
         print("2. docx")
         print("3. png")
