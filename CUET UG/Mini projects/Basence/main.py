@@ -98,6 +98,9 @@ while True:
                 query = f"insert into pcb values({name},{Class_},{EnglishScore},{AccountancyScore},{BusinessStudiesScore},{EconomicsScore},{ComputerScienceScore},{PhysicalEducationScore})"
                 Cursor.execute(query)
 
+    elif choice==2:
+        pass
+    
     elif choice==6:
         print("Export it in: ")
         print("1. pdf")
