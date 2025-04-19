@@ -3,7 +3,7 @@
 # This analyzer currently works only for the purpose of analyzing the performance of students of a class
 # Currently using and relying on CSV for data storage
 import mysql.connector as connector
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import os
 from collections import Counter
 from dotenv import load_dotenv
