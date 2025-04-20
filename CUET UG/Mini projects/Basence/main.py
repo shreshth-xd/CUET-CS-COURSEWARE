@@ -137,6 +137,7 @@ while True:
             plt.show()
 
     elif choice==4:
+        # To calculate the probability of a selected student to have a particular average
         table=str(input("Stream: "))
         
 
