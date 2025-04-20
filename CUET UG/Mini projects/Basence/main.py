@@ -147,10 +147,20 @@ while True:
             averages.append(row[0])
 
         print(averages)
-        favourableAverage=int(input("Favourable average: "))
+        favourableAverage=float(input("Favourable average: "))
 
         probabilityOfEvent=averages.count(favourableAverage)/len(averages)
         print(f"Probability of {favourableAverage} is {probabilityOfEvent}")
+
+        GraphRequest=str(input("Do you want to plot these probabilities on a graph?"))
+        if GraphRequest.lower()=="yes":
+            GraphType=str(input("Do you want to plot it on a bar graph or a line graph?"))
+            if GraphType.lower() in ("bar","bar graph"):
+                pass
+            elif GraphType.lower() in ("bar","bar graph"):
+                pass
+        else:
+            print("")
 
     elif choice==5:
         break
