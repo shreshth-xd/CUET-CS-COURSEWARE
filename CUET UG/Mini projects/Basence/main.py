@@ -29,6 +29,25 @@ def barGraphGenerator(names,averages):
         plt.show()
 
 
+def lineGraphGenerator(names,averages):
+    plt.bar(names,averages)
+    plt.title("Overall performance of all students")
+    plt.xlabel("Names")
+    plt.ylabel("Averages")
+    save=str(input("Do you want to save the upcoming graph?"))
+    
+    if save.lower()=="yes":
+        GraphName=str(input("Name: "))
+        print("Save it in: ")
+        print("1. pdf")
+        print("2. docx")
+        print("3. png")
+        print("4. jpeg")
+        print("5. svg")
+        format_=str(input(">"))
+        plt.savefig(f"Export/{GraphName}.{format_.lower()}")
+        plt.show()
+
 
 
 load_dotenv()
