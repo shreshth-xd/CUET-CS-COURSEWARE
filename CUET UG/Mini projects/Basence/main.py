@@ -146,9 +146,9 @@ while True:
         for row in RetreivedAverages:
             averages.append(row[0])
 
+        print(averages)
         favourableAverage=int(input("Favourable average: "))
 
-        print(averages)
         probabilityOfEvent=averages.count(favourableAverage)/len(averages)
         print(f"Probability of {favourableAverage} is {probabilityOfEvent}")
 
