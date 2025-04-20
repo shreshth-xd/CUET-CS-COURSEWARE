@@ -140,14 +140,15 @@ while True:
         # To calculate the probability of a selected student to have a particular average
         averages=[]
         table=str(input("Stream: "))
-        favourableAverage=int(input("Favourable average: "))
-
         QueryForAverage=f"select (English+Physics+Chemistry+Maths+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
         Cursor.execute(QueryForAverage)
         RetreivedAverages=Cursor.fetchall()
         for row in RetreivedAverages:
             averages.append(row[0])
 
+        favourableAverage=int(input("Favourable average: "))
+
+        print(averages)
         probabilityOfEvent=averages.count(favourableAverage)/len(averages)
         print(f"Probability of {favourableAverage} is {probabilityOfEvent}")
 
