@@ -160,33 +160,14 @@ while True:
         
         graphChoice=str(input("Do you want a line graph or a bar graph? "))
         if graphChoice.lower()=="line":
-            plt.plot(names,averages)
+            lineGraphGenerator(names,averages)
         elif graphChoice.lower()=="bar":
-            plt.bar(names,averages)
-        plt.title("Overall performance of all students")
-        plt.xlabel("Names")
-        plt.ylabel("Averages")
-        save=str(input("Do you want to save the upcoming graph?"))
-        
-        if save.lower()=="yes":
-            GraphName=str(input("Name: "))
-            print("Save it in: ")
-            print("1. pdf")
-            print("2. docx")
-            print("3. png")
-            print("4. jpeg")
-            print("5. svg")
-            format_=str(input(">"))
-            plt.savefig(f"Export/{GraphName}.{format_.lower()}")
-            plt.show()
-        
-        else:
-            plt.show()
+            barGraphGenerator(names,averages)
 
     elif choice==4:
         # To calculate the probability of a selected student to have a particular average
         averages=[]
-        probabilities={}
+        probabilities=[]
         table=str(input("Stream: "))
         QueryForAverage=f"select (English+Physics+Chemistry+Maths+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
         Cursor.execute(QueryForAverage)
@@ -207,13 +188,15 @@ while True:
             if GraphType.lower() in ("bar","bar graph"):
                 for item in averages:
                     probabilityOfItem=averages.count(item)/len(averages)
-                    probabilities[item]=probabilityOfItem
+                    probabilities.append(probabilityOfItem)
                 
+                barGraphGenerator(averages,probabilities)
 
 
                 
             elif GraphType.lower() in ("line","line graph"):
                 pass
+        
         else:
             print("")
 
