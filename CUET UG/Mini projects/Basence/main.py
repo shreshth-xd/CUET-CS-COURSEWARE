@@ -28,6 +28,8 @@ def barGraphGenerator(names,averages):
         plt.savefig(f"Export/{GraphName}.{format_.lower()}")
         plt.show()
 
+    else:
+        plt.show()
 
 def lineGraphGenerator(names,averages):
     plt.bar(names,averages)
@@ -46,6 +48,9 @@ def lineGraphGenerator(names,averages):
         print("5. svg")
         format_=str(input(">"))
         plt.savefig(f"Export/{GraphName}.{format_.lower()}")
+        plt.show()
+    
+    else:
         plt.show()
 
 
