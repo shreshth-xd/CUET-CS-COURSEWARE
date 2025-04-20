@@ -137,7 +137,9 @@ while True:
             plt.show()
 
     elif choice==4:
-        pass
+        table=str(input("Stream: "))
+        
+
     elif choice==5:
         break
     else:
