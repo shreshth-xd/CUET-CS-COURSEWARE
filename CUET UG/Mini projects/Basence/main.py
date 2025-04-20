@@ -190,12 +190,13 @@ while True:
                 probabilityOfItem=averages.count(item)/len(averages)
                 probabilities.append(probabilityOfItem)
 
+            title=str(input("Enter the title of this graph: "))
             GraphType=str(input("Do you want to plot it on a bar graph or a line graph?"))
             if GraphType.lower() in ("bar","bar graph"):
-                barGraphGenerator(averages,probabilities)
+                barGraphGenerator(averages,probabilities,title)
 
             elif GraphType.lower() in ("line","line graph"):
-                lineGraphGenerator(averages,probabilities)
+                lineGraphGenerator(averages,probabilities,title)
         
         else:
             # Exit with no traces
