@@ -9,11 +9,11 @@ from collections import Counter
 from dotenv import load_dotenv
 
 
-def barGraphGenerator(names,averages):
-    plt.bar(names,averages)
-    plt.title("Overall performance of all students")
-    plt.xlabel("Names")
-    plt.ylabel("Averages")
+def barGraphGenerator(x,y,title):
+    plt.bar(x,y)
+    plt.title(f"{title}")
+    plt.xlabel(f"{x}")
+    plt.ylabel(f"{y}")
     save=str(input("Do you want to save the upcoming graph?"))
     
     if save.lower()=="yes":
@@ -31,11 +31,11 @@ def barGraphGenerator(names,averages):
     else:
         plt.show()
 
-def lineGraphGenerator(names,averages):
-    plt.bar(names,averages)
-    plt.title("Overall performance of all students")
-    plt.xlabel("Names")
-    plt.ylabel("Averages")
+def lineGraphGenerator(x,y,title):
+    plt.bar(x,y)
+    plt.title(f"{title}")
+    plt.xlabel(f"{x}")
+    plt.ylabel(f"{y}")
     save=str(input("Do you want to save the upcoming graph?"))
     
     if save.lower()=="yes":
@@ -158,11 +158,12 @@ while True:
             names.append(row[0])
             averages.append(row[1])
         
+        title=str(input("Enter the title of the graph: "))
         graphChoice=str(input("Do you want a line graph or a bar graph? "))
         if graphChoice.lower()=="line":
-            lineGraphGenerator(names,averages)
+            lineGraphGenerator(names,averages,title)
         elif graphChoice.lower()=="bar":
-            barGraphGenerator(names,averages)
+            barGraphGenerator(names,averages,title)
 
     elif choice==4:
         # To calculate the probability of a selected student to have a particular average
@@ -182,7 +183,8 @@ while True:
         print(f"Probability of {favourableAverage} is {probabilityOfEvent}")
 
         GraphRequest=str(input("Do you want to plot these probabilities on a graph?"))
-        if GraphRequest.lower()=="yes":            
+        if GraphRequest.lower()=="yes":
+                        
             # Storing the probabilities of respective averages
             for item in averages:
                 probabilityOfItem=averages.count(item)/len(averages)
@@ -196,7 +198,8 @@ while True:
                 lineGraphGenerator(averages,probabilities)
         
         else:
-            print("")
+            # Exit with no traces
+            pass
 
     elif choice==5:
         break
