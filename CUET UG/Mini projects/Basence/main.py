@@ -94,6 +94,9 @@ while True:
     elif choice==2:
         table=str(input("Stream: "))
 
+    elif choice==4:
+        print("Update dataset only allows you to update the marks of the already present students in the database.")
+
     elif choice==3:
         names=[]
         averages=[]
@@ -127,7 +130,7 @@ while True:
             print("4. jpeg")
             print("5. svg")
             format_=str(input(">"))
-            plt.savefig(f"{GraphName}.{format_.lower()}")
+            plt.savefig(f"Export/{GraphName}.{format_.lower()}")
             plt.show()
         
         else:
