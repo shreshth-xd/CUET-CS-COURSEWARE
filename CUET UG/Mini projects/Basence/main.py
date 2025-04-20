@@ -9,8 +9,8 @@ from collections import Counter
 from dotenv import load_dotenv
 
 
-def barGraphGenerator(names,averages):
-    plt.bar(names,averages)
+def barGraphGenerator(x,y):
+    plt.bar(x,y)
     plt.title("Overall performance of all students")
     plt.xlabel("Names")
     plt.ylabel("Averages")
@@ -31,8 +31,8 @@ def barGraphGenerator(names,averages):
     else:
         plt.show()
 
-def lineGraphGenerator(names,averages):
-    plt.bar(names,averages)
+def lineGraphGenerator(x,y):
+    plt.bar(x,y)
     plt.title("Overall performance of all students")
     plt.xlabel("Names")
     plt.ylabel("Averages")
