@@ -94,8 +94,6 @@ while True:
     elif choice==2:
         table=str(input("Stream: "))
 
-    elif choice==4:
-        print("Update dataset only allows you to update the marks of the already present students in the database.")
 
     elif choice==3:
         names=[]
@@ -135,6 +133,9 @@ while True:
         
         else:
             plt.show()
+
+    elif choice==4:
+        print("Update dataset only allows you to update the marks of the already present students in the database.")
 
     elif choice==5:
         break
