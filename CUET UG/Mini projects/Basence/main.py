@@ -182,18 +182,16 @@ while True:
         print(f"Probability of {favourableAverage} is {probabilityOfEvent}")
 
         GraphRequest=str(input("Do you want to plot these probabilities on a graph?"))
-        if GraphRequest.lower()=="yes":
+        if GraphRequest.lower()=="yes":            
+            # Storing the probabilities of respective averages
+            for item in averages:
+                probabilityOfItem=averages.count(item)/len(averages)
+                probabilities.append(probabilityOfItem)
+
             GraphType=str(input("Do you want to plot it on a bar graph or a line graph?"))
-            
             if GraphType.lower() in ("bar","bar graph"):
-                for item in averages:
-                    probabilityOfItem=averages.count(item)/len(averages)
-                    probabilities.append(probabilityOfItem)
-                
                 barGraphGenerator(averages,probabilities)
 
-
-                
             elif GraphType.lower() in ("line","line graph"):
                 pass
         
