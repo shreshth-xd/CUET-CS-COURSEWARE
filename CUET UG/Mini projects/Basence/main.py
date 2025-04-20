@@ -139,6 +139,7 @@ while True:
     elif choice==4:
         # To calculate the probability of a selected student to have a particular average
         averages=[]
+        probabilities={}
         table=str(input("Stream: "))
         QueryForAverage=f"select (English+Physics+Chemistry+Maths+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
         Cursor.execute(QueryForAverage)
@@ -155,9 +156,15 @@ while True:
         GraphRequest=str(input("Do you want to plot these probabilities on a graph?"))
         if GraphRequest.lower()=="yes":
             GraphType=str(input("Do you want to plot it on a bar graph or a line graph?"))
+            
             if GraphType.lower() in ("bar","bar graph"):
-                pass
-            elif GraphType.lower() in ("bar","bar graph"):
+                for item in averages:
+                    probabilityOfItem=averages.count(item)/len(averages)
+                    probabilities[item]=probabilityOfItem
+                
+
+                
+            elif GraphType.lower() in ("line","line graph"):
                 pass
         else:
             print("")
