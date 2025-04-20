@@ -160,9 +160,9 @@ while True:
         
         title=str(input("Enter the title of the graph: "))
         graphChoice=str(input("Do you want a line graph or a bar graph? "))
-        if graphChoice.lower()=="line":
+        if graphChoice.lower() in ("line","line graph"):
             lineGraphGenerator(names,averages,title)
-        elif graphChoice.lower()=="bar":
+        elif graphChoice.lower() in ("bar","bar graph"):
             barGraphGenerator(names,averages,title)
 
     elif choice==4:
