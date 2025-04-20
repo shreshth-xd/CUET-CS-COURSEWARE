@@ -92,6 +92,8 @@ while True:
                 Cursor.execute(query)
 
     elif choice==2:
+        print("DISCLAIMER:")
+        print("Update dataset only allows you to update the marks of the already present students in the database.")
         table=str(input("Stream: "))
 
 
@@ -135,8 +137,7 @@ while True:
             plt.show()
 
     elif choice==4:
-        print("Update dataset only allows you to update the marks of the already present students in the database.")
-
+        pass
     elif choice==5:
         break
     else:
