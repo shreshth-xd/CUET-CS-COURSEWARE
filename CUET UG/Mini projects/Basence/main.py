@@ -139,7 +139,10 @@ while True:
     elif choice==4:
         # To calculate the probability of a selected student to have a particular average
         table=str(input("Stream: "))
-        
+        favourableAverage=int(input("Favourable average: "))
+
+        QueryForAverage=f"select (English+Physics+Chemistry+Maths+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
+        Cursor.execute(QueryForAverage)
 
     elif choice==5:
         break
