@@ -194,7 +194,6 @@ while True:
 
             elif GraphType.lower() in ("line","line graph"):
                 lineGraphGenerator(averages,probabilities)
-                pass
         
         else:
             print("")
