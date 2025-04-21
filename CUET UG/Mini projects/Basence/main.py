@@ -9,7 +9,7 @@ from collections import Counter
 from dotenv import load_dotenv
 
 
-def barGraphGenerator(x,y,title):
+def barGraphGenerator(x,y,XLABEL,YLABEL,title):
     plt.bar(x,y)
     plt.title(f"{title}")
     plt.xlabel(f"{x}")
@@ -31,7 +31,7 @@ def barGraphGenerator(x,y,title):
     else:
         plt.show()
 
-def lineGraphGenerator(x,y,title):
+def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
     plt.bar(x,y)
     plt.title(f"{title}")
     plt.xlabel(f"{x}")
@@ -71,7 +71,8 @@ if missing:
     print(f"Missing env variables: {', '.join(missing)}")
 
 if conn.is_connected():
-    print("BASENCE\n")
+    print("\n\n")
+    print("BASENCE:",end="")
     print("One stop solution for performance analysis")
 
 # Cursor
