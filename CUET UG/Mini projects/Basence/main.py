@@ -12,8 +12,8 @@ from dotenv import load_dotenv
 def barGraphGenerator(x,y,XLABEL,YLABEL,title):
     plt.bar(x,y)
     plt.title(f"{title}")
-    plt.xlabel(f"{x}")
-    plt.ylabel(f"{y}")
+    plt.xlabel(f"{XLABEL}")
+    plt.ylabel(f"{YLABEL}")
     save=str(input("Do you want to save the upcoming graph?"))
     
     if save.lower()=="yes":
@@ -34,8 +34,8 @@ def barGraphGenerator(x,y,XLABEL,YLABEL,title):
 def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
     plt.bar(x,y)
     plt.title(f"{title}")
-    plt.xlabel(f"{x}")
-    plt.ylabel(f"{y}")
+    plt.xlabel(f"{XLABEL}")
+    plt.ylabel(f"{YLABEL}")
     save=str(input("Do you want to save the upcoming graph?"))
     
     if save.lower()=="yes":
