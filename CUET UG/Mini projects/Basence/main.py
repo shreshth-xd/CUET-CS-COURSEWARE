@@ -162,9 +162,9 @@ while True:
         title=str(input("Enter the title of the graph: "))
         graphChoice=str(input("Do you want a line graph or a bar graph? "))
         if graphChoice.lower() in ("line","line graph"):
-            lineGraphGenerator(names,averages,"names","averages",title)
+            lineGraphGenerator(names,averages,"Names","Averages",title)
         elif graphChoice.lower() in ("bar","bar graph"):
-            barGraphGenerator(names,averages,"names","averages",title)
+            barGraphGenerator(names,averages,"Names","Averages",title)
 
     elif choice==4:
 
@@ -195,10 +195,10 @@ while True:
             title=str(input("Enter the title of this graph: "))
             GraphType=str(input("Do you want to plot it on a bar graph or a line graph?"))
             if GraphType.lower() in ("bar","bar graph"):
-                barGraphGenerator(averages,probabilities,title)
+                barGraphGenerator(averages,probabilities,"averages","Probabilities",title)
 
             elif GraphType.lower() in ("line","line graph"):
-                lineGraphGenerator(averages,probabilities,title)
+                lineGraphGenerator(averages,probabilities,"averages","Probabilities",title)
         
         else:
             # Exit with no traces
