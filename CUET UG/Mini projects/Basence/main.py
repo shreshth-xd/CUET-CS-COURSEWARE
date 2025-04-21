@@ -195,10 +195,10 @@ while True:
             title=str(input("Enter the title of this graph: "))
             GraphType=str(input("Do you want to plot it on a bar graph or a line graph?"))
             if GraphType.lower() in ("bar","bar graph"):
-                barGraphGenerator(averages,probabilities,"averages","Probabilities",title)
+                barGraphGenerator(averages,probabilities,"Averages","Probabilities",title)
 
             elif GraphType.lower() in ("line","line graph"):
-                lineGraphGenerator(averages,probabilities,"averages","Probabilities",title)
+                lineGraphGenerator(averages,probabilities,"Averages","Probabilities",title)
         
         else:
             # Exit with no traces
