@@ -32,7 +32,7 @@ def barGraphGenerator(x,y,XLABEL,YLABEL,title):
         plt.show()
 
 def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
-    plt.bar(x,y)
+    plt.plot(x,y)
     plt.title(f"{title}")
     plt.xlabel(f"{XLABEL}")
     plt.ylabel(f"{YLABEL}")
