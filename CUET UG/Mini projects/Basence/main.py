@@ -166,7 +166,8 @@ while True:
             barGraphGenerator(names,averages,title)
 
     elif choice==4:
-        # To calculate the probability of a selected student to have a particular average
+
+        # To calculate the probability of a randomly selected student to have a particular average
         averages=[]
         probabilities=[]
         table=str(input("Stream: "))
