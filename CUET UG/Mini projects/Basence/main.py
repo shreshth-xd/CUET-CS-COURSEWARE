@@ -49,7 +49,6 @@ def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
     ax.xaxis.set_major_locator(MultipleLocator(1))
     ax.yaxis.set_major_locator(MultipleLocator(0.5))
 
-    
     plt.plot(x,y)
     plt.title(f"{title}")
     plt.xlabel(f"{XLABEL}")
