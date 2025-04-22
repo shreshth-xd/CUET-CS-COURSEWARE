@@ -198,6 +198,9 @@ while True:
         for row in RetreivedAverages:
             averages.append(int(row[0]))
 
+        # Making a set out of the averages list, so as to plot the probabilities of unique averages only
+        uniqueAverages = set(averages)
+
         print("Here is the list of averages of your class:")
         print(averages)
         favourableAverage=float(input("Favourable average: "))
@@ -209,17 +212,17 @@ while True:
         if GraphRequest.lower()=="yes":
                         
             # Storing the probabilities of respective averages
-            for item in averages:
+            for item in uniqueAverages:
                 probabilityOfItem=averages.count(item)/len(averages)
                 probabilities.append(probabilityOfItem)
 
             title=str(input("Enter the title of this graph: "))
             GraphType=str(input("Do you want to plot it on a bar graph or a line graph?"))
             if GraphType.lower() in ("bar","bar graph"):
-                barGraphGenerator(averages,probabilities,"Averages","Probabilities",title)
+                barGraphGenerator(uniqueAverages,probabilities,"Averages","Probabilities",title)
 
             elif GraphType.lower() in ("line","line graph"):
-                lineGraphGenerator(averages,probabilities,"Averages","Probabilities",title)
+                lineGraphGenerator(uniqueAverages,probabilities,"Averages","Probabilities",title)
         
         else:
             # Exit with no traces
