@@ -6,6 +6,7 @@ import mysql.connector as connector
 import matplotlib.pyplot as plt
 import os
 from collections import Counter
+from matplotlib.ticker import MultipleLocator
 from dotenv import load_dotenv
 
 
