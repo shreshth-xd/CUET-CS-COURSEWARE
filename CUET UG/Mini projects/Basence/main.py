@@ -192,7 +192,16 @@ while True:
         averages=[]
         probabilities=[]
         table=str(input("Stream: "))
-        QueryForAverage=f"select (English+Physics+Chemistry+Maths+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
+        if "pcm" in table.lower():
+            QueryForAverage=f"select (English+Physics+Chemistry+Maths+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
+
+        elif "pcb" in table.lower():
+            QueryForAverage=f"select (English+Physics+Chemistry+Biology+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
+        
+        elif "commerce" in table.lower():
+            QueryForAverage=f"select (English+Accountancy+Business_studies+Economics+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
+        
+        
         Cursor.execute(QueryForAverage)
         RetreivedAverages=Cursor.fetchall()
         for row in RetreivedAverages:
@@ -201,7 +210,7 @@ while True:
         # Making a set out of the averages list, so as to plot the probabilities of unique averages only
         uniqueAverages = sorted(set(averages))
 
-        print("Here is the list of averages of your class:")
+        print("Here is the list of all averages of your class:")
         print(uniqueAverages)
         favourableAverage=float(input("Favourable average: "))
 
