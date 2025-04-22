@@ -199,10 +199,10 @@ while True:
             averages.append(int(row[0]))
 
         # Making a set out of the averages list, so as to plot the probabilities of unique averages only
-        uniqueAverages = set(averages)
+        uniqueAverages = sorted(set(averages))
 
         print("Here is the list of averages of your class:")
-        print(averages)
+        print(uniqueAverages)
         favourableAverage=float(input("Favourable average: "))
 
         probabilityOfEvent=averages.count(favourableAverage)/len(averages)
