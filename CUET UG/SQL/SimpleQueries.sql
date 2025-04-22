@@ -54,14 +54,3 @@ DESCRIBE registered_users;
 
 -- Reviewing all the tables (relations) that you have in your database:
 SHOW tables;
-
--- To use column aliases, i.e. to change a column's name in the result of the query
-SELECT Name, Sex as "Age" FROM registered_users;
-
--- To select all the male users with age of either 18 or more than 18:
-SELECT name FROM registered_users WHERE sex="Male" and age>=18;
-
-
--- To retreive non duplicate data in a particular column or columns in the specified table
-SELECT DISTINCT age FROM registered_users;
-SELECT DISTINCT name FROM registered_users;
