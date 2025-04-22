@@ -14,10 +14,9 @@ def barGraphGenerator(x,y,XLABEL,YLABEL,title):
     
     # Getting current axis
     ax=plt.gca()
-    
     # Setting locator to the x axis and y axis so that it shows the values coming between two discrete integers
     ax.xaxis.set_major_locator(MultipleLocator(1))
-    ax.yaxis.set_major_locator(MultipleLocator(1))
+    ax.yaxis.set_major_locator(MultipleLocator(0.2))
 
     plt.title(f"{title}")
     plt.xlabel(f"{XLABEL}")
@@ -45,10 +44,9 @@ def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
     
     # Getting current axis
     ax=plt.gca()
-    
     # Setting locator to the x axis and y axis so that it shows the values coming between two discrete integers
     ax.xaxis.set_major_locator(MultipleLocator(1))
-    ax.yaxis.set_major_locator(MultipleLocator(1))
+    ax.yaxis.set_major_locator(MultipleLocator(0.2))
 
     plt.title(f"{title}")
     plt.xlabel(f"{XLABEL}")
@@ -65,6 +63,7 @@ def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
         print("5. svg")
         format_=str(input(">"))
         plt.savefig(f"Export/{GraphName}.{format_.lower()}")
+        plt.grid(True)
         plt.show()
     
     else:
