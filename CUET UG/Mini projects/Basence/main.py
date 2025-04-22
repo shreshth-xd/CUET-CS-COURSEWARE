@@ -176,7 +176,7 @@ while True:
         Cursor.execute(QueryForAverage)
         RetreivedAverages=Cursor.fetchall()
         for row in RetreivedAverages:
-            averages.append(float(row[0]))
+            averages.append(int(row[0]))
 
         print("Here is the list of averages of your class:")
         print(averages)
