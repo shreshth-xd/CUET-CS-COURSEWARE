@@ -174,13 +174,13 @@ while True:
 
         table=str(input("Stream: "))
         if "pcm" in table.lower():
-            query=f"select (English+Physics+Chemistry+Maths+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
+            query=f"select name, (English+Physics+Chemistry+Maths+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
 
         elif "pcb" in table.lower():
-            query=f"select (English+Physics+Chemistry+Biology+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
+            query=f"select name, (English+Physics+Chemistry+Biology+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
         
         elif "commerce" in table.lower():
-            query=f"select (English+Accountancy+Business_studies+Economics+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
+            query=f"select name, (English+Accountancy+Business_studies+Economics+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
         
         Cursor.execute(query)
         data=Cursor.fetchall()
