@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 
 
 def barGraphGenerator(x,y,XLABEL,YLABEL,title):
+    plt.figure(figsize=(12,6))
     plt.bar(x,y)
     
     # Getting current axis
