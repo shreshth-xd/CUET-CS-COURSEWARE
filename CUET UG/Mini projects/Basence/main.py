@@ -41,6 +41,7 @@ def barGraphGenerator(x,y,XLABEL,YLABEL,title):
         plt.show()
 
 def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
+    plt.plot(x,y)
     
     # Getting current axis
     ax=plt.gca()
@@ -49,7 +50,6 @@ def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
     ax.xaxis.set_major_locator(MultipleLocator(1))
     ax.yaxis.set_major_locator(MultipleLocator(1))
 
-    plt.plot(x,y)
     plt.title(f"{title}")
     plt.xlabel(f"{XLABEL}")
     plt.ylabel(f"{YLABEL}")
