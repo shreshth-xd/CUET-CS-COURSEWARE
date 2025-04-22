@@ -43,7 +43,7 @@ def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
     
     # Adjusting the size of graph so as to prevent it from collapsing in case of lot of values on x axis
     plt.figure(figsize=(12,6))
-    plt.plot(x,y)
+    plt.plot(x,y,marker="o")
     
     # Getting current axis
     ax=plt.gca()
@@ -201,7 +201,7 @@ while True:
         elif "commerce" in table.lower():
             QueryForAverage=f"select (English+Accountancy+Business_studies+Economics+round(floor(computer_science),1)+round(floor(computer_science),1))/6 as average from {table.lower()};"
         
-        
+
         Cursor.execute(QueryForAverage)
         RetreivedAverages=Cursor.fetchall()
         for row in RetreivedAverages:
