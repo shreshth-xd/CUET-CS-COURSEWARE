@@ -40,6 +40,9 @@ def barGraphGenerator(x,y,XLABEL,YLABEL,title):
         plt.show()
 
 def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
+    
+    # Adjusting the size of graph so as to prevent it from collapsing in case of lot of values on x axis
+    plt.figure(figsize=(12,6))
     plt.plot(x,y)
     
     # Getting current axis
@@ -64,6 +67,7 @@ def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
         format_=str(input(">"))
         plt.savefig(f"Export/{GraphName}.{format_.lower()}")
         plt.grid(True)
+        plt.tight_layout()
         plt.show()
     
     else:
