@@ -9,6 +9,7 @@ from matplotlib.ticker import MultipleLocator
 from dotenv import load_dotenv
 
 
+# To plot a bar graph whose x and y axes along with it's respective labels are given 
 def barGraphGenerator(x,y,XLABEL,YLABEL,title):
     plt.figure(figsize=(20,14))
     plt.bar(x,y)
@@ -42,6 +43,8 @@ def barGraphGenerator(x,y,XLABEL,YLABEL,title):
     else:
         plt.show()
 
+
+# To plot a line graph whose x and y axes along with it's respective labels are given 
 def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
     
     # Adjusting the size of graph so as to prevent it from collapsing in case of lot of values on x axis
@@ -76,6 +79,7 @@ def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
     
     else:
         plt.show()
+
 
 
 
