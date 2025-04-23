@@ -83,6 +83,11 @@ def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
 
 def UpdateRecord(count,table):
     if ("pcm") in table.lower():
+        name=str(input("Enter the name of the student: "))
+        class_=str(input("Enter the class: "))
+        subject=str(input("Enter the subject: "))
+        marks=int(input("Enter the new marks of this student: "))
+        query=f"update pcm set {subject}={marks} where name={name}"
         pass
     elif ("commerce") in table.lower():
         pass
