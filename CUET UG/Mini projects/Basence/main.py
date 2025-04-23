@@ -81,15 +81,16 @@ def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
         plt.show()
 
 
-def UpdateRecord(count,table):
+def UpdateRecord(table):
     if ("pcm") in table.lower():
         name=str(input("Enter the name of the student: "))
+        print(name)
         class_=str(input("Enter the class: "))
         subject=str(input("Enter the subject: "))
         marks=int(input("Enter the new marks of this student: "))
-        query=f"update pcm set {subject.lower()}={marks} where name={name.lower()}"
+        query=f'update pcm set {subject}={marks} where name="{name.lower()}";'
         Cursor.execute(query)
-        showQuery=f"select name,marks from pcm where name={name} and subject={marks}"
+        showQuery=f'select name,{subject} from pcm where name="{name.lower()}" and {subject}={marks};'
         Cursor.execute(showQuery)
         data=Cursor.fetchone()
         print(data)
@@ -100,7 +101,7 @@ def UpdateRecord(count,table):
         marks=int(input("Enter the new marks of this student: "))
         query=f"update pcm set {subject.lower()}={marks} where name={name.lower()}"
         Cursor.execute(query)
-        showQuery=f"select name,marks from pcm where name={name} and subject={marks}"
+        showQuery=f"select name,{subject} from pcm where name={name} and subject={marks}"
         Cursor.execute(showQuery)
         data=Cursor.fetchone()
         print(data)
@@ -111,11 +112,11 @@ def UpdateRecord(count,table):
         marks=int(input("Enter the new marks of this student: "))
         query=f"update pcm set {subject.lower()}={marks} where name={name.lower()}"
         Cursor.execute(query)
-        showQuery=f"select name,marks from pcm where name={name} and subject={marks}"
+        showQuery=f"select name,{subject} from pcm where name={name} and subject={marks}"
         Cursor.execute(showQuery)
         data=Cursor.fetchone()
         print(data)
-        
+
     else:
         print("Not a valid stream.")
 
@@ -205,11 +206,12 @@ while True:
                 Cursor.execute(query)
 
     elif choice==2:
-        print("DISCLAIMER:")
-        print("Update dataset only allows you to update the marks of the already present students in the database.")
+        print("DISCLAIMER:",end="")
+        print(" Update dataset only allows you to update the marks of the already present students in the database.")
         table=str(input("Stream: "))
         RecordCount=int(input("Enter how many records do you want to edit: "))
-        
+        for i in range(RecordCount):
+            UpdateRecord(table)
 
     elif choice==3:
         names=[]
