@@ -81,7 +81,8 @@ def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
         plt.show()
 
 
-
+def UpdateRecord(count,table):
+    query=""
 
 load_dotenv()
 conn = connector.connect(
