@@ -87,7 +87,7 @@ def UpdateRecord(count,table):
         class_=str(input("Enter the class: "))
         subject=str(input("Enter the subject: "))
         marks=int(input("Enter the new marks of this student: "))
-        query=f"update pcm set {subject}={marks} where name={name}"
+        query=f"update pcm set {subject.lower()}={marks} where name={name.lower()}"
         pass
     elif ("commerce") in table.lower():
         pass
