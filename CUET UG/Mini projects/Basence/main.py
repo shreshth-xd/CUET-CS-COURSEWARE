@@ -167,7 +167,8 @@ while True:
         print("DISCLAIMER:")
         print("Update dataset only allows you to update the marks of the already present students in the database.")
         table=str(input("Stream: "))
-
+        RecordCount=int(input("Enter how many records do you want to edit: "))
+        
 
     elif choice==3:
         names=[]
