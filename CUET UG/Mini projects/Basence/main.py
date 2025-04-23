@@ -100,6 +100,8 @@ def UpdateRecord(count,table):
         subject=str(input("Enter the subject: "))
         marks=int(input("Enter the new marks of this student: "))
         query=f"update pcm set {subject.lower()}={marks} where name={name.lower()}"
+    else:
+        print("Not a valid stream.")
 
 
 load_dotenv()
