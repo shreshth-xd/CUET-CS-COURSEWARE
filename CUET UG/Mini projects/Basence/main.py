@@ -83,11 +83,11 @@ def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
 
 def UpdateRecord(count,table):
     if ("pcm") in table.lower():
-        query=f"INSERT INTO {table}"
+        pass
     elif ("commerce") in table.lower():
-        query=f"INSERT INTO {table}"
+        pass
     elif ("pcb") in table.lower():
-        query=f"INSERT INTO {table}"
+        pass
 
 
 load_dotenv()
