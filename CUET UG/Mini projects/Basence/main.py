@@ -95,7 +95,11 @@ def UpdateRecord(count,table):
         marks=int(input("Enter the new marks of this student: "))
         query=f"update pcm set {subject.lower()}={marks} where name={name.lower()}"
     elif ("pcb") in table.lower():
-        pass
+        name=str(input("Enter the name of the student: "))
+        class_=str(input("Enter the class: "))
+        subject=str(input("Enter the subject: "))
+        marks=int(input("Enter the new marks of this student: "))
+        query=f"update pcm set {subject.lower()}={marks} where name={name.lower()}"
 
 
 load_dotenv()
