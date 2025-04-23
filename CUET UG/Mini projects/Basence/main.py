@@ -55,6 +55,7 @@ def lineGraphGenerator(x,y,XLABEL,YLABEL,title):
     ax.xaxis.set_major_locator(MultipleLocator(1))
     
     plt.title(f"{title}")
+    plt.xticks(rotation=45,ha="right")
     plt.xlabel(f"{XLABEL}")
     plt.ylabel(f"{YLABEL}")
     save=str(input("Do you want to save the upcoming graph?"))
