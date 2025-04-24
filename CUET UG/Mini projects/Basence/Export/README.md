@@ -3,10 +3,7 @@
 <ul>
 <li>
 
-[text](BarAveragePCM.pdf)  ==>  Bar graph depicting the average scores of PCM students</li>
-    
-<li>
-
+[text](BarAveragePCM.pdf)  ==>  Bar graph depicting the average scores of PCM students</li><li>
 [text](BarAveragePCB.pdf)  ==>  Bar graph depicting the average scores of PCB students</li>
     <li>[text](BarAverageCommerce.pdf)  ==>  Bar graph depicting the average scores of Commerce students</li>
     <li>[text](LineAveragePCM.pdf)  ==>  Line graph depicting the average scores of PCM students</li>
