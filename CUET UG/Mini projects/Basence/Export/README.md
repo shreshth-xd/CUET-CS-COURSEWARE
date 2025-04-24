@@ -10,7 +10,7 @@
     <li>BarProbabilityPCM.pdf  ==>  Bar graph depicting the probability of selected student of PCM having a particular average.</li>
     <li>BarProbabilityPCB.pdf  ==>  Bar graph depicting the probability of selected student of PCM having a particular average.</li>
     <li>BarProbabilityCommerce.pdf  ==> Bar graph depicting the probability of selected student of PCM having a particular average.</li>
-    <li>LineProbabilityPCM.pdf  ==>  Line graph depicting the average scores of PCM students</li>
-    <li>LineProbabilityPCB.pdf  ==>  Line graph depicting the average scores of PCM students</li>
-    <li>LineProbabilityCommerce.pdf  ==> Line graph depicting the average scores of PCM students </li>
+    <li>LineProbabilityPCM.pdf  ==>  Line graph depicting the probability of selected student of PCM having a particular average.</li>
+    <li>LineProbabilityPCB.pdf  ==>  Line graph depicting the probability of selected student of PCB having a particular average.</li>
+    <li>LineProbabilityCommerce.pdf  ==> Line graph depicting the probability of selected student of Commerce having a particular average.</li>
 </ul>
