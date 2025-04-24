@@ -1,16 +1,16 @@
 # Describing which file is for which purpose:
 
-<ol>
-    <li>BarAveragePCM</li>
-    <li>BarAveragePCB</li>
-    <li>BarAverageCommerce</li>
-    <li>LineAveragePCM</li>
-    <li>LineAveragePCB</li>
-    <li>LineAverageCommerce</li>
-    <li>BarProbabilityPCM</li>
-    <li>BarProbabilityPCB</li>
-    <li>BarProbabilityCommerce</li>
-    <li>LineProbabilityPCM</li>
-    <li>LineProbabilityPCB</li>
-    <li>LineProbabilityCommerce</li>
-</ol>
+<ul>
+    <li>BarAveragePCM.pdf</li>
+    <li>BarAveragePCB.pdf</li>
+    <li>BarAverageCommerce.pdf</li>
+    <li>LineAveragePCM.pdf</li>
+    <li>LineAveragePCB.pdf</li>
+    <li>LineAverageCommerce.pdf</li>
+    <li>BarProbabilityPCM.pdf</li>
+    <li>BarProbabilityPCB.pdf</li>
+    <li>BarProbabilityCommerce.pdf</li>
+    <li>LineProbabilityPCM.pdf</li>
+    <li>LineProbabilityPCB.pdf</li>
+    <li>LineProbabilityCommerce.pdf</li>
+</ul>
