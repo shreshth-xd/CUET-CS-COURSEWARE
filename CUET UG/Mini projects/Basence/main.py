@@ -297,3 +297,5 @@ while True:
     else:
         print("Please make a valid choice.")
 
+Cursor.close()
+conn.close()
