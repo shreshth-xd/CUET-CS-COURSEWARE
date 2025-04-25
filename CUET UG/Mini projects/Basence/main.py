@@ -89,10 +89,7 @@ def UpdateRecord(table):
         marks=int(input("Enter the new marks of this student: "))
         query=f'update pcm set {subject}={marks} where name="{name.lower()}";'
         Cursor.execute(query)
-        showQuery=f'select name,{subject} from pcm where name="{name.lower()}" and {subject}={marks};'
-        Cursor.execute(showQuery)
-        data=Cursor.fetchone()
-        print(data)
+        
     elif ("commerce") in table.lower():
         name=str(input("Enter the name of the student: "))
         class_=str(input("Enter the class: "))
@@ -100,10 +97,7 @@ def UpdateRecord(table):
         marks=int(input("Enter the new marks of this student: "))
         query=f"update pcm set {subject.lower()}={marks} where name={name.lower()}"
         Cursor.execute(query)
-        showQuery=f"select name,{subject} from pcm where name={name} and subject={marks}"
-        Cursor.execute(showQuery)
-        data=Cursor.fetchone()
-        print(data)
+        
     elif ("pcb") in table.lower():
         name=str(input("Enter the name of the student: "))
         class_=str(input("Enter the class: "))
@@ -111,10 +105,7 @@ def UpdateRecord(table):
         marks=int(input("Enter the new marks of this student: "))
         query=f"update pcm set {subject.lower()}={marks} where name={name.lower()}"
         Cursor.execute(query)
-        showQuery=f"select name,{subject} from pcm where name={name} and subject={marks}"
-        Cursor.execute(showQuery)
-        data=Cursor.fetchone()
-        print(data)
+        
 
     else:
         print("Not a valid stream.")
