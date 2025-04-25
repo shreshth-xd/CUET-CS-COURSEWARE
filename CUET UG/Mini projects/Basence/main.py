@@ -296,5 +296,6 @@ while True:
     else:
         print("Please make a valid choice.")
 
+conn.commit()
 Cursor.close()
 conn.close()
