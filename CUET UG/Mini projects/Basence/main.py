@@ -294,10 +294,13 @@ while True:
         data=Cursor.fetchall()
         if table.lower()=="pcm":
             attributeSet=("Student ID","Name","Class","English","Physics","Chemistry","Maths","Computer science","Physical education")
+            print(attributeSet)
         elif table.lower()=="commerce":
-            attributeSet=("Student ID","Name","Class","English","Physics","Chemistry","Maths","Computer science","Physical education")
+            attributeSet=("Student ID","Name","Class","English","Accountancy","Business studies","Economics","Computer science","Physical education")
+            print(attributeSet)
         elif table.lower()=="pcb":
             attributeSet=("Student ID","Name","Class","English","Physics","Chemistry","Biology","Computer science","Physical education")
+            print(attributeSet)
         for row in data:
             print(row)
 
