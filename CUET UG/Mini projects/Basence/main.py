@@ -286,6 +286,7 @@ while True:
     elif choice==5:
         # To display the fetched records from the relational database
         table=str(input("Enter the stream: "))
+        
     elif choice==6:
         break
     else:
