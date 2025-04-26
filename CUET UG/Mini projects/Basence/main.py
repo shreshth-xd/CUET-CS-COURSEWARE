@@ -286,8 +286,10 @@ while True:
     elif choice==5:
         # To display the fetched record of a particular student from the relational database
         table=str(input("Enter the stream: "))
+        student_id=int(input("Enter the student id of the student: "))
         name=str(input("Enter the name of the student: "))
-        query=f"select name "
+
+        query=f"select * from {table.lower()} where student_ID={student_id} and name={name};"
     elif choice==6:
         break
     else:
