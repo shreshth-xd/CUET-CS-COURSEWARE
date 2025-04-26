@@ -301,6 +301,7 @@ while True:
         elif table.lower()=="pcb":
             attributeSet=("Student ID","Name","Class","English","Physics","Chemistry","Biology","Computer science","Physical education")
             print(attributeSet)
+        
         for row in data:
             print(row)
 
