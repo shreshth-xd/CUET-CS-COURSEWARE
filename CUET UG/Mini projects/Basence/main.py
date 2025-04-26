@@ -303,6 +303,7 @@ while True:
             print(attributeSet)
         
         for row in data:
+            # To print the retrieved query from the result set
             print(row)
 
     elif choice==6:
