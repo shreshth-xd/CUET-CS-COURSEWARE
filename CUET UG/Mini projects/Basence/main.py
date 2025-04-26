@@ -139,7 +139,8 @@ while True:
     print("2. Update dataset")
     print("3. Project averages")
     print("4. Calculate probability")
-    print("5. Exit")
+    print("5. Load dataset")
+    print("6. Exit")
     choice=int(input(">"))
     if choice==1:
         
