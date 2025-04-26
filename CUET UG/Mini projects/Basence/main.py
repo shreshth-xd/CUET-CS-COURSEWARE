@@ -283,7 +283,7 @@ while True:
             # Exit with no traces
             pass
 
-    elif choice==5:
+    elif choice==6:
         break
     else:
         print("Please make a valid choice.")
