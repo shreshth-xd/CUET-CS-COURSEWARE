@@ -292,6 +292,12 @@ while True:
         query=f'Select * from {table.lower()} where student_ID={student_id} and name="{name}";'
         Cursor.execute(query)
         data=Cursor.fetchall()
+        if table.lower()=="pcm":
+            attributeSet=("Student ID","Name","Class","English","Physics","Chemistry","Maths","Computer science","Physical education")
+        elif table.lower()=="commerce":
+            attributeSet=("Student ID","Name","Class","English","Physics","Chemistry","Maths","Computer science","Physical education")
+        elif table.lower()=="pcb":
+            attributeSet=("Student ID","Name","Class","English","Physics","Chemistry","Biology","Computer science","Physical education")
         for row in data:
             print(row)
 
