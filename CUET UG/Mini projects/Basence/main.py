@@ -289,12 +289,12 @@ while True:
         student_id=int(input("Enter the student id of the student: "))
         name=str(input("Enter the name of the student: "))
 
-        query=f"select * from {table.lower()} where student_ID={student_id} and name={name};"
-        Cursor.execute()
+        query=f'Select * from {table.lower()} where student_ID={student_id} and name="{name}";'
+        Cursor.execute(query)
         data=Cursor.fetchall()
         for row in data:
             print(row)
-            
+
     elif choice==6:
         break
     else:
