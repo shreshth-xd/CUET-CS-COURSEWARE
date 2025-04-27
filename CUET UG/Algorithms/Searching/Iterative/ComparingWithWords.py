@@ -52,3 +52,6 @@ def binarySearch(key,array):
 word=input("Enter the word to search for in the list: ")
 linearSearch(word,wordList)
 selectionSort(wordList,len(wordList))
+print("Finding the word after sorting the list: ")
+linearSearch(word,wordList)
+binarySearch(word,wordList)
