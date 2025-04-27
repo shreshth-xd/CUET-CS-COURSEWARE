@@ -71,7 +71,7 @@ chooseAlgorithm=str(input("Which algorithm do you want to use to sort this wordl
 if chooseAlgorithm.lower() in ("selection sort","selection"):
     selectionSort(wordList,len(wordList))
 elif chooseAlgorithm.lower() in ("bubble sort","bubble"):
-    bubbleSort(wordList,len(wordList))
+    bubbleSort(wordList)
 elif chooseAlgorithm.lower() in ("insertion sort","insertion"):
     insertionSort(wordList)
 
