@@ -11,3 +11,15 @@ def selectionSort(array,length):
             array[i],array[min_]=array[min_],array[i]
     
     return array
+
+def linearSearch(key,array):
+    i=0
+    n=len(array)
+    while i<n and array[i]!=key:
+        i=i+1
+    
+    else:
+        if i<n:
+            print(f"{key} found at {i} index.")
+        else:
+            print("Search unsuccessful.")
