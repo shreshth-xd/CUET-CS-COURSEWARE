@@ -26,10 +26,10 @@ def linearSearch(key,array):
     n=len(array)
     while i<n and array[i]!=key:
         i=i+1
-    
+
     else:
         if i<n:
-            print(f"{key} found at {i} index.")
+            print(f"{key} found at {i} index after {i} iterations.")
         else:
             print("Search unsuccessful.")
 
