@@ -29,7 +29,7 @@ def linearSearch(key,array):
 
     else:
         if i<n:
-            print(f"{key} found at after {i} iterations.")
+            print(f"{key} found after {i} iterations.")
         else:
             print("Search unsuccessful.")
 
