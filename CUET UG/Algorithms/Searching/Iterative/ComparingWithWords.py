@@ -45,8 +45,10 @@ def binarySearch(key,array):
             return key
         elif array[mid]>key:
             high=mid-1
-        elif array[mid]<key:
+        else:
             low=mid+1
+    else:
+        print("Search unsuccessful.")
 
 word=input("Enter the word to search for in the list: ")
 # linearSearch(word,wordList)
