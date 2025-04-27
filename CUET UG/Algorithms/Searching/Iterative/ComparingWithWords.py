@@ -12,6 +12,15 @@ def selectionSort(array,length):
     
     return array
 
+def bubbleSort(array):
+    n=len(array)
+    for i in range(0,n):
+        for j in range(0,n-i-1):
+            if array[j]>array[j+1]:
+                array[j],array[j+1]=array[j+1],array[j]
+    
+    return array
+
 def linearSearch(key,array):
     i=0
     n=len(array)
