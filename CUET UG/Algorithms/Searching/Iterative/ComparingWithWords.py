@@ -2,12 +2,12 @@ wordList=["Perfect", "Stupendous", "Wondrous", "Gorgeous", "Awesome", "Mirthful"
 
 def selectionSort(array,length):
     for i in range(0, length-1):
-        min_=array[i]
+        min_=i
         for j in range(i+1, length):
-            if array[j]<min_:
-                min_=array[j]
+            if array[j]<array[min_]:
+                min_=j
         
-        if min_!=array[i]:
+        if min_!=i:
             array[i],array[min_]=array[min_],array[i]
     
     return array
