@@ -71,7 +71,8 @@ if chooseAlgorithm.lower() in ("selection sort","selection"):
     selectionSort(wordList,len(wordList))
 elif chooseAlgorithm.lower() in ("bubble sort","bubble"):
     bubbleSort(wordList,len(wordList))
-
+elif chooseAlgorithm.lower() in ("insertion sort","insertion"):
+    insertionSort(wordList)
 # print("Finding the word after sorting the list: ")
 # linearSearch(word,wordList)
 binarySearch(word,wordList)
