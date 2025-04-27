@@ -14,7 +14,7 @@ for i in range(n):
     individualX=int(input("Enter the score: "))
     marks.append(individualX)
 
-sortedMarks=bubbleSort(marks)
+sortedMarks=bubbleSort(marks,n)
 x=int(input("Enter the x(between 0 to 100): "))
 percentile=int(round((x*n)/100,0))
 print(f"{x}th percentile is {percentile}")
