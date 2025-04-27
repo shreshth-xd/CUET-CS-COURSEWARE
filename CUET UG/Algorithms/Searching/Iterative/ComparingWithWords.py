@@ -23,3 +23,12 @@ def linearSearch(key,array):
             print(f"{key} found at {i} index.")
         else:
             print("Search unsuccessful.")
+
+def binarySearch(key,array):
+    low=0
+    high=len(array)-1
+    while low<high:
+        mid=int((low+high)/2)
+        if array[mid]==key:
+            return key
+        
