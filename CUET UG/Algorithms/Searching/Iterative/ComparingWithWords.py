@@ -45,8 +45,10 @@ def binarySearch(key,array):
             return key
         elif array[mid]>key:
             high=mid-1
+            continue
         else:
             low=mid+1
+            continue
     else:
         print("Search unsuccessful.")
 
