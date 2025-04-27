@@ -35,7 +35,7 @@ def linearSearch(key,array):
 
 def binarySearch(key,array):
     low=0
-    high=len(array)-1
+    high=len(array)
     comparisions=0
     while low<high:
         comparisions+=1
@@ -54,7 +54,12 @@ def binarySearch(key,array):
 
 word=input("Enter the word to search for in the list: ")
 # linearSearch(word,wordList)
-selectionSort(wordList,len(wordList))
+chooseAlgorithm=str(input("Which algorithm do you want to use to sort this wordlist: "))
+if chooseAlgorithm.lower() in ("selection sort","selection"):
+    selectionSort(wordList,len(wordList))
+elif chooseAlgorithm.lower() in ("bubble sort","bubble"):
+    bubbleSort(wordList,len(wordList))
+    
 # print("Finding the word after sorting the list: ")
 # linearSearch(word,wordList)
 binarySearch(word,wordList)
