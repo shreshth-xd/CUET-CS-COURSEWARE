@@ -11,6 +11,7 @@ def insertionSort(array):
         else:
             array[j+1]=curr
 
+    return array
 
 def selectionSort(array,length):
     for i in range(0, length-1):
