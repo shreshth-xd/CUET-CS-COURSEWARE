@@ -38,16 +38,15 @@ def binarySearch(key,array):
     high=len(array)-1
     comparisions=0
     while low<high:
+        comparisions+=1
         mid=int((low+high)/2)
         if array[mid]==key:
             print(f"{key} found after {comparisions} number of comparisions.")
             return key
         elif array[mid]>key:
             high=mid-1
-            comparisions+=1
         elif array[mid]<key:
             low=mid+1
-            comparisions+=1
 
 word=input("Enter the word to search for in the list: ")
 # linearSearch(word,wordList)
