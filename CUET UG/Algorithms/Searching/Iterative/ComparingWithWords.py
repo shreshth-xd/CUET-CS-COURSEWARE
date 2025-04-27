@@ -50,8 +50,9 @@ def binarySearch(key,array):
             comparisions+=1
 
 word=input("Enter the word to search for in the list: ")
-linearSearch(word,wordList)
+# linearSearch(word,wordList)
 selectionSort(wordList,len(wordList))
-print("Finding the word after sorting the list: ")
-linearSearch(word,wordList)
+# print("Finding the word after sorting the list: ")
+# linearSearch(word,wordList)
 binarySearch(word,wordList)
+print(len(wordList))
