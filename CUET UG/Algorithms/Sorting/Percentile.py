@@ -17,4 +17,4 @@ for i in range(n):
 sortedMarks=bubbleSort(marks,n)
 x=int(input("Enter the x(between 0 to 100): "))
 percentile=int(round((x*n)/100,0))
-print(f"{x}th percentile is {percentile}")
+print(f"{x}th percentile is marks[{percentile}]")
