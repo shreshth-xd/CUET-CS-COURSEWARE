@@ -1,5 +1,17 @@
 wordList=["Perfect", "Stupendous", "Wondrous", "Gorgeous", "Awesome", "Mirthful", "Fabulous", "Splendid", "Incredible", "Outstanding", "Propitious","Remarkable", "Stellar", "Unbelievable", "Super", "Amazing"]
 
+def insertionSort(array):
+    n=len(array)
+    for i in range(1,n):
+        curr=array[i]
+        j=i-1
+        while j>=0 and curr<array[j]:
+            array[j+1]=array[j]
+            j=j-1
+        else:
+            array[j+1]=curr
+
+
 def selectionSort(array,length):
     for i in range(0, length-1):
         min_=i
@@ -59,7 +71,7 @@ if chooseAlgorithm.lower() in ("selection sort","selection"):
     selectionSort(wordList,len(wordList))
 elif chooseAlgorithm.lower() in ("bubble sort","bubble"):
     bubbleSort(wordList,len(wordList))
-    
+
 # print("Finding the word after sorting the list: ")
 # linearSearch(word,wordList)
 binarySearch(word,wordList)
