@@ -35,7 +35,7 @@ def bubbleSort(array):
     return array
 
 def linearSearch(key,array):
-    i=0
+    i=1
     n=len(array)
     while i<n and array[i]!=key:
         i=i+1
