@@ -66,7 +66,7 @@ def binarySearch(key,array):
         print("Search unsuccessful.")
 
 word=input("Enter the word to search for in the list: ")
-# linearSearch(word,wordList)
+linearSearch(word,wordList)
 chooseAlgorithm=str(input("Which algorithm do you want to use to sort this wordlist: "))
 if chooseAlgorithm.lower() in ("selection sort","selection"):
     selectionSort(wordList,len(wordList))
