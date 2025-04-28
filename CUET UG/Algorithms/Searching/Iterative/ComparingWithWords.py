@@ -76,5 +76,8 @@ elif chooseAlgorithm.lower() in ("insertion sort","insertion"):
     insertionSort(wordList)
 
 print("Finding the word after sorting the list: ")
+
+# To check the performance of linear search on an array after it is sorted
 linearSearch(word,wordList)
+
 binarySearch(word,wordList)
