@@ -35,3 +35,6 @@ print(DivBy2(8))
 2
 1
 ```
+
+<h2>Observation:</h2>
+<p></p>
