@@ -26,6 +26,7 @@ def DivBy2(x):
 print(DivBy2(8))
 ```
 <br>
+
 ```python
 8
 4
