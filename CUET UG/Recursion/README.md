@@ -10,4 +10,18 @@
 <p>A recursive function not just calls itself directly or indirectly, each recursive call made a function needs a certain increment in any of it's parameters, otherwise making recursive calls to the same function without incrementing or updating it's parameters results to infinite recursion error (also called as Stackoverflow error in some languages).</p>
 
 <h2>But what if increments to the parameters produces the same error?</h2>
-<p>Now that's where the concept of "Base case" and "Recursive case" comes in, In order to make sure that a recursive function, be it a directly or indirectly recursive one, doesn't repeats itself infinitely, we make sure to program a conditional block in the function body of this recursive function which terminates the recurring execution of this function after executing the statements that we have written in the base case (if any), and such a conditional block or such a condition is called as "Base case". Now the part of the function body which recalls this function with increments in one or more than one parameters of it</p>
+<p>Now that's where the concept of "Base case" and "Recursive case" comes in, In order to make sure that a recursive function, be it a directly or indirectly recursive one, doesn't repeats itself infinitely, we make sure to program a conditional block in the function body of this recursive function which terminates the recurring execution of this function after executing the statements that we have written in the base case (if any), and such a conditional block or such a condition is called as "Base case". Now the part of the function body which recalls this function with increments in one or more than one parameters of it is called as the recursive case.</p>
+
+
+```python
+
+def DivBy2(x):
+    if x<=1:
+        print(x)
+        return
+    else:
+        print(x)
+        return DivBy2(x//2)
+    
+print(DivBy2(8))
+```
