@@ -60,6 +60,8 @@ return DivBy2(x//2)
 <p>Direct recursion is widely used while writing recursive functions and using recursion in a program, where a function calls itself
 from it's own function body, and again, while making sure that each recursive call updates the arguement to be used in the function
 and is reachable to the base case of that recursive function.</p>
-<h3></h3>
+<br>
+<h3>Indirect recursion:</h3>
+<p></p>
 
 <h2>Infinite recursion and it's result:</h2>
