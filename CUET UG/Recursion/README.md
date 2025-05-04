@@ -2,8 +2,6 @@
 <br>
 <h1>INTRODUCTION:</h1>
 <p>By definition: Recursion by definition means a technique where a function calls itself, either directly from it's own function body, or indirectly when two functions call each other recursively, provided that both the functions do have a base case.</p>
-<br>
-<h2>Direct and Indirect recursion:</h2>
 <p>Usually while writing programs, most of you have always used iterations to solve a question or a problem statement given to you, but here's something new you can implement instead of iterative approach to solve those same questions or problem statements, and that is Recursion.</p>
 <br>
 <h2>Crucial step while writing recursive functions:</h2>
@@ -41,3 +39,4 @@ print(DivBy2(8))
 in the statement where I am calling it recursively and also how I have also made it sure to keep a base case where
 if a number being passed as an arguement to the function is lesser than or equal to 1 , then the function first prints
 it and then terminates the entire execution of this recurring function by that return statement.</p>
+
