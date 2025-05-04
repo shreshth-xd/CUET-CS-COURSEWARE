@@ -47,4 +47,11 @@ if x<=1:
     print(x)
     return
 ```
-<p></p>
+<p>The recursive case is:</p>
+
+```python
+return DivBy2(x//2)
+```
+
+<h2>Direct and indirect recursion:</h2>
+<h2>Infinite recursion and it's result:</h2>
