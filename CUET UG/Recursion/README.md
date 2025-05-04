@@ -56,7 +56,10 @@ return DivBy2(x//2)
 <h2>Direct and indirect recursion:</h2>
 <p>There are two ways of using recursion in a program, Direct recursion and indirect recursion.</p>
 <br>
-<h3></h3>
+<h3>Direct recursion:</h3>
+<p>Direct recursion is widely used while writing recursive functions and using recursion in a program, where a function calls itself
+from it's own function body, and again, while making sure that each recursive call updates the arguement to be used in the function
+and is reachable to the base case of that recursive function.</p>
 <h3></h3>
 
 <h2>Infinite recursion and it's result:</h2>
