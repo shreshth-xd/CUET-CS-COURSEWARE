@@ -1,8 +1,7 @@
 # INTRODUCING RECURSION AS A PROGRAMMING TECHNIQUE
 <br>
 <h1>INTRODUCTION:</h1>
-<p>By definition: Recursion by definition means a technique where a function calls itself, either directly from it's own function body, or indirectly when two functions call each other recursively, provided that both the functions do have a base case 
-usually while writing programs, most of you have always used iterations to solve a question or a problem statement given to you, but here's something new you can implement instead of iterative approach to solve those same questions or problem statements, and that is Recursion.</p>
+<p>By definition: Recursion by definition means a technique where a function calls itself, either directly from it's own function body, or indirectly when two functions call each other recursively, provided that both the functions do have a base case.</p>
 <br>
 <h2>Crucial step while writing recursive functions:</h2>
 <p>A recursive function not just calls itself directly or indirectly, each recursive call made a function needs a certain increment in any of it's parameters, otherwise making recursive calls to the same function without incrementing or updating it's parameters results to infinite recursion error (also called as Stackoverflow error in some languages).</p>
@@ -39,4 +38,13 @@ print(DivBy2(8))
 in the statement where I am calling it recursively and also how I have also made it sure to keep a base case where
 if a number being passed as an arguement to the function is lesser than or equal to 1 , then the function first prints
 it and then terminates the entire execution of this recurring function by that return statement.</p>
+<br>
+<p>So in our code example:</p>
+<p>The base case is:</p>
 
+```python
+if x<=1:
+    print(x)
+    return
+```
+<p></p>
