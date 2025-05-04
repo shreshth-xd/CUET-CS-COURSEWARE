@@ -37,4 +37,7 @@ print(DivBy2(8))
 ```
 
 <h2>Observation:</h2>
-<p>Right here in this code example you can see that how I have made it sure to update the arguement of the function</p>
+<p>Right here in this code example you can see that how I have made it sure to update the arguement of the function
+in the statement where I am calling it recursively and also how I have also made it sure to keep a base case where
+if a number being passed as an arguement to the function is lesser than or equal to 1 , then the function first prints
+it and then terminates the entire execution of this recurring function by that return statement.</p>
