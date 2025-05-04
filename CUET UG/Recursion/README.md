@@ -62,6 +62,10 @@ from it's own function body, and again, while making sure that each recursive ca
 and is reachable to the base case of that recursive function.</p>
 <br>
 <h3>Indirect recursion:</h3>
-<p></p>
+<p>When two or more than two functions call each other from each other's function bodies, then it's called as indirect recursion,
+provided that this chained recursive flow gets to stop at some point of this recurring execution with the help of the base cases of
+all these recursive functions.</p>
+<span>For example:</span>
+
 
 <h2>Infinite recursion and it's result:</h2>
