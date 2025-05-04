@@ -54,4 +54,7 @@ return DivBy2(x//2)
 ```
 
 <h2>Direct and indirect recursion:</h2>
+<p>There are two ways of using recursion in a program, Direct recursion and indirect recursion.</p>
+
+
 <h2>Infinite recursion and it's result:</h2>
