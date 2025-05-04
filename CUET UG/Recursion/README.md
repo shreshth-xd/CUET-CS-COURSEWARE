@@ -86,7 +86,9 @@ odd(1)
 <p>If you look at this code example, you can say, that this chain of recursion is never going to terminate itself,
 as the function odd(x) takes the number 1 which is odd and then passes it to the function even(x) which in turn again
 increments it and passes it to the function odd(x) and this cycle continues, and this cycle of infinite recursion produces
-a recursion which looks like: </p>
+a recursion which : </p>
 
-
+```python
+RecursionError: maximum recursion depth exceeded in comparison
+```
 <h2>Infinite recursion and it's result:</h2>
