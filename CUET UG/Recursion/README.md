@@ -67,5 +67,26 @@ provided that this chained recursive flow gets to stop at some point of this rec
 all these recursive functions.</p>
 <span>For example:</span>
 
+```python
+def odd(x):
+    if x%2==0:
+        return
+    else:
+        return even(x+1)
+
+def even(x):
+    if x%2!=0:
+        return
+    else:
+        return odd(x+1)
+
+odd(1)
+    
+```
+<p>If you look at this code example, you can say, that this chain of recursion is never going to terminate itself,
+as the function odd(x) takes the number 1 which is odd and then passes it to the function even(x) which in turn again
+increments it and passes it to the function odd(x) and this cycle continues, and this cycle of infinite recursion produces
+a recursion which looks like: </p>
+
 
 <h2>Infinite recursion and it's result:</h2>
