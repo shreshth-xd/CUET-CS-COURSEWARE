@@ -37,4 +37,4 @@ print(DivBy2(8))
 ```
 
 <h2>Observation:</h2>
-<p></p>
+<p>Right here in this code example you can see that how I have made it sure to update the arguement of the function</p>
