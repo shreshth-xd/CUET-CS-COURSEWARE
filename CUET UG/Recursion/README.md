@@ -159,6 +159,25 @@ print(factorial(5))
 ```
 <br>
 <li><h3>2. Fibonacci sequence</h3></li>
+<span>Code:</span>
 
+```python
+def fibonacci(x,a,b):
+    if a+b==x:
+        print(a)
+        print(b)
+        print(a+b)
+
+    a,b=0,1
+    print(a)
+    print(b)
+    c=a+b
+    print(c)
+    a=b
+    b=c
+
+
+
+```
 </ol>
 </ul>
