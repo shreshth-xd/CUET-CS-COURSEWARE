@@ -173,7 +173,6 @@ def fibonacci(x,a,b):
     print(c)
     a=b
     b=c
-
     fibonacci(x,a,b)
 
 fibonacci(2,0,1)
