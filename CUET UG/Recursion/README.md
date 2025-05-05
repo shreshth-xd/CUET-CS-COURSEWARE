@@ -1,7 +1,7 @@
 # INTRODUCING RECURSION AS A PROGRAMMING TECHNIQUE
 <br>
 <ul>
-<h1>INTRODUCTION:</h1>
+<li><h1>INTRODUCTION:</h1></li>
 <p>By definition: Recursion by definition means a technique where a function calls itself, either directly from it's own function body, or indirectly when two functions call each other recursively, provided that both the functions do have a base case.</p>
 <br>
 <h2>Crucial step while writing recursive functions:</h2>
@@ -34,7 +34,7 @@ print(DivBy2(8))
 1
 ```
 
-<h2>Observation:</h2>
+<li><h2>Observation:</h2></li>
 <p>Right here in this code example you can see that how I have made it sure to update the arguement of the function
 in the statement where I am calling it recursively and also how I have also made it sure to keep a base case where
 if a number being passed as an arguement to the function is lesser than or equal to 1 , then the function first prints
