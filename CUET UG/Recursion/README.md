@@ -4,10 +4,10 @@
 <li><h1>INTRODUCTION:</h1></li>
 <p>By definition: Recursion by definition means a technique where a function calls itself, either directly from it's own function body, or indirectly when two functions call each other recursively, provided that both the functions do have a base case.</p>
 <br>
-<h2>Crucial step while writing recursive functions:</h2>
+<li><h2>Crucial step while writing recursive functions:</h2></li>
 <p>A recursive function not just calls itself directly or indirectly, each recursive call made a function needs a certain increment in any of it's parameters, otherwise making recursive calls to the same function without incrementing or updating it's parameters results to infinite recursion error (also called as Stackoverflow error in some languages).</p>
 <br>
-<h2>But what if it incrementation produces the same error?</h2>
+<li><h2>But what if it incrementation produces the same error?</h2></li>
 <p>Now that's where the concept of "Base case" and "Recursive case" comes in, In order to make sure that a recursive function, be it a directly or indirectly recursive one, doesn't repeats itself infinitely, we make sure to program a conditional block in the function body of this recursive function which terminates the recurring execution of this function after executing the statements that we have written in the base case (if any), and such a conditional block or such a condition is called as "Base case". Now the part of the function body which recalls this function with increments in one or more than one parameters of it is called as the recursive case.</p>
 <br>
 <p>Have a look at the code example given below:</p>
