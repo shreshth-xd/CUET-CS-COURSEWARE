@@ -115,8 +115,13 @@ def even(x):
         return odd(x+1)
 
 odd(1)
-
 ```
 
 <h2>Infinite recursion and it's result:</h2>
-<p>Despite throwing</p>
+<p>We have already seen how missing a base case in a recursive function can induce a infinite flow of recursion, and how a base case 
+must be reachable by the function otherwise, if a function fails to reach any base case of it, then still it will result in infinite
+recursion and hence a runtime exception.</p>
+<br>
+<h3>Ok so, Why doeesn't the interpreter throws this exception at once? Why does it throws it after executing it for some time?</h3>
+<p>To understand this, we have to realise that all the function calls are stored and managed in a stack type data structure known
+as call stack, here</p>
