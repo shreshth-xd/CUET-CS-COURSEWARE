@@ -168,13 +168,13 @@ def fibonacci(x,a,b):
         print(b)
         print(a+b)
 
-    a,b=0,1
     print(a)
     print(b)
     c=a+b
     print(c)
     a=b
     b=c
+
 
 
 
