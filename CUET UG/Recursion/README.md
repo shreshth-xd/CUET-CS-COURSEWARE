@@ -1,6 +1,6 @@
 # INTRODUCING RECURSION AS A PROGRAMMING TECHNIQUE
 <br>
-<ol>
+<ul>
 <h1>INTRODUCTION:</h1>
 <p>By definition: Recursion by definition means a technique where a function calls itself, either directly from it's own function body, or indirectly when two functions call each other recursively, provided that both the functions do have a base case.</p>
 <br>
@@ -54,15 +54,15 @@ if x<=1:
 return DivBy2(x//2)
 ```
 
-<h2>Direct and indirect recursion:</h2>
+<li><h2>Direct and indirect recursion:</h2></li>
 <p>There are two ways of using recursion in a program, Direct recursion and indirect recursion.</p>
 <br>
-<h3>Direct recursion:</h3>
+<li><h3>Direct recursion:</h3></li>
 <p>Direct recursion is widely used while writing recursive functions and using recursion in a program, where a function calls itself
 from it's own function body, and again, while making sure that each recursive call updates the arguement to be used in the function
 and is reachable to the base case of that recursive function.</p>
 <br>
-<h3>Indirect recursion:</h3>
+<li><h3>Indirect recursion:</h3></li>
 <p>When two or more than two functions call each other from each other's function bodies, then it's called as indirect recursion,
 provided that this chained recursive flow gets to stop at some point of this recurring execution with the help of the base cases of
 all these recursive functions.</p>
@@ -132,4 +132,4 @@ elements can be pushed to a stack implemented through list in Python) it crashes
 ```python
 RecursionError: maximum recursion depth exceeded in comparison
 ```
-</ol>
+</ul>
