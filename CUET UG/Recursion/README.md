@@ -139,9 +139,24 @@ error than to affect performance of other well running programs in the backgroun
 <li>Some recursive codes:</li>
 <ol>
 <li>1. Calculating factorial</li>
+<span>Code:</span>
 
 ```python
+def factorial(x):
+    if x<=0:
+        return "Doesn't exists"
+    elif x==1:
+        return 1
+    else:
+        return x*factorial(x-1)
 
+print(factorial(5))
 ```
+<span>Output:</span>
+
+```python
+120
+```
+
 </ol>
 </ul>
