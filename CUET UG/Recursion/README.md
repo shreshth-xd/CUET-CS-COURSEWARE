@@ -93,5 +93,8 @@ RecursionError: maximum recursion depth exceeded in comparison
 ```
 
 <p>In order to make the an infinite flow of recursion stop at a certain point, we have add a base case reachable by this recursion.</p>
+<p>For example:</p>
+
+
 
 <h2>Infinite recursion and it's result:</h2>
