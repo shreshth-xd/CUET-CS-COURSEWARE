@@ -136,9 +136,9 @@ RecursionError: maximum recursion depth exceeded in comparison
 error than to affect performance of other well running programs in the background.</p>
 <br>
 
-<li>Some recursive codes:</li>
+<li><h2>Some recursive codes:</h2></li>
 <ol>
-<li>1. Calculating factorial</li>
+<li><h3>1. Calculating factorial</h3></li>
 <span>Code:</span>
 
 ```python
@@ -157,5 +157,8 @@ print(factorial(5))
 ```python
 120
 ```
+<br>
+<li><h3>2. Fibonacci sequence</h3></li>
+
 </ol>
 </ul>
