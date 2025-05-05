@@ -1,5 +1,6 @@
 # INTRODUCING RECURSION AS A PROGRAMMING TECHNIQUE
 <br>
+<ol>
 <h1>INTRODUCTION:</h1>
 <p>By definition: Recursion by definition means a technique where a function calls itself, either directly from it's own function body, or indirectly when two functions call each other recursively, provided that both the functions do have a base case.</p>
 <br>
@@ -116,13 +117,14 @@ def even(x):
 
 odd(1)
 ```
-
-<h2>Infinite recursion and it's result:</h2>
+<li>
+<h2>Infinite recursion and it's result:</h2></li>
 <p>We have already seen how missing a base case in a recursive function can induce a infinite flow of recursion, and how a base case 
 must be reachable by the function otherwise, if a function fails to reach any base case of it, then still it will result in infinite
 recursion and hence a runtime exception.</p>
 <br>
-<h3>Ok so, Why doeesn't the interpreter throws this exception at once? Why does it throws it after executing it for some time?</h3>
+
+<li><h3>Ok so, Why doeesn't the interpreter throws this exception at once? Why does it throws it after executing it for some time?</h3></li>
 <p>To understand this, we have to realise that all the function calls are stored and managed in a stack type data structure known
 as call stack, here when the call stacks gets pushed with too many recursive calls (since there is no upper limit to as how many 
 elements can be pushed to a stack implemented through list in Python) it crashes the program after returning the runtime exception</p>
@@ -130,3 +132,4 @@ elements can be pushed to a stack implemented through list in Python) it crashes
 ```python
 RecursionError: maximum recursion depth exceeded in comparison
 ```
+</ol>
