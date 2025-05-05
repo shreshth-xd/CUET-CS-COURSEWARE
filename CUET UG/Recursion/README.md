@@ -124,4 +124,9 @@ recursion and hence a runtime exception.</p>
 <br>
 <h3>Ok so, Why doeesn't the interpreter throws this exception at once? Why does it throws it after executing it for some time?</h3>
 <p>To understand this, we have to realise that all the function calls are stored and managed in a stack type data structure known
-as call stack, here</p>
+as call stack, here when the call stacks gets pushed with too many recursive calls (since there is no upper limit to as how many 
+elements can be pushed to a stack implemented through list in Python) it crashes the program after returning the runtime exception of</p>
+
+```python
+RecursionError: maximum recursion depth exceeded in comparison
+```
