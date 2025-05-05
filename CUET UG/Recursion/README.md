@@ -157,6 +157,5 @@ print(factorial(5))
 ```python
 120
 ```
-
 </ol>
 </ul>
