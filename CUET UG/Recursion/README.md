@@ -95,6 +95,28 @@ RecursionError: maximum recursion depth exceeded in comparison
 <p>In order to make the an infinite flow of recursion stop at a certain point, we have add a base case reachable by this recursion.</p>
 <p>For example:</p>
 
+```python
+def odd(x):
+    if x>=10:
+        print(x)
+        return
+    if x%2==0:
+        return
+    else:
+        return even(x+1)
+
+def even(x):
+    if x>=10:
+        print(x)
+        return
+    if x%2!=0:
+        return
+    else:
+        return odd(x+1)
+
+odd(1)
+
+```
 
 
 <h2>Infinite recursion and it's result:</h2>
