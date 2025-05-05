@@ -164,8 +164,6 @@ print(factorial(5))
 ```python
 def fibonacci(x,a,b):
     if a+b==x:
-        print(a)
-        print(b)
         print(a+b)
 
     print(a)
@@ -175,9 +173,9 @@ def fibonacci(x,a,b):
     a=b
     b=c
 
+    fibonacci(x,a,b)
 
-
-
+fibonacci()
 ```
 </ol>
 </ul>
