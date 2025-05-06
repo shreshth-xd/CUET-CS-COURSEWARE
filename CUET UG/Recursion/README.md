@@ -162,7 +162,7 @@ print(factorial(5))
 <span>Code:</span>
 
 ```python
-def fibonacci(x,a,b):
+def fibonacci(x,a=0,b=1):
     if a+b==x:
         print(a+b)
         return
