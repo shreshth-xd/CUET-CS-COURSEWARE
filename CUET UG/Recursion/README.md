@@ -167,15 +167,17 @@ def fibonacci(x,a,b):
         print(a+b)
         return
 
-    print(a)
-    print(b)
+    if a==0 and b==1:
+        print(a)
+        print(b)
+
     c=a+b
     print(c)
     a=b
     b=c
     fibonacci(x,a,b)
 
-fibonacci(2,0,1)
+fibonacci(2)
 ```
 </ol>
 </ul>
