@@ -137,7 +137,7 @@ error than to affect performance of other well running programs in the backgroun
 <br>
 
 <li><h2>Some recursive codes:</h2></li>
-<ol>
+<ol type="1">
 <li><h3>Calculating factorial</h3></li>
 <span>Code:</span>
 
