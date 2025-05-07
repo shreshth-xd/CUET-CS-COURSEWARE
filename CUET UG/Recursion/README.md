@@ -189,6 +189,8 @@ def nfib(n):
         return 0
     elif n==2:
         return 1
+    else:
+        return nfib(n-1) + nfib(n-2)
 ```
 </ol>
 </ul>
