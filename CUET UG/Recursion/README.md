@@ -138,7 +138,7 @@ error than to affect performance of other well running programs in the backgroun
 
 <li><h2>Some recursive codes:</h2></li>
 <ol>
-<li><h3>1. Calculating factorial</h3></li>
+<li><h3>Calculating factorial</h3></li>
 <span>Code:</span>
 
 ```python
@@ -158,7 +158,7 @@ print(factorial(5))
 120
 ```
 <br>
-<li><h3>2. Fibonacci sequence</h3></li>
+<li><h3>Fibonacci sequence</h3></li>
 <span>Code:</span>
 
 ```python
