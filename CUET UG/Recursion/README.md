@@ -180,11 +180,15 @@ def fibonacci(x,a=0,b=1):
 fibonacci(2)
 ```
 <br>
-<li><h3>2. Fibonacci sequence</h3></li>
+<li><h3>3. nth Fibonacci</h3></li>
 <span>Code:</span>
 
 ```python
-
+def nfib(n):
+    if n==1:
+        return 0
+    elif n==2:
+        return 1
 ```
 </ol>
 </ul>
