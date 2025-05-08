@@ -12,9 +12,9 @@
     <li>[Bar graph of probability of randomly selected student having a particular average](BarProbabilityPCM.pdf) ==>  Bar graph depicting the probability of selected student of PCM having a particular average.</li>
     <li>[Bar graph of probability of randomly selected student having a particular average](BarProbabilityPCB.pdf)  ==>  Bar graph depicting the probability of selected student of PCM having a particular average.</li>
     <li>[Bar graph of probability of randomly selected student having a particular average](BarProbabilityCommerce.pdf)  ==> Bar graph depicting the probability of selected student of PCM having a particular average.</li>
-    <li>[text](LineProbabilityPCM.pdf)  ==>  Line graph depicting the probability of selected student of PCM having a particular average.</li>
-    <li>[text](LineProbabilityPCB.pdf)  ==>  Line graph depicting the probability of selected student of PCB having a particular average.</li>
-    <li>[text](LineProbabilityCommerce.pdf)  ==> Line graph depicting the probability of selected student of Commerce having a particular average.</li>
+    <li>[Line graph of probability of randomly selected student having a particular average](LineProbabilityPCM.pdf)  ==>  Line graph depicting the probability of selected student of PCM having a particular average.</li>
+    <li>[Line graph of probability of randomly selected student having a particular average](LineProbabilityPCB.pdf)  ==>  Line graph depicting the probability of selected student of PCB having a particular average.</li>
+    <li>[Line graph of probability of randomly selected student having a particular average](LineProbabilityCommerce.pdf)  ==> Line graph depicting the probability of selected student of Commerce having a particular average.</li>
 </ul>
 
 [text](BarAveragePCM.pdf)
