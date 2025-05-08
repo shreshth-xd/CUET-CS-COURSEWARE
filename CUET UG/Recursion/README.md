@@ -167,9 +167,8 @@ def fibonacci(x,a=0,b=1):
         print(a+b)
         return
 
-    if a==0 and b==1:
-        print(a)
-        print(b)
+    print(a)
+    print(b)
 
     c=a+b
     print(c)
