@@ -200,5 +200,10 @@ def nfib(n):
     else:
         return nfib(n-1) + nfib(n-2)
 ```
+<span>Output:</span>
+
+```python
+120
+```
 </ol>
 </ul>
