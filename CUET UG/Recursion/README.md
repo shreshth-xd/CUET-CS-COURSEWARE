@@ -198,12 +198,14 @@ def nfib(n):
     elif n==2:
         return 1
     else:
-        return nfib(n-1) + nfib(n-2)
+        return nfib(n-2) + nfib(n-1)
+
+nfib(3)
 ```
 <span>Output:</span>
 
 ```python
-120
+1
 ```
 </ol>
 </ul>
