@@ -3,12 +3,12 @@
 <ul>
 <li>
 
-[text](BarAveragePCM.pdf)  ==>  Bar graph depicting the average scores of PCM students</li><li>
-[text](BarAveragePCB.pdf)  ==>  Bar graph depicting the average scores of PCB students</li>
-    <li>[text](BarAverageCommerce.pdf)  ==>  Bar graph depicting the average scores of Commerce students</li>
-    <li>[text](LineAveragePCM.pdf)  ==>  Line graph depicting the average scores of PCM students</li>
-    <li>[text](LineAveragePCB.pdf)  ==>  Line graph depicting the average scores of PCB students</li>
-    <li>[text](LineAverageCommerce.pdf)  ==>  Line graph depicting the average scores of Commerce students</li>
+[Bar graph of average scores of](BarAveragePCM.pdf)  ==>  Bar graph depicting the average scores of PCM students</li><li>
+[Bar graph of average scores of](BarAveragePCB.pdf)  ==>  Bar graph depicting the average scores of PCB students</li>
+    <li>[Bar graph of average scores of](BarAverageCommerce.pdf)  ==>  Bar graph depicting the average scores of Commerce students</li>
+    <li>[Line graph of average scores of](LineAveragePCM.pdf)  ==>  Line graph depicting the average scores of PCM students</li>
+    <li>[Line graph of average scores of](LineAveragePCB.pdf)  ==>  Line graph depicting the average scores of PCB students</li>
+    <li>[Line graph of average scores of](LineAverageCommerce.pdf)  ==>  Line graph depicting the average scores of Commerce students</li>
     <li>[text](BarProbabilityPCM.pdf) ==>  Bar graph depicting the probability of selected student of PCM having a particular average.</li>
     <li>[text](BarProbabilityPCB.pdf)  ==>  Bar graph depicting the probability of selected student of PCM having a particular average.</li>
     <li>[text](BarProbabilityCommerce.pdf)  ==> Bar graph depicting the probability of selected student of PCM having a particular average.</li>
