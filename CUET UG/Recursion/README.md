@@ -209,8 +209,8 @@ nfib(3)
 ```
 </ol>
 <br>
+<li><h2>Recursive programs in this folder of this courseware repo:</h2></li>
 <ol type="1">
-<li><h3>Recursive programs in this folder of this courseware repo:</h3></li>
 <li></li>
 <li></li>
 <li></li>
