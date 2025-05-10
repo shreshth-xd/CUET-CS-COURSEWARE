@@ -136,7 +136,7 @@ RecursionError: maximum recursion depth exceeded in comparison
 error than to affect performance of other well running programs in the background.</p>
 <br>
 
-<li><h2>Some recursive codes:</h2></li>
+<li><h2>Some basic recursive codes:</h2></li>
 <ol type="1">
 <li><h3>Calculating factorial</h3></li>
 <span>Code:</span>
