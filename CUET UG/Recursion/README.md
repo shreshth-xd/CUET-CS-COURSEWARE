@@ -213,41 +213,29 @@ nfib(3)
 <li><h2>Recursive programs in this folder of this courseware repo:</h2></li>
 <ol type="1">
 <li>
-<h3>1. Prime test</h3>
+<h3>Prime test:</h3>
 <p>To check if a given number is a prime number or not using recursion</p>
 </li>
 
 <li>
-<h3></h3>
+<h3>Admission number:</h3>
+<p>To search for a student's admission number using recursive binary search</p>
 </li>
 
 <li>
-<h3></h3>
+<h3>Multiplication without "*" operator:</h3>
+<p>To multiply two numbers by just using addition operators.</p>
 </li>
 
 <li>
-<h3></h3>
+<h3>Printing the string backwards:</h3>
+<p>To print a given string backwards using recursion.</p>
 </li>
 
-<li>
-<h3></h3>
-</li>
-
-<li>
-<h3></h3>
-</li>
-
-<li>
-<h3></h3>
-</li>
-
-<li>
-<h3></h3>
-</li>
-
-<li>
-<h3></h3>
-</li>
-
+<li><h3></h3></li>
+<li><h3></h3></li>
+<li><h3></h3></li>
+<li><h3></h3></li>
+<li><h3></h3></li>
 </ol>
 </ul>
