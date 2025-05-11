@@ -232,7 +232,10 @@ nfib(3)
 <p>To print a given string backwards using recursion.</p>
 </li>
 
-<li><h3></h3></li>
+<li>
+<h3>Digit sum:</h3>
+<p>To find the sum of the digits of the number until it reduces to a single digit</p>
+</li>
 <li><h3></h3></li>
 <li><h3></h3></li>
 <li><h3></h3></li>
