@@ -213,6 +213,7 @@ nfib(3)
 <ol type="1">
 <li>
 <h3>1. Prime test</h3>
+<p>To check if a given number is a prime number or not using recursion</p>
 </li>
 <li><h3></h3></li>
 <li><h3></h3></li>
