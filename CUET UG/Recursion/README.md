@@ -263,6 +263,7 @@ sum of the digits of 100 is 1.</p>
 <h3>Power set:</h3>
 <p>A beautiful implementation of recursion to find out all the possible and unique combinations of all the letters
 in a given string.</p>
+
 </li>
 </ol>
 </ul>
