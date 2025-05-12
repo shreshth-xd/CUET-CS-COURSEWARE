@@ -214,7 +214,7 @@ nfib(3)
 <ol type="1">
 <li>
 <h3>Prime test:</h3>
-<p>To check if a given number is a prime number or not using recursion</p>
+<p>A function that takkes a given number and checks if it is a prime number using recursion</p>
 </li>
 
 <li>
