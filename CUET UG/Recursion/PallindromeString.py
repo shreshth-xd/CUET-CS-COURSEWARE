@@ -2,7 +2,8 @@
 string=str(input("Enter the string: "))
 
 def PalindromeString(string):
-    string = "".join(c.lower() for c in string if c.isalnum())
+    # string = "".join(c.lower() for c in string if c.isalnum())
+    string = string.lower()
 
     def checkForPalindrome(left=0,right=len(string)-1):
         if left>=right:
