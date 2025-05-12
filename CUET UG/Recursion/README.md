@@ -253,6 +253,7 @@ stop it right there, otherwise it will throw a Stack overflow error following in
 For ex. 28 is a happy number, as 4 + 64 = 68 and eventually 36 + 64 = 100, and right here the
 sum of the digits of 100 is 1.</p>
 </li>
+
 <li><h3></h3></li>
 <li><h3></h3></li>
 </ol>
