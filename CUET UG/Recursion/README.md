@@ -237,8 +237,22 @@ nfib(3)
 <h3>Digit sum:</h3>
 <p>To find the sum of the digits of the number until it reduces to a single digit</p>
 </li>
-<li><h3></h3></li>
-<li><h3></h3></li>
+
+<li>
+<h3>Hailstone sequence:</h3>
+<p>To generate the Hailstone sequence using recursion which starts with a positive integer "N" and governs itself by just two rules, that 
+if "N" is a even number then the next number coming up in the sequence will be N//2 and If "N" is a odd number then, the next number
+coming up on the sequence will be 3*N+1. The catch here is, that once the number of this sequence is deduced to 1, then we are going to
+stop it right there, otherwise it will throw a Stack overflow error following infinite recursion.</p>
+</li>
+
+<li>
+<h3>Happy numbers:</h3>
+<p>A recursive function to check if a given number is a happy number is not.</p>
+<p>Context: A happy number is a number whose eventual sum of the squares of it's digits is 1.
+For ex. 28 is a happy number, as 4 + 64 = 68 and eventually 36 + 64 = 100, and right here the
+sum of the digits of 100 is 1.</p>
+</li>
 <li><h3></h3></li>
 <li><h3></h3></li>
 </ol>
