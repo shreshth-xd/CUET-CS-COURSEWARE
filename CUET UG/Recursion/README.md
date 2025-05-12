@@ -254,7 +254,10 @@ For ex. 28 is a happy number, as 4 + 64 = 68 and eventually 36 + 64 = 100, and r
 sum of the digits of 100 is 1.</p>
 </li>
 
-<li><h3></h3></li>
+<li>
+<h3>Pallindrome string:</h3>
+<p>To check if a given string is a pallindrome or not using a different approach based on recursion.</p>
+</li>
 <li><h3></h3></li>
 </ol>
 </ul>
