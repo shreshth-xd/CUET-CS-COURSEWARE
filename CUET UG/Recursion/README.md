@@ -219,12 +219,12 @@ nfib(3)
 
 <li>
 <h3>Admission number:</h3>
-<p>To search for a student's admission number using recursive binary search</p>
+<p>A program which takes a admission number as input and looks for it in a sorted list using recursive binary search.</p>
 </li>
 
 <li>
 <h3>Multiplication without "*" operator:</h3>
-<p>To multiply two numbers by just using addition operators.</p>
+<p>To multiply two numbers recursively by using addition and subtraction operations.</p>
 </li>
 
 <li>
