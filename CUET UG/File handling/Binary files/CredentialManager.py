@@ -4,4 +4,4 @@ print("Simple script to store your credentials in an encrypted form in a binary 
 password=str(input("Enter your password: "))
 
 with open("credentials.dat","ab+"):
-    print("")
+    pickle.dump(password,"credentials.dat")
