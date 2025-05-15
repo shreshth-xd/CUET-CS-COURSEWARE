@@ -14,4 +14,4 @@ if copy_password.lower()!="no":
         pyperclip.copy(password)
         print("Password copied to clipboard.")
 else:
-    
+    pass
