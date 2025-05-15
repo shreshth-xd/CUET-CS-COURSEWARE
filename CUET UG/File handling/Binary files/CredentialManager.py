@@ -13,3 +13,5 @@ if copy_password.lower()!="no":
         password=pickle.load(file)
         pyperclip.copy(password)
         print("Password copied to clipboard.")
+else:
+    
