@@ -1,6 +1,8 @@
 import pickle
 import pyperclip
+import time
 
+print("")
 print("Simple script to store your credentials in an encrypted form in a binary file.")
 password=str(input("Enter your password: "))
 
