@@ -2,7 +2,10 @@ import pickle
 import pyperclip
 import time
 
-print("")
+print("This program is for just revising how text is serialised and pushed into a binary file.\n")
+print("Apparently, binary files are not a good choice for storing credentials and especially passwords.\n")
+print("I advise you guys to push some sample password to your respective credentials.dat files\nand see if it actually protects your credentials or not.")
+time.sleep(4)
 print("Simple script to store your credentials in an encrypted form in a binary file.")
 password=str(input("Enter your password: "))
 
