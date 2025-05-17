@@ -5,4 +5,4 @@ import csv
 file=open("Sample.csv","r")
 reader=csv.reader(file,delimiter=",")
 for row in reader:
-    print()
+    print(row)
