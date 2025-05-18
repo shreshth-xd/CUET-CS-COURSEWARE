@@ -1,0 +1,1 @@
+# Basic program of try-except clause for exception handling
