@@ -9,3 +9,5 @@ except ZeroDivisionError:
     print("That's undefined bro")
 else:
     print("Congratulations you just did it without encountering any error.")
+finally:
+    print("Don't worry, you would have to encounter me in either way.")
