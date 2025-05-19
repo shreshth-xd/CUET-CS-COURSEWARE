@@ -5,6 +5,7 @@ try:
     print("Oh boy, let's check for some errors.")
     n/n1
 except ValueError:
+    # To tackle a certain exception by writing a code block to be executed whenever that certain exception is raised
     print("Please don't enter a string when you are asked for a freaking number!!!!")
 except ZeroDivisionError:
     print("That's undefined bro")
