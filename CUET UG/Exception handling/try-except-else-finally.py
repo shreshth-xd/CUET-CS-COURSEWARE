@@ -14,4 +14,5 @@ else:
     # This code block gets executed when the code block is executed without any exception or error
     print("Congratulations you just did it without encountering any error.")
 finally:
+    # This code block gets executed irrespective of whether any exception has been raised or not
     print("Don't worry, you would have to encounter me in either way.")
