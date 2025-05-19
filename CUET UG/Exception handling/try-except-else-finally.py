@@ -1,6 +1,7 @@
 n=int(input("Enter a number: "))
 n1=int(input("Enter another number: "))
 try:
+    # To execute the code block where there is a possibility for an exception or error to be encountered 
     print("Oh boy, let's check for some errors.")
     n/n1
 except ValueError:
