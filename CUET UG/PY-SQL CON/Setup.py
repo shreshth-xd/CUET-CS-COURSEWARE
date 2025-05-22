@@ -4,4 +4,6 @@ con = connector.connect(host="localhost", user="root", password="password", data
 if con.is_connected():
     print("Connection with database successful")
 
+cursorObj=con.cursor()
+SampleQuery=""
 con.close()
