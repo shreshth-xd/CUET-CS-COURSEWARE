@@ -6,4 +6,10 @@ if con.is_connected():
 
 cursorObj=con.cursor()
 SampleQuery="SELECT * FROM table1;"
+cursorObj.execute()
+data=cursorObj.fetchall()
+
+for row in data:
+    print(row)
+
 con.close()
