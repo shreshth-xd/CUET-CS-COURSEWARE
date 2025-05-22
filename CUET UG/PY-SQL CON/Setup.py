@@ -5,5 +5,5 @@ if con.is_connected():
     print("Connection with database successful")
 
 cursorObj=con.cursor()
-SampleQuery=""
+SampleQuery="SELECT * FROM table1;"
 con.close()
