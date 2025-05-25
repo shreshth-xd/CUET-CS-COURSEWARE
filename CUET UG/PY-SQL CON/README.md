@@ -6,4 +6,3 @@ while writing the connection object whenver you are writing your Python-SQL conn
 <p>Make sure that you use a .env file in the same folder to store your credentials and OS module in the script where you need those
 credentials to connect to your database using this connectivity script.</p>
 
-
