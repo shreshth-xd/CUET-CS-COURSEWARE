@@ -12,4 +12,5 @@ data=cursorObj.fetchall()
 for row in data:
     print(row)
 
+
 con.close()
